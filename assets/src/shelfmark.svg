@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 286" width="880" height="286" role="img" aria-label="shelfmark — ask your storage a question in plain English and get the file back.">
+<style>
+__FONTS__
+__VARS__
+.card{fill:var(--card);stroke:var(--rule);stroke-width:1}
+.eyebrow{font:500 10px var(--mono);fill:var(--faint);letter-spacing:2.2px}
+.name{font:800 40px var(--disp);fill:var(--ink);letter-spacing:-1.5px}
+.tag{font:italic 400 19px var(--serif);fill:var(--ink)}
+.body{font:500 13px var(--body);fill:var(--dim)}
+.link{font:500 11px var(--mono);fill:var(--violet);letter-spacing:1.3px}
+.ask{font:500 12.5px var(--mono);fill:var(--ink)}
+.ask tspan.c{fill:var(--violet)}
+.blk{fill:var(--sunk);stroke:var(--rule);stroke-width:.9}
+.hit{font:500 12px var(--mono);fill:var(--ytext)}
+.ms{font:500 10px var(--mono);fill:var(--faint);letter-spacing:1.8px}
+</style>
+<defs>
+  <clipPath id="cardclip"><rect x="24" y="14" width="832" height="258" rx="14"/></clipPath>
+  <clipPath id="typing"><rect x="486" y="46" width="0" height="30">
+    <animate attributeName="width" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;300;300;300;0" keyTimes="0;0.05;0.34;0.90;0.95;1"/>
+  </rect></clipPath>
+</defs>
+
+<rect width="880" height="286" fill="var(--paper)"/>
+<rect class="card" x="24" y="14" width="832" height="258" rx="14"/>
+<g clip-path="url(#cardclip)"><rect x="24" y="14" width="5" height="258" fill="var(--violet)"/></g>
+
+<text class="eyebrow" x="58" y="54">02 &#160;·&#160; LOCAL &#160;·&#160; SEMANTIC INDEX</text>
+<text class="name" x="56" y="98">shelfmark</text>
+<text class="tag" x="56" y="128">talk to your storage.</text>
+<text class="body" x="56" y="164">Ask the drive a question the way you’d ask a person.</text>
+<text class="body" x="56" y="183">It answers with the file — not a folder tree, not forty</text>
+<text class="body" x="56" y="202">results ranked by filename. It read everything already.</text>
+<text class="link" x="56" y="238">GITHUB.COM/A-DAWG010/SHELFMARK  ↗</text>
+
+<!-- ask bar -->
+<rect x="470" y="40" width="368" height="42" rx="10" fill="var(--sunk)" stroke="var(--rule)"/>
+<g clip-path="url(#typing)">
+  <text class="ask" x="486" y="66"><tspan class="c">&gt;</tspan> that lease pdf from march</text>
+</g>
+<rect x="486" y="52" width="7" height="16" fill="var(--violet)">
+  <animate attributeName="x" dur="11s" repeatCount="indefinite" calcMode="linear" values="486;486;786;786;486;486" keyTimes="0;0.05;0.34;0.90;0.93;1"/>
+  <animate attributeName="opacity" dur=".9s" repeatCount="indefinite" calcMode="discrete" values="1;0" keyTimes="0;0.5"/>
+</rect>
+
+<!-- shelves -->
+<g>
+  <rect class="blk" x="470" y="104" width="68" height="16" rx="3"/><rect class="blk" x="470" y="126" width="68" height="16" rx="3"/><rect class="blk" x="470" y="148" width="68" height="16" rx="3"/><rect class="blk" x="470" y="170" width="68" height="16" rx="3"/>
+  <rect class="blk" x="545" y="104" width="68" height="16" rx="3"/><rect class="blk" x="545" y="126" width="68" height="16" rx="3"/><rect class="blk" x="545" y="148" width="68" height="16" rx="3"/><rect class="blk" x="545" y="170" width="68" height="16" rx="3"/>
+  <rect class="blk" x="620" y="104" width="68" height="16" rx="3"/><rect class="blk" x="620" y="126" width="68" height="16" rx="3"/><rect class="blk" x="620" y="148" width="68" height="16" rx="3"/><rect class="blk" x="620" y="170" width="68" height="16" rx="3"/>
+  <rect class="blk" x="695" y="104" width="68" height="16" rx="3"/><rect class="blk" x="695" y="126" width="68" height="16" rx="3"/><rect class="blk" x="695" y="148" width="68" height="16" rx="3"/><rect class="blk" x="695" y="170" width="68" height="16" rx="3"/>
+  <rect class="blk" x="770" y="104" width="68" height="16" rx="3"/><rect class="blk" x="770" y="126" width="68" height="16" rx="3"/><rect class="blk" x="770" y="148" width="68" height="16" rx="3"/><rect class="blk" x="770" y="170" width="68" height="16" rx="3"/>
+</g>
+
+<!-- the scan ripple: a few candidates warm up, then one wins -->
+<g>
+  <rect x="470" y="148" width="68" height="16" rx="3" fill="var(--rule2)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.36;0.39;0.52;0.56;1"/></rect>
+  <rect x="695" y="104" width="68" height="16" rx="3" fill="var(--rule2)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.39;0.42;0.52;0.56;1"/></rect>
+  <rect x="770" y="170" width="68" height="16" rx="3" fill="var(--rule2)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.42;0.45;0.52;0.56;1"/></rect>
+</g>
+<g opacity="0">
+  <animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.47;0.52;0.90;0.94;1"/>
+  <rect x="620" y="126" width="68" height="16" rx="3" fill="var(--yellow)"/>
+  <rect x="616" y="122" width="76" height="24" rx="5" fill="none" stroke="var(--ink)" stroke-width="1.4"/>
+</g>
+
+<!-- the answer -->
+<g opacity="0">
+  <animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.52;0.57;0.90;0.94;1"/>
+  <rect x="470" y="204" width="278" height="32" rx="8" fill="var(--yellow)"/>
+  <text class="hit" x="486" y="224">lease_2026-03.pdf &#160;·&#160; ✓</text>
+</g>
+<text class="ms" x="838" y="224" text-anchor="end" opacity="0">0.4S
+  <animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.52;0.57;0.90;0.94;1"/>
+</text>
+</svg>
