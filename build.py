@@ -9,6 +9,7 @@ import pathlib
 
 FONTS = {
     "mono": "ui-monospace,SFMono-Regular,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace",
+    "sans": "-apple-system,BlinkMacSystemFont,Inter,'Segoe UI',Helvetica,Arial,sans-serif",
 }
 
 DARK = {
