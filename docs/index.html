@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Ameya Panse</title>
-<meta name="description" content="Ameya Panse — AI engineer in Pune. I build agents that know when they're guessing.">
-<meta property="og:title" content="Ameya Panse">
+<title>Ameya</title>
+<meta name="description" content="I build agents that know when they're guessing. Multi-agent orchestration, graph-backed retrieval, and two local-first tools.">
+<meta property="og:title" content="Ameya">
 <meta property="og:description" content="I build agents that know when they're guessing.">
 <meta property="og:image" content="https://raw.githubusercontent.com/a-dawg010/a-dawg010/main/assets/hero-dark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
   --paper:#F4F0E6; --card:#FBF8F1; --sunk:#EDE8DA;
   --ink:#14141A; --dim:#5C5850; --faint:#968F82;
   --rule:#DFD8C8; --rule2:#C9C0AC;
-  --yellow:#FFD429; --ytext:#14141A; --violet:#4B2BF0; --coral:#D8431F;
+  --yellow:#FFD429; --ytext:#14141A; --violet:#4B2BF0;
   --grain:.05;
   --disp:'Bricolage Grotesque',Georgia,serif;
   --serif:'Instrument Serif',Georgia,serif;
@@ -25,8 +25,7 @@
 :root[data-theme="dark"]{
   --paper:#0D0D0F; --card:#16161A; --sunk:#101014;
   --ink:#F4F0E6; --dim:#9D978B; --faint:#6A6459;
-  --rule:#26262C; --rule2:#34343C;
-  --violet:#A98BFF; --coral:#FF7A57; --grain:.07;
+  --rule:#26262C; --rule2:#34343C; --violet:#A98BFF; --grain:.07;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -35,14 +34,11 @@ body{background:var(--paper);color:var(--ink);font-family:var(--disp);font-weigh
      font-optical-sizing:auto;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 ::selection{background:var(--yellow);color:var(--ytext)}
-
-/* paper grain */
 body::before{content:"";position:fixed;inset:0;z-index:99;pointer-events:none;opacity:var(--grain);
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
 
-/* ---- header ---- */
 header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 86%,transparent);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
@@ -54,7 +50,6 @@ header nav{display:flex;gap:clamp(14px,2.4vw,30px);font:500 11px var(--mono);let
 header nav a:hover,header button:hover{color:var(--ink)}
 button{font:500 11px var(--mono);letter-spacing:1.9px;color:var(--faint);background:none;border:none;cursor:pointer;padding:0}
 
-/* ---- hero ---- */
 .hero{padding-top:clamp(56px,11vh,120px)}
 .eyebrow{font:500 11px var(--mono);letter-spacing:2.4px;color:var(--dim);margin:0 0 clamp(26px,4vh,44px)}
 h1{font-family:var(--disp);font-weight:800;font-size:clamp(46px,9.2vw,124px);line-height:.94;
@@ -66,14 +61,12 @@ h1 .mk::before{content:"";position:absolute;inset:-.02em -.04em .06em;background
   margin:clamp(26px,4vh,40px) 0 0;letter-spacing:-.01em}
 .lede em{font-family:var(--serif);font-style:italic;font-size:1.12em;color:var(--ink)}
 
-/* the strip with its resident */
-.strip{margin-top:clamp(40px,7vh,76px);position:relative;height:64px;cursor:crosshair}
+.strip{margin-top:clamp(40px,7vh,76px);position:relative;height:72px;cursor:crosshair}
 .strip svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.strip .hint{position:absolute;right:0;bottom:-4px;font:500 10px var(--mono);letter-spacing:1.8px;
+.strip .hint{position:absolute;right:0;bottom:-2px;font:500 10px var(--mono);letter-spacing:1.8px;
   color:var(--faint);opacity:0;transition:opacity .3s}
 .strip:hover .hint{opacity:1}
 
-/* ---- marquee ---- */
 .marq{margin-top:clamp(48px,8vh,86px);background:var(--yellow);color:var(--ytext);
   border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden;padding:13px 0}
 .marq ul{display:flex;gap:44px;list-style:none;margin:0;padding:0;width:max-content;
@@ -83,7 +76,6 @@ h1 .mk::before{content:"";position:absolute;inset:-.02em -.04em .06em;background
 .marq:hover ul{animation-play-state:paused}
 @keyframes slide{to{transform:translateX(-50%)}}
 
-/* ---- sections ---- */
 section{padding:clamp(70px,12vh,132px) 0 0}
 .stitle{display:flex;align-items:baseline;gap:18px;margin:0 0 clamp(28px,4vh,48px)}
 .stitle h2{font-weight:800;font-size:clamp(26px,3.4vw,44px);letter-spacing:-.035em;margin:0}
@@ -92,75 +84,68 @@ section{padding:clamp(70px,12vh,132px) 0 0}
 
 .proj{display:block;border:1px solid var(--rule);border-radius:16px;background:var(--card);
   overflow:hidden;position:relative;margin-bottom:22px;transition:border-color .25s,transform .25s}
-.proj::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--accent,var(--yellow));
-  transition:width .25s}
+.proj::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--accent);transition:width .25s}
 .proj:hover{transform:translateY(-3px);border-color:var(--rule2)}
 .proj:hover::before{width:11px}
-.proj .in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,56px);
+.proj .in{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(24px,4vw,56px);
   padding:clamp(26px,3.6vw,42px) clamp(28px,4vw,48px) clamp(26px,3.6vw,42px) clamp(32px,4.4vw,56px);align-items:center}
 .pk{font:500 10px var(--mono);letter-spacing:2.2px;color:var(--faint);margin:0 0 14px}
 .pn{font-weight:800;font-size:clamp(30px,4vw,46px);letter-spacing:-.04em;margin:0}
 .pt{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.1vw,25px);margin:6px 0 16px}
-.pb{color:var(--dim);font-size:14.5px;line-height:1.6;margin:0;max-width:44ch}
+.pb{color:var(--dim);font-size:14.5px;line-height:1.6;margin:0;max-width:46ch}
 .go{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font:500 11px var(--mono);
   letter-spacing:1.6px;color:var(--violet)}
-.proj:hover .go .arw{transform:translateX(5px)}
 .go .arw{transition:transform .25s}
+.proj:hover .go .arw{transform:translateX(5px)}
 
-/* project mini-visuals */
-.viz{position:relative;min-height:170px}
-.viz svg{width:100%;height:auto;display:block}
-.tile{fill:var(--sunk);stroke:var(--rule)}
-.flag{fill:var(--yellow);opacity:0}
-.proj.in .flag{animation:flagin .5s ease forwards}
-.proj.in .flag:nth-of-type(2n){animation-delay:.35s}
-.proj.in .flag:nth-of-type(3n){animation-delay:.6s}
-@keyframes flagin{to{opacity:1}}
-.sweep{fill:var(--yellow);opacity:0}
-.proj.in .sweep{animation:sweep 1.9s ease-in-out 3}
-.proj.in:hover .sweep{animation:sweep 1.9s ease-in-out infinite}
-@keyframes sweep{0%{opacity:.9;transform:translateY(0)}92%{opacity:.9;transform:translateY(126px)}100%{opacity:0;transform:translateY(126px)}}
-.cnt{font-weight:800;font-size:30px;letter-spacing:-.03em;fill:var(--ink)}
-.cntl{font:500 10px var(--mono);letter-spacing:2px;fill:var(--faint)}
+.viz svg{width:100%;height:auto;display:block;overflow:visible}
+.rail{stroke:var(--rule);stroke-width:1}
+.lane{font:500 9px var(--mono);fill:var(--faint);letter-spacing:1.5px}
+.tick{fill:var(--ink);opacity:0}
+.proj.in-view .tick{animation:pop .01s linear forwards}
+.play{fill:var(--yellow);opacity:0}
+.proj.in-view .play{animation:play 3.4s ease-in-out .2s}
+.proj.in-view:hover .play{animation:play 3.4s ease-in-out infinite}
+@keyframes pop{to{opacity:1}}
+@keyframes play{0%{opacity:0;transform:translateX(0)}4%{opacity:1}96%{opacity:1;transform:translateX(252px)}100%{opacity:0;transform:translateX(252px)}}
+.axis{font:500 8.5px var(--mono);fill:var(--faint);letter-spacing:1.5px}
 .qbar{fill:var(--sunk);stroke:var(--rule)}
-.qtx{font:500 12px var(--mono);fill:var(--ink)}
-.blk{fill:var(--sunk);stroke:var(--rule)}
-.win{fill:var(--yellow);opacity:0}
-.proj.in .win{animation:flagin .45s .55s ease forwards}
-.hitc{fill:var(--yellow);opacity:0}
-.proj.in .hitc{animation:flagin .45s .7s ease forwards}
-.hitt{font:500 12px var(--mono);fill:var(--ytext);opacity:0}
-.proj.in .hitt{animation:flagin .45s .7s ease forwards}
+.qtx{font:500 11px var(--mono);fill:var(--ink)}
+.colh{font:500 8.5px var(--mono);fill:var(--faint);letter-spacing:1.5px}
+.row{font:500 9px var(--mono);fill:var(--dim);opacity:0}
+.proj.in-view .row{animation:pop2 .4s ease forwards}
+@keyframes pop2{to{opacity:1}}
+.winr{fill:var(--yellow);opacity:0}
+.proj.in-view .winr{animation:pop2 .4s .9s ease forwards}
+.note{font-family:var(--serif);font-style:italic;font-size:11px;fill:var(--ink);opacity:0}
+.proj.in-view .note{animation:pop2 .5s 1.2s ease forwards}
 
-/* ---- notes ---- */
 .notes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px)}
-.note h3{font-weight:800;font-size:19px;letter-spacing:-.02em;margin:0 0 9px}
-.note p{color:var(--dim);font-size:14.5px;line-height:1.6;margin:0}
-.note .num{display:inline-block;font:500 10px var(--mono);letter-spacing:2.2px;color:var(--ytext);
+.note-c h3{font-weight:800;font-size:19px;letter-spacing:-.02em;margin:0 0 9px}
+.note-c p{color:var(--dim);font-size:14.5px;line-height:1.6;margin:0}
+.note-c .num{display:inline-block;font:500 10px var(--mono);letter-spacing:2.2px;color:var(--ytext);
   background:var(--yellow);padding:4px 7px;border-radius:3px;margin:0 0 14px}
 
-/* ---- footer ---- */
 footer{margin-top:clamp(80px,13vh,150px);border-top:1px solid var(--rule);padding:30px 0 46px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between;
   font:500 11px var(--mono);letter-spacing:1.7px;color:var(--faint)}
 footer a{color:var(--ink);border-bottom:1px solid var(--rule2);padding-bottom:2px}
 footer a:hover{border-bottom-color:var(--yellow)}
 
-/* reveals */
 .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 
 @media (max-width:860px){
   .proj .in{grid-template-columns:1fr;gap:26px}
-  .viz{min-height:0}
   .notes{grid-template-columns:1fr;gap:28px}
   h1{max-width:none}
-  header nav a:not(.tt){display:none}
+  header nav a{display:none}
 }
 @media (prefers-reduced-motion:reduce){
   .marq ul{animation:none}
   .rv{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
+  .tick,.row,.winr,.note{opacity:1;animation:none}
 }
 </style>
 </head>
@@ -168,11 +153,10 @@ footer a:hover{border-bottom-color:var(--yellow)}
 
 <header>
   <div class="wrap">
-    <div class="mark"><i></i><b>AMEYA PANSE</b><span>PUNE, IN</span></div>
+    <div class="mark"><i></i><b>AMEYA</b><span>AI ENGINEER</span></div>
     <nav>
-      <a href="#work">WORK</a>
-      <a href="#how">HOW</a>
-      <button id="tt" class="tt">THEME</button>
+      <a href="#work">WORK</a><a href="#how">HOW</a>
+      <button id="tt">THEME</button>
     </nav>
   </div>
 </header>
@@ -185,19 +169,19 @@ footer a:hover{border-bottom-color:var(--yellow)}
   vibes. And a surprising amount of engineering spent teaching a model to say <em>I don’t know that yet</em>.</p>
 
   <div class="strip rv" id="strip">
-    <svg viewBox="0 0 1000 64" preserveAspectRatio="none" aria-hidden="true">
-      <line x1="0" y1="46" x2="1000" y2="46" stroke="var(--rule)" stroke-width="1" vector-effect="non-scaling-stroke"/>
+    <svg viewBox="0 0 1000 72" preserveAspectRatio="none" aria-hidden="true">
+      <line x1="0" y1="52" x2="1000" y2="52" stroke="var(--rule)" stroke-width="1" vector-effect="non-scaling-stroke"/>
     </svg>
-    <svg viewBox="0 0 1000 64" id="worm" aria-hidden="true"></svg>
+    <svg viewBox="0 0 1000 72" id="bird" aria-hidden="true"></svg>
     <span class="hint">IT FOLLOWS YOU</span>
   </div>
 </section>
 
 <div class="marq">
   <ul id="marq">
-    <li>multi-agent orchestration</li><li>knowledge-graph RAG</li><li>neo4j + cypher</li>
-    <li>langgraph</li><li>ISO/SAE 21434</li><li>threat modelling</li><li>custom NER</li>
-    <li>fastapi</li><li>attack-path analysis</li><li>evaluation you can defend</li>
+    <li>multi-agent orchestration</li><li>knowledge-graph retrieval</li><li>neo4j + cypher</li>
+    <li>langgraph</li><li>threat modelling</li><li>custom NER</li><li>fastapi</li>
+    <li>local-first tooling</li><li>evaluation you can defend</li>
   </ul>
 </div>
 
@@ -207,36 +191,18 @@ footer a:hover{border-bottom-color:var(--yellow)}
   <a class="proj rv" href="https://github.com/a-dawg010/assay" style="--accent:var(--yellow)">
     <div class="in">
       <div>
-        <p class="pk">01 &nbsp;·&nbsp; CLI &nbsp;·&nbsp; PYTHON</p>
+        <p class="pk">01 &nbsp;·&nbsp; CLI &nbsp;·&nbsp; PYTHON, STDLIB ONLY</p>
         <h3 class="pn">assay</h3>
-        <p class="pt">your agents are hoarders.</p>
-        <p class="pb">Coding agents are messy guests. Scratch checkouts, dependency caches, whole VMs —
-        the session ends and nobody remembers any of it existed. assay finds what Claude Code, Cursor,
-        Codex and Antigravity left behind, attributes each find to the harness that made it, and sorts
-        by what you would actually get back. Nothing dies without you saying so.</p>
+        <p class="pt">what left the machine, and when.</p>
+        <p class="pb">Your coding agents write every session to disk in plaintext, with the working
+        directory attached. Nobody reads those files, so nobody notices they add up to an egress log —
+        a record of what left the machine that the vendors do not provide. assay reconstructs which
+        repository went to which vendor and when, and is equally clear about what it cannot see. A
+        gateway cannot be installed retroactively; these files are already there.</p>
         <span class="go">OPEN THE REPO <span class="arw">→</span></span>
       </div>
       <div class="viz">
-        <svg viewBox="0 0 300 172">
-          <g>
-            <rect class="tile" x="4"   y="4"  width="16" height="20" rx="2.5"/><rect class="tile" x="28"  y="4"  width="16" height="20" rx="2.5"/><rect class="tile" x="52"  y="4"  width="16" height="20" rx="2.5"/><rect class="tile" x="76"  y="4"  width="16" height="20" rx="2.5"/><rect class="tile" x="100" y="4"  width="16" height="20" rx="2.5"/><rect class="tile" x="124" y="4"  width="16" height="20" rx="2.5"/><rect class="tile" x="148" y="4"  width="16" height="20" rx="2.5"/><rect class="tile" x="172" y="4"  width="16" height="20" rx="2.5"/><rect class="tile" x="196" y="4"  width="16" height="20" rx="2.5"/>
-            <rect class="tile" x="4"   y="34" width="16" height="20" rx="2.5"/><rect class="tile" x="28"  y="34" width="16" height="20" rx="2.5"/><rect class="tile" x="52"  y="34" width="16" height="20" rx="2.5"/><rect class="tile" x="76"  y="34" width="16" height="20" rx="2.5"/><rect class="tile" x="100" y="34" width="16" height="20" rx="2.5"/><rect class="tile" x="124" y="34" width="16" height="20" rx="2.5"/><rect class="tile" x="148" y="34" width="16" height="20" rx="2.5"/><rect class="tile" x="172" y="34" width="16" height="20" rx="2.5"/><rect class="tile" x="196" y="34" width="16" height="20" rx="2.5"/>
-            <rect class="tile" x="4"   y="64" width="16" height="20" rx="2.5"/><rect class="tile" x="28"  y="64" width="16" height="20" rx="2.5"/><rect class="tile" x="52"  y="64" width="16" height="20" rx="2.5"/><rect class="tile" x="76"  y="64" width="16" height="20" rx="2.5"/><rect class="tile" x="100" y="64" width="16" height="20" rx="2.5"/><rect class="tile" x="124" y="64" width="16" height="20" rx="2.5"/><rect class="tile" x="148" y="64" width="16" height="20" rx="2.5"/><rect class="tile" x="172" y="64" width="16" height="20" rx="2.5"/><rect class="tile" x="196" y="64" width="16" height="20" rx="2.5"/>
-            <rect class="tile" x="4"   y="94" width="16" height="20" rx="2.5"/><rect class="tile" x="28"  y="94" width="16" height="20" rx="2.5"/><rect class="tile" x="52"  y="94" width="16" height="20" rx="2.5"/><rect class="tile" x="76"  y="94" width="16" height="20" rx="2.5"/><rect class="tile" x="100" y="94" width="16" height="20" rx="2.5"/><rect class="tile" x="124" y="94" width="16" height="20" rx="2.5"/><rect class="tile" x="148" y="94" width="16" height="20" rx="2.5"/><rect class="tile" x="172" y="94" width="16" height="20" rx="2.5"/><rect class="tile" x="196" y="94" width="16" height="20" rx="2.5"/>
-          </g>
-          <rect class="flag" x="28"  y="4"  width="16" height="20" rx="2.5"/>
-          <rect class="flag" x="100" y="4"  width="16" height="20" rx="2.5"/>
-          <rect class="flag" x="52"  y="34" width="16" height="20" rx="2.5"/>
-          <rect class="flag" x="172" y="34" width="16" height="20" rx="2.5"/>
-          <rect class="flag" x="4"   y="64" width="16" height="20" rx="2.5"/>
-          <rect class="flag" x="124" y="64" width="16" height="20" rx="2.5"/>
-          <rect class="flag" x="76"  y="94" width="16" height="20" rx="2.5"/>
-          <rect class="flag" x="196" y="94" width="16" height="20" rx="2.5"/>
-          <rect class="sweep" x="0" y="0" width="216" height="3"/>
-          <line x1="4" y1="132" x2="216" y2="132" stroke="var(--rule)"/>
-          <text class="cnt" x="4" y="164">41.6</text>
-          <text class="cntl" x="74" y="162">GB RECLAIMABLE</text>
-        </svg>
+        <svg viewBox="0 0 300 172" id="ledger"></svg>
       </div>
     </div>
   </a>
@@ -244,29 +210,36 @@ footer a:hover{border-bottom-color:var(--yellow)}
   <a class="proj rv" href="https://github.com/a-dawg010/shelfmark" style="--accent:var(--violet)">
     <div class="in">
       <div>
-        <p class="pk">02 &nbsp;·&nbsp; LOCAL &nbsp;·&nbsp; SEMANTIC INDEX</p>
+        <p class="pk">02 &nbsp;·&nbsp; macOS &nbsp;·&nbsp; SWIFT 6 &nbsp;·&nbsp; NO DEPENDENCIES</p>
         <h3 class="pn">shelfmark</h3>
-        <p class="pt">talk to your storage.</p>
-        <p class="pb">Search on your own machine is still filename matching in a nicer coat. You remember
-        what the document said, not what you called it. shelfmark indexes content instead of names and
-        answers a plain-English question with the file itself — no folder tree to walk, no page of
-        results ranked by how closely a filename matched.</p>
+        <p class="pt">not what it’s about. where it is.</p>
+        <p class="pb">A shelfmark is the notation a library puts on an item saying exactly where it
+        lives. Ask where a file is and you get the path — not a summary, not a chat. Two lists,
+        labelled and never blended: BM25 over a lexical index, and a MiniLM embedding index running
+        on device with a cosine floor, so nonsense returns nothing instead of six confident wrong
+        files. Everything stays on the Mac.</p>
         <span class="go">OPEN THE REPO <span class="arw">→</span></span>
       </div>
       <div class="viz">
         <svg viewBox="0 0 300 172">
-          <rect class="qbar" x="4" y="2" width="292" height="34" rx="9"/>
-          <text class="qtx" x="18" y="24"><tspan fill="var(--violet)">&gt;</tspan> that lease pdf from march</text>
-          <g>
-            <rect class="blk" x="4"   y="56" width="52" height="15" rx="3"/><rect class="blk" x="4"   y="77" width="52" height="15" rx="3"/><rect class="blk" x="4"   y="98" width="52" height="15" rx="3"/>
-            <rect class="blk" x="64"  y="56" width="52" height="15" rx="3"/><rect class="blk" x="64"  y="77" width="52" height="15" rx="3"/><rect class="blk" x="64"  y="98" width="52" height="15" rx="3"/>
-            <rect class="blk" x="124" y="56" width="52" height="15" rx="3"/><rect class="blk" x="124" y="77" width="52" height="15" rx="3"/><rect class="blk" x="124" y="98" width="52" height="15" rx="3"/>
-            <rect class="blk" x="184" y="56" width="52" height="15" rx="3"/><rect class="blk" x="184" y="77" width="52" height="15" rx="3"/><rect class="blk" x="184" y="98" width="52" height="15" rx="3"/>
-            <rect class="blk" x="244" y="56" width="52" height="15" rx="3"/><rect class="blk" x="244" y="77" width="52" height="15" rx="3"/><rect class="blk" x="244" y="98" width="52" height="15" rx="3"/>
-          </g>
-          <rect class="win" x="124" y="77" width="52" height="15" rx="3"/>
-          <rect class="hitc" x="4" y="128" width="210" height="30" rx="8"/>
-          <text class="hitt" x="18" y="148">lease_2026-03.pdf &nbsp;·&nbsp; ✓</text>
+          <rect class="qbar" x="4" y="2" width="292" height="32" rx="9"/>
+          <text class="qtx" x="17" y="22"><tspan fill="var(--violet)">&gt;</tspan> spanish coffee shop conversation</text>
+          <rect x="4" y="50" width="6" height="6" fill="var(--violet)"/>
+          <text class="colh" x="16" y="56">MATCHES YOUR WORDS</text>
+          <line class="rail" x1="4" y1="64" x2="144" y2="64"/>
+          <rect x="160" y="50" width="6" height="6" fill="var(--yellow)"/>
+          <text class="colh" x="172" y="56">MATCHES THE MEANING</text>
+          <line class="rail" x1="160" y1="64" x2="296" y2="64"/>
+          <rect class="winr" x="157" y="110" width="141" height="16"/>
+          <text class="row" x="6"   y="80"  style="animation-delay:.15s">README.md</text>
+          <text class="row" x="6"   y="98"  style="animation-delay:.25s">notes/spanish.md</text>
+          <text class="row" x="6"   y="116" style="animation-delay:.35s">shopping-list.md</text>
+          <text class="row" x="6"   y="134" style="animation-delay:.45s">trip-2025/cafes.txt</text>
+          <text class="row" x="162" y="80"  style="animation-delay:.55s">06_Flashcards_Sets_01_02.csv</text>
+          <text class="row" x="162" y="98"  style="animation-delay:.65s">04_Vocab_Cafe_Restaurante.md</text>
+          <text class="row" x="162" y="116" style="animation-delay:.75s">08_Dialogue_En_el_cafe.md</text>
+          <text class="row" x="162" y="134" style="animation-delay:.85s">05_Vocab_Presentarse.md</text>
+          <text class="note" x="162" y="160">that one contains none of those words.</text>
         </svg>
       </div>
     </div>
@@ -276,13 +249,13 @@ footer a:hover{border-bottom-color:var(--yellow)}
 <section id="how" class="wrap">
   <div class="stitle rv"><h2>how I think about it</h2><span>THREE RULES</span></div>
   <div class="notes">
-    <div class="note rv"><p class="num">01</p><h3>Decide, then execute.</h3>
+    <div class="note-c rv"><p class="num">01</p><h3>Decide, then execute.</h3>
       <p>The part that chooses which tool to reach for should be separate from the part that reaches.
       One prompt doing both is a system you cannot debug at 2am.</p></div>
-    <div class="note rv"><p class="num">02</p><h3>Relationships beat similarity.</h3>
+    <div class="note-c rv"><p class="num">02</p><h3>Relationships beat similarity.</h3>
       <p>A vector index tells you a document mentions the thing. A graph tells you what sits two hops
       downstream of it. In security work that distance <em>is</em> the answer.</p></div>
-    <div class="note rv"><p class="num">03</p><h3>If it can’t be traced, it isn’t an answer.</h3>
+    <div class="note-c rv"><p class="num">03</p><h3>If it can’t be traced, it isn’t an answer.</h3>
       <p>Anything that ends up in front of an assessor, a regulator or an on-call engineer has to carry
       the path it took to get there. Confidence is not evidence.</p></div>
   </div>
@@ -291,14 +264,13 @@ footer a:hover{border-bottom-color:var(--yellow)}
 
 <footer>
   <div class="wrap">
-    <span>PUNE, IN &nbsp;·&nbsp; GMT+5:30</span>
-    <span>NO ANALYTICS. NO NEWSLETTER. THE WORM IS LOAD-BEARING.</span>
-    <span><a href="https://github.com/a-dawg010">GITHUB ↗</a> &nbsp;&nbsp; <a href="mailto:ameypanse786@gmail.com">SAY SOMETHING ↗</a></span>
+    <span>LOCAL-FIRST, MOSTLY</span>
+    <span>NO ANALYTICS. NO NEWSLETTER. THE CROW IS LOAD-BEARING.</span>
+    <span><a href="https://github.com/a-dawg010">GITHUB ↗</a></span>
   </div>
 </footer>
 
 <script>
-/* ---------- theme ---------- */
 const root = document.documentElement, mq = matchMedia('(prefers-color-scheme: dark)');
 const set = t => root.setAttribute('data-theme', t);
 set(localStorage.getItem('theme') || (mq.matches ? 'dark' : 'light'));
@@ -308,97 +280,110 @@ document.getElementById('tt').onclick = () => {
   localStorage.setItem('theme', t); set(t);
 };
 
-/* ---------- marquee: duplicate the list so the loop is seamless ---------- */
-const m = document.getElementById('marq');
-m.innerHTML += m.innerHTML;
+const m = document.getElementById('marq'); m.innerHTML += m.innerHTML;
 
-/* ---------- reveals ---------- */
+/* assay's ledger: four vendor lanes, a tick per session, a playhead reconstructing them */
+const LANES = [
+  ['ANTHROPIC', [8,19,30,38,54,65,76,91,102,117,128,143,158,169,184,199,210,225,240]],
+  ['OPENAI',    [15,44,73,102,134,166,198,231]],
+  ['COPILOT', [4,33,62,111,157,210]],
+  ['GOOGLE',    [37,86,135,184,238]],
+];
+document.getElementById('ledger').innerHTML = LANES.map(([name, ticks], i) => {
+  const y = 22 + i * 30;
+  return `<text class="lane" x="46" y="${y + 3}" text-anchor="end">${name}</text>
+    <line class="rail" x1="52" y1="${y}" x2="296" y2="${y}"/>` +
+    ticks.map(x => `<rect class="tick" x="${52 + x}" y="${y - 5}" width="2.4" height="10" rx="1.2"
+      style="animation-delay:${(0.2 + x / 252 * 3.2).toFixed(2)}s"/>`).join('');
+}).join('') + `
+  <rect class="play" x="52" y="10" width="1.6" height="130"/>
+  <line class="rail" x1="52" y1="150" x2="296" y2="150"/>
+  <text class="axis" x="52" y="164">EARLIEST RECORD</text>
+  <text class="axis" x="296" y="164" text-anchor="end">TODAY</text>`;
+
+/* reveals — .in on the wrapper also starts each card's own animations */
 const io = new IntersectionObserver(es => es.forEach(e => {
-  if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  if(e.isIntersecting){ e.target.classList.add('in', 'in-view'); io.unobserve(e.target); }
 }), { rootMargin: '-40px' });
 document.querySelectorAll('.rv').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
 
-/* ---------- the worm ----------
-   Crawls the strip on its own, chases the pointer while you hover it, and eats
-   the crumbs it passes. They grow back. */
+/* ---------- the crow ----------
+   Hops along the strip on its own, follows the pointer while you hover it, and
+   pecks at the crumbs it reaches. They come back. */
 const SVG = 'http://www.w3.org/2000/svg';
-const svg = document.getElementById('worm'), strip = document.getElementById('strip');
+const stage = document.getElementById('bird'), strip = document.getElementById('strip');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const SEGS = 7, FLOOR = 46, W = 1000;
-const trail = [], segs = [];
+const FLOOR = 52, SCALE = 0.5, W = 1000;
 
-for(let i = SEGS - 1; i >= 0; i--){
-  const g = document.createElementNS(SVG, 'circle');
-  g.setAttribute('r', 2.6 + i * 0.62);
-  g.setAttribute('fill', 'var(--ink)');
-  svg.appendChild(g); segs.push(g);
-}
-segs.reverse();                       // segs[0] is the head
-const eyes = [0, 1].map(() => { const c = document.createElementNS(SVG, 'circle');
-  c.setAttribute('r', 1.15); c.setAttribute('fill', 'var(--paper)'); svg.appendChild(c); return c; });
-
-const CRUMB_X = [300, 318, 336, 354, 620, 638, 656];
-const crumbs = CRUMB_X.map(x => {
+const crumbs = [300, 318, 336, 620, 638].map(x => {
   const r = document.createElementNS(SVG, 'rect');
-  r.setAttribute('x', x); r.setAttribute('y', FLOOR - 6); r.setAttribute('width', 6);
-  r.setAttribute('height', 6); r.setAttribute('rx', 1.5); r.setAttribute('fill', 'var(--rule2)');
-  svg.appendChild(r); return { el: r, x, eaten: 0 };
+  r.setAttribute('x', x); r.setAttribute('y', FLOOR - 5); r.setAttribute('width', 5);
+  r.setAttribute('height', 5); r.setAttribute('rx', 1.4); r.setAttribute('fill', 'var(--rule2)');
+  stage.appendChild(r); return { el: r, x, eaten: 0 };
 });
-const nom = document.createElementNS(SVG, 'text');
-nom.setAttribute('font-family', "'Instrument Serif',Georgia,serif");
-nom.setAttribute('font-style', 'italic'); nom.setAttribute('font-size', '19');
-nom.setAttribute('fill', 'var(--ink)'); nom.setAttribute('opacity', '0');
-svg.appendChild(nom);
 
-let head = -30, chase = null, nomAt = -1e9, t = 0;
-const GAP = 7.4;                      // distance between segment centres, in viewBox units
+const caw = document.createElementNS(SVG, 'text');
+caw.setAttribute('font-family', "'Instrument Serif',Georgia,serif");
+caw.setAttribute('font-style', 'italic'); caw.setAttribute('font-size', '17');
+caw.setAttribute('fill', 'var(--ink)'); caw.setAttribute('opacity', '0');
+caw.textContent = 'caw.'; stage.appendChild(caw);
+
+const crow = document.createElementNS(SVG, 'g');
+crow.innerHTML = `
+  <path d="M1,-13 L0,-2 M8,-13 L7,-2" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M-4,-0.7 L0,-2.2 L5.6,-0.7 M0,-2.2 L-2.6,0.2" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M3,-0.7 L7,-2.2 L12.6,-0.7 M7,-2.2 L4.4,0.2" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M-4,-28 L-48,-13 L-45,-5 L-2,-13 Z" fill="var(--ink)"/>
+  <ellipse cx="0" cy="-22" rx="18" ry="11" transform="rotate(-12 0 -22)" fill="var(--ink)"/>
+  <path d="M2,-26 C4,-38 13,-46 22,-45 C30,-44 34,-38 33,-32 C32,-27 26,-24 19,-25 C11,-26 5,-24 2,-26 Z" fill="var(--ink)"/>
+  <path d="M31,-39.5 C37,-38.6 44,-36 48,-33.6 C43.6,-31.2 36,-30.4 30.4,-31.2 Z" fill="var(--ink)"/>
+  <path d="M-14,-21 C-4,-25 8,-26 15,-25" stroke="var(--paper)" stroke-width="1.2" fill="none" opacity=".34" stroke-linecap="round"/>
+  <circle cx="26" cy="-37.5" r="1.6" fill="var(--paper)"/>`;
+stage.appendChild(crow);
+
+let x = -60, chase = null, phase = 0, peckUntil = 0, cawAt = -1e9, last = 0;
 strip.addEventListener('pointermove', e => {
   const r = strip.getBoundingClientRect();
   chase = (e.clientX - r.left) / r.width * W;
 });
 strip.addEventListener('pointerleave', () => { chase = null; });
 
-function tick(now){
-  t = now / 1000;
-  if(chase !== null) head += (chase - head) * 0.07;
-  else { head += 0.95; if(head > W + 40) head = -30; }
+function frame(now){
+  const dt = Math.min(48, now - (last || now)); last = now;
+  const pecking = now < peckUntil;
 
-  trail.unshift(head);
-  if(trail.length > 900) trail.length = 900;
-
-  // walk back along the recorded path until each segment is GAP behind the one before it
-  const spots = [head];
-  for(let i = 1, j = 0; i < SEGS; i++){
-    while(j < trail.length - 1 && Math.abs(trail[j] - spots[i - 1]) < GAP) j++;
-    spots.push(trail[j]);
+  if(!pecking){
+    if(chase !== null) x += Math.max(-2.4, Math.min(2.4, (chase - x) * 0.05));
+    else { x += dt * 0.055; if(x > W + 70) x = -60; }
+    phase += dt * 0.011;
   }
 
-  segs.forEach((s, i) => {
-    const x = spots[i] ?? head;
-    const y = FLOOR - 4 - (SEGS - i) * 0.55 - Math.sin(t * 7 - i * 0.8) * 2.4;
-    s.setAttribute('cx', x); s.setAttribute('cy', y);
-    if(i === 0){
-      eyes[0].setAttribute('cx', x + 1.6); eyes[0].setAttribute('cy', y - 2.2);
-      eyes[1].setAttribute('cx', x + 3.9); eyes[1].setAttribute('cy', y - 0.2);
-    }
-  });
+  // hop: a bounce whose height falls off when the bird is barely moving
+  const speed = chase !== null ? Math.min(1, Math.abs(chase - x) / 40) : 1;
+  const bounce = pecking ? 0 : Math.abs(Math.sin(phase)) * 9 * speed;
+  const pitch = pecking ? 24 * Math.abs(Math.sin((peckUntil - now) / 320 * Math.PI)) : 0;
+  crow.setAttribute('transform',
+    `translate(${x.toFixed(2)} ${(FLOOR - bounce).toFixed(2)}) scale(${SCALE}) rotate(${pitch.toFixed(1)} 4 0)`);
 
   for(const c of crumbs){
-    if(!c.eaten && Math.abs(head - c.x) < 7){
+    const beak = x + 48 * SCALE;
+    if(!c.eaten && Math.abs(beak - c.x) < 8){
       c.eaten = now; c.el.setAttribute('opacity', '0');
-      nom.textContent = 'nom.'; nom.setAttribute('x', c.x + 14); nom.setAttribute('y', FLOOR - 14);
-      nomAt = now;
-    } else if(c.eaten && now - c.eaten > 6500){
+      peckUntil = now + 320;
+      caw.setAttribute('x', c.x + 16); caw.setAttribute('y', FLOOR - 26); cawAt = now;
+    } else if(c.eaten && now - c.eaten > 7000){
       c.eaten = 0; c.el.setAttribute('opacity', '1');
     }
   }
-  const age = now - nomAt;
-  nom.setAttribute('opacity', age < 1400 ? String(Math.max(0, 1 - age / 1400)) : '0');
+  const age = now - cawAt;
+  caw.setAttribute('opacity', age < 1500 ? String(Math.max(0, 1 - age / 1500)) : '0');
 
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 }
-if(!reduced) requestAnimationFrame(tick);
-else { head = W * 0.35; trail.length = 0; requestAnimationFrame(t => { tick(t); }); }
+if(reduced){
+  x = W * 0.34;
+  crow.setAttribute('transform', `translate(${x} ${FLOOR}) scale(${SCALE})`);
+} else requestAnimationFrame(frame);
 </script>
 </body>
 </html>

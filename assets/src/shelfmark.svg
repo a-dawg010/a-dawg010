@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 286" width="880" height="286" role="img" aria-label="shelfmark — ask your storage a question in plain English and get the file back.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 286" width="880" height="286" role="img" aria-label="shelfmark — ask where a file is and get the path. Two answers, never blended: a lexical index and an on-device embedding index, side by side.">
 <style>
 __FONTS__
 __VARS__
@@ -10,67 +10,62 @@ __VARS__
 .link{font:500 11px var(--mono);fill:var(--violet);letter-spacing:1.3px}
 .ask{font:500 12.5px var(--mono);fill:var(--ink)}
 .ask tspan.c{fill:var(--violet)}
-.blk{fill:var(--sunk);stroke:var(--rule);stroke-width:.9}
-.hit{font:500 12px var(--mono);fill:var(--ytext)}
-.ms{font:500 10px var(--mono);fill:var(--faint);letter-spacing:1.8px}
+.colh{font:500 9px var(--mono);fill:var(--faint);letter-spacing:1.6px}
+.row{font:500 9.5px var(--mono);fill:var(--dim)}
+.note{font:italic 400 13px var(--serif);fill:var(--ink)}
+.rail{stroke:var(--rule);stroke-width:1}
 </style>
 <defs>
   <clipPath id="cardclip"><rect x="24" y="14" width="832" height="258" rx="14"/></clipPath>
-  <clipPath id="typing"><rect x="486" y="46" width="0" height="30">
-    <animate attributeName="width" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;300;300;300;0" keyTimes="0;0.05;0.34;0.90;0.95;1"/>
+  <clipPath id="typing"><rect x="486" y="42" width="0" height="30">
+    <animate attributeName="width" dur="12s" repeatCount="indefinite" calcMode="linear"
+      values="0;0;300;300;300;0" keyTimes="0;0.04;0.30;0.88;0.93;1"/>
   </rect></clipPath>
 </defs>
-
 <rect width="880" height="286" fill="var(--paper)"/>
 <rect class="card" x="24" y="14" width="832" height="258" rx="14"/>
 <g clip-path="url(#cardclip)"><rect x="24" y="14" width="5" height="258" fill="var(--violet)"/></g>
 
-<text class="eyebrow" x="58" y="54">02 &#160;·&#160; LOCAL &#160;·&#160; SEMANTIC INDEX</text>
+<text class="eyebrow" x="58" y="54">02 &#160;·&#160; macOS &#160;·&#160; SWIFT 6 &#160;·&#160; NO DEPENDENCIES</text>
 <text class="name" x="56" y="98">shelfmark</text>
-<text class="tag" x="56" y="128">talk to your storage.</text>
-<text class="body" x="56" y="164">Ask the drive a question the way you’d ask a person.</text>
-<text class="body" x="56" y="183">It answers with the file — not a folder tree, not forty</text>
-<text class="body" x="56" y="202">results ranked by filename. It read everything already.</text>
-<text class="link" x="56" y="238">GITHUB.COM/A-DAWG010/SHELFMARK  ↗</text>
+<text class="tag" x="56" y="128">not what it&#8217;s about. where it is.</text>
+<text class="body" x="56" y="164">Ask where a file is, get the path. Two answers, never</text>
+<text class="body" x="56" y="183">blended: one lexical index, one on-device embedding</text>
+<text class="body" x="56" y="202">index, side by side. Nothing leaves the Mac.</text>
+<text class="link" x="56" y="238">GITHUB.COM/A-DAWG010/SHELFMARK  &#8599;</text>
 
-<!-- ask bar -->
-<rect x="470" y="40" width="368" height="42" rx="10" fill="var(--sunk)" stroke="var(--rule)"/>
+<rect x="470" y="36" width="374" height="38" rx="9" fill="var(--sunk)" stroke="var(--rule)"/>
 <g clip-path="url(#typing)">
-  <text class="ask" x="486" y="66"><tspan class="c">&gt;</tspan> that lease pdf from march</text>
+  <text class="ask" x="486" y="60"><tspan class="c">&gt;</tspan> spanish coffee shop conversation</text>
 </g>
-<rect x="486" y="52" width="7" height="16" fill="var(--violet)">
-  <animate attributeName="x" dur="11s" repeatCount="indefinite" calcMode="linear" values="486;486;786;786;486;486" keyTimes="0;0.05;0.34;0.90;0.93;1"/>
+<rect x="486" y="48" width="7" height="15" fill="var(--violet)">
+  <animate attributeName="x" dur="12s" repeatCount="indefinite" calcMode="linear" values="486;486;786;786;486;486" keyTimes="0;0.04;0.30;0.88;0.91;1"/>
   <animate attributeName="opacity" dur=".9s" repeatCount="indefinite" calcMode="discrete" values="1;0" keyTimes="0;0.5"/>
 </rect>
 
-<!-- shelves -->
-<g>
-  <rect class="blk" x="470" y="104" width="68" height="16" rx="3"/><rect class="blk" x="470" y="126" width="68" height="16" rx="3"/><rect class="blk" x="470" y="148" width="68" height="16" rx="3"/><rect class="blk" x="470" y="170" width="68" height="16" rx="3"/>
-  <rect class="blk" x="545" y="104" width="68" height="16" rx="3"/><rect class="blk" x="545" y="126" width="68" height="16" rx="3"/><rect class="blk" x="545" y="148" width="68" height="16" rx="3"/><rect class="blk" x="545" y="170" width="68" height="16" rx="3"/>
-  <rect class="blk" x="620" y="104" width="68" height="16" rx="3"/><rect class="blk" x="620" y="126" width="68" height="16" rx="3"/><rect class="blk" x="620" y="148" width="68" height="16" rx="3"/><rect class="blk" x="620" y="170" width="68" height="16" rx="3"/>
-  <rect class="blk" x="695" y="104" width="68" height="16" rx="3"/><rect class="blk" x="695" y="126" width="68" height="16" rx="3"/><rect class="blk" x="695" y="148" width="68" height="16" rx="3"/><rect class="blk" x="695" y="170" width="68" height="16" rx="3"/>
-  <rect class="blk" x="770" y="104" width="68" height="16" rx="3"/><rect class="blk" x="770" y="126" width="68" height="16" rx="3"/><rect class="blk" x="770" y="148" width="68" height="16" rx="3"/><rect class="blk" x="770" y="170" width="68" height="16" rx="3"/>
-</g>
+<rect x="470" y="92" width="7" height="7" fill="var(--violet)"/>
+<text class="colh" x="484" y="99">MATCHES YOUR WORDS</text>
+<line class="rail" x1="470" y1="106" x2="648" y2="106"/>
 
-<!-- the scan ripple: a few candidates warm up, then one wins -->
-<g>
-  <rect x="470" y="148" width="68" height="16" rx="3" fill="var(--rule2)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.36;0.39;0.52;0.56;1"/></rect>
-  <rect x="695" y="104" width="68" height="16" rx="3" fill="var(--rule2)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.39;0.42;0.52;0.56;1"/></rect>
-  <rect x="770" y="170" width="68" height="16" rx="3" fill="var(--rule2)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.42;0.45;0.52;0.56;1"/></rect>
-</g>
-<g opacity="0">
-  <animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.47;0.52;0.90;0.94;1"/>
-  <rect x="620" y="126" width="68" height="16" rx="3" fill="var(--yellow)"/>
-  <rect x="616" y="122" width="76" height="24" rx="5" fill="none" stroke="var(--ink)" stroke-width="1.4"/>
-</g>
+<rect x="666" y="92" width="7" height="7" fill="var(--yellow)"/>
+<text class="colh" x="680" y="99">MATCHES THE MEANING</text>
+<line class="rail" x1="666" y1="106" x2="844" y2="106"/>
 
-<!-- the answer -->
 <g opacity="0">
-  <animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.52;0.57;0.90;0.94;1"/>
-  <rect x="470" y="204" width="278" height="32" rx="8" fill="var(--yellow)"/>
-  <text class="hit" x="486" y="224">lease_2026-03.pdf &#160;·&#160; ✓</text>
+  <animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.55;0.59;0.88;0.92;1"/>
+  <rect x="664" y="146" width="178" height="20" rx="4" fill="var(--yellow)"/>
 </g>
-<text class="ms" x="838" y="224" text-anchor="end" opacity="0">0.4S
-  <animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.52;0.57;0.90;0.94;1"/>
-</text>
+  <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.360;0.380;0.88;0.92;1"/><text class="row" x="474" y="116">README.md</text></g>
+  <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.382;0.402;0.88;0.92;1"/><text class="row" x="474" y="138">notes/spanish.md</text></g>
+  <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.404;0.424;0.88;0.92;1"/><text class="row" x="474" y="160">shopping-list.md</text></g>
+  <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.426;0.446;0.88;0.92;1"/><text class="row" x="474" y="182">trip-2025/cafes.txt</text></g>
+  <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.460;0.480;0.88;0.92;1"/><text class="row" x="670" y="116">06_Flashcards_Sets_01_02.csv</text></g>
+  <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.482;0.502;0.88;0.92;1"/><text class="row" x="670" y="138">04_Vocab_Cafe_Restaurante.md</text></g>
+  <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.504;0.524;0.88;0.92;1"/><text class="row" x="670" y="160">08_Dialogue_En_el_cafe.md</text></g>
+  <g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.526;0.546;0.88;0.92;1"/><text class="row" x="670" y="182">05_Vocab_Presentarse.md</text></g>
+
+<g opacity="0">
+  <animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.60;0.65;0.88;0.92;1"/>
+  <text class="note" x="666" y="228">that one contains none of those words.</text>
+</g>
 </svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 286" width="880" height="286" role="img" aria-label="assay — a scanner that finds the files and virtual machines coding agents leave behind, and reports how much space you can reclaim.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 286" width="880" height="286" role="img" aria-label="assay — reconstructs which of your repositories have been sent to which AI vendor, and when, from records already on your Mac.">
 <style>
 __FONTS__
 __VARS__
@@ -8,97 +8,80 @@ __VARS__
 .tag{font:italic 400 19px var(--serif);fill:var(--ink)}
 .body{font:500 13px var(--body);fill:var(--dim)}
 .link{font:500 11px var(--mono);fill:var(--violet);letter-spacing:1.3px}
-.tile{fill:var(--sunk);stroke:var(--rule);stroke-width:.9}
-.num{font:800 30px var(--disp);fill:var(--ink);letter-spacing:-1px}
-.unit{font:500 11px var(--mono);fill:var(--faint);letter-spacing:2px}
+.lane{font:500 9.5px var(--mono);fill:var(--faint);letter-spacing:1.6px}
+.rail{stroke:var(--rule);stroke-width:1}
+.tick{fill:var(--ink)}
+.axis{font:500 9px var(--mono);fill:var(--faint);letter-spacing:1.6px}
 </style>
 <defs>
   <clipPath id="cardclip"><rect x="24" y="14" width="832" height="258" rx="14"/></clipPath>
-  <clipPath id="grid"><rect x="470" y="44" width="230" height="130"/></clipPath>
-</defs>
 
+</defs>
 <rect width="880" height="286" fill="var(--paper)"/>
 <rect class="card" x="24" y="14" width="832" height="258" rx="14"/>
 <g clip-path="url(#cardclip)"><rect x="24" y="14" width="5" height="258" fill="var(--yellow)"/></g>
 
-<text class="eyebrow" x="58" y="54">01 &#160;·&#160; CLI &#160;·&#160; PYTHON</text>
+<text class="eyebrow" x="58" y="54">01 &#160;·&#160; CLI &#160;·&#160; PYTHON, STDLIB ONLY</text>
 <text class="name" x="56" y="98">assay</text>
-<text class="tag" x="56" y="128">your agents are hoarders.</text>
-<text class="body" x="56" y="164">Scans the machine for what Claude Code, Cursor,</text>
-<text class="body" x="56" y="183">Codex and Antigravity left behind — orphaned files,</text>
-<text class="body" x="56" y="202">dead VMs, caches nobody claims. You decide what dies.</text>
-<text class="link" x="56" y="238">GITHUB.COM/A-DAWG010/ASSAY  ↗</text>
+<text class="tag" x="56" y="128">what left the machine, and when.</text>
+<text class="body" x="56" y="164">Reconstructs which of your repositories went to which AI</text>
+<text class="body" x="56" y="183">vendor, from the session records your coding agents already</text>
+<text class="body" x="56" y="202">wrote to disk. Read-only. Uploads nothing. Deletes nothing.</text>
+<text class="link" x="56" y="238">GITHUB.COM/A-DAWG010/ASSAY  &#8599;</text>
 
-<!-- scan field -->
-<g clip-path="url(#grid)">
-  <g>
-    <rect class="tile" x="470" y="44" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="494" y="44" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="518" y="44" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="542" y="44" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="566" y="44" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="590" y="44" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="614" y="44" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="638" y="44" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="662" y="44" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="470" y="74" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="494" y="74" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="518" y="74" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="542" y="74" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="566" y="74" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="590" y="74" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="614" y="74" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="638" y="74" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="662" y="74" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="470" y="104" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="494" y="104" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="518" y="104" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="542" y="104" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="566" y="104" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="590" y="104" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="614" y="104" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="638" y="104" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="662" y="104" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="470" y="134" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="494" y="134" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="518" y="134" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="542" y="134" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="566" y="134" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="590" y="134" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="614" y="134" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="638" y="134" width="16" height="20" rx="2.5"/>
-    <rect class="tile" x="662" y="134" width="16" height="20" rx="2.5"/>
-  </g>
+  <text class="lane" x="540" y="66" text-anchor="end">ANTHROPIC</text>
+  <line class="rail" x1="552" y1="62" x2="838" y2="62"/>
+  <rect class="tick" x="560" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.0979;0.1059;0.86;0.90;1"/></rect>
+  <rect class="tick" x="573" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1270;0.1350;0.86;0.90;1"/></rect>
+  <rect class="tick" x="586" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1561;0.1641;0.86;0.90;1"/></rect>
+  <rect class="tick" x="598" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1829;0.1909;0.86;0.90;1"/></rect>
+  <rect class="tick" x="617" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2255;0.2335;0.86;0.90;1"/></rect>
+  <rect class="tick" x="630" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2545;0.2625;0.86;0.90;1"/></rect>
+  <rect class="tick" x="643" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2836;0.2916;0.86;0.90;1"/></rect>
+  <rect class="tick" x="661" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3239;0.3319;0.86;0.90;1"/></rect>
+  <rect class="tick" x="674" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3530;0.3610;0.86;0.90;1"/></rect>
+  <rect class="tick" x="692" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3933;0.4013;0.86;0.90;1"/></rect>
+  <rect class="tick" x="705" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4224;0.4304;0.86;0.90;1"/></rect>
+  <rect class="tick" x="723" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4627;0.4707;0.86;0.90;1"/></rect>
+  <rect class="tick" x="741" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5029;0.5109;0.86;0.90;1"/></rect>
+  <rect class="tick" x="754" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5320;0.5400;0.86;0.90;1"/></rect>
+  <rect class="tick" x="772" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5723;0.5803;0.86;0.90;1"/></rect>
+  <rect class="tick" x="790" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6126;0.6206;0.86;0.90;1"/></rect>
+  <rect class="tick" x="803" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6417;0.6497;0.86;0.90;1"/></rect>
+  <rect class="tick" x="821" y="56" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6820;0.6900;0.86;0.90;1"/></rect>
+  <text class="lane" x="540" y="96" text-anchor="end">OPENAI</text>
+  <line class="rail" x1="552" y1="92" x2="838" y2="92"/>
+  <rect class="tick" x="568" y="86" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1158;0.1238;0.86;0.90;1"/></rect>
+  <rect class="tick" x="601" y="86" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1897;0.1977;0.86;0.90;1"/></rect>
+  <rect class="tick" x="634" y="86" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2635;0.2715;0.86;0.90;1"/></rect>
+  <rect class="tick" x="667" y="86" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3373;0.3453;0.86;0.90;1"/></rect>
+  <rect class="tick" x="703" y="86" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4179;0.4259;0.86;0.90;1"/></rect>
+  <rect class="tick" x="739" y="86" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4985;0.5065;0.86;0.90;1"/></rect>
+  <rect class="tick" x="775" y="86" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5790;0.5870;0.86;0.90;1"/></rect>
+  <rect class="tick" x="812" y="86" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6618;0.6698;0.86;0.90;1"/></rect>
+  <text class="lane" x="540" y="126" text-anchor="end">COPILOT / CURSOR</text>
+  <line class="rail" x1="552" y1="122" x2="838" y2="122"/>
+  <rect class="tick" x="556" y="116" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.0890;0.0970;0.86;0.90;1"/></rect>
+  <rect class="tick" x="589" y="116" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1628;0.1708;0.86;0.90;1"/></rect>
+  <rect class="tick" x="622" y="116" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2366;0.2446;0.86;0.90;1"/></rect>
+  <rect class="tick" x="678" y="116" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3620;0.3700;0.86;0.90;1"/></rect>
+  <rect class="tick" x="730" y="116" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4783;0.4863;0.86;0.90;1"/></rect>
+  <rect class="tick" x="791" y="116" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6148;0.6228;0.86;0.90;1"/></rect>
+  <text class="lane" x="540" y="156" text-anchor="end">GOOGLE</text>
+  <line class="rail" x1="552" y1="152" x2="838" y2="152"/>
+  <rect class="tick" x="594" y="146" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1740;0.1820;0.86;0.90;1"/></rect>
+  <rect class="tick" x="650" y="146" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2993;0.3073;0.86;0.90;1"/></rect>
+  <rect class="tick" x="706" y="146" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4246;0.4326;0.86;0.90;1"/></rect>
+  <rect class="tick" x="762" y="146" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5499;0.5579;0.86;0.90;1"/></rect>
+  <rect class="tick" x="819" y="146" width="2.6" height="12" rx="1.2" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6775;0.6855;0.86;0.90;1"/></rect>
 
-  <!-- flagged: filled yellow as the sweep passes, cleared at the end -->
-  <g>
-    <rect x="494" y="44" width="16" height="20" rx="2.5" fill="var(--yellow)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.14;0.17;0.80;0.84;1"/></rect>
-    <rect x="566" y="44" width="16" height="20" rx="2.5" fill="var(--yellow)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.20;0.23;0.80;0.84;1"/></rect>
-    <rect x="518" y="74" width="16" height="20" rx="2.5" fill="var(--yellow)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.30;0.33;0.80;0.84;1"/></rect>
-    <rect x="638" y="74" width="16" height="20" rx="2.5" fill="var(--yellow)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.36;0.39;0.80;0.84;1"/></rect>
-    <rect x="470" y="104" width="16" height="20" rx="2.5" fill="var(--yellow)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.45;0.48;0.80;0.84;1"/></rect>
-    <rect x="590" y="104" width="16" height="20" rx="2.5" fill="var(--yellow)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.51;0.54;0.80;0.84;1"/></rect>
-    <rect x="542" y="134" width="16" height="20" rx="2.5" fill="var(--yellow)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.62;0.65;0.80;0.84;1"/></rect>
-    <rect x="662" y="134" width="16" height="20" rx="2.5" fill="var(--yellow)" opacity="0"><animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.68;0.71;0.80;0.84;1"/></rect>
-  </g>
-
-  <!-- sweep -->
-  <rect x="464" y="40" width="244" height="3" fill="var(--yellow)" opacity=".85">
-    <animate attributeName="y" dur="11s" repeatCount="indefinite" calcMode="linear" values="40;40;172;172;40;40" keyTimes="0;0.06;0.74;0.80;0.83;1"/>
-    <animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="linear" values="0;.85;.85;0;0" keyTimes="0;0.06;0.74;0.80;1"/>
+  <rect x="552" y="44" width="1.6" height="146" fill="var(--yellow)" opacity="0">
+    <animate attributeName="x" dur="12s" repeatCount="indefinite" calcMode="linear" values="552;552;838;838;552;552" keyTimes="0;0.08;0.72;0.86;0.90;1"/>
+    <animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;1;1;0;0" keyTimes="0;0.08;0.72;0.78;1"/>
   </rect>
-</g>
 
-<line x1="470" y1="192" x2="700" y2="192" stroke="var(--rule)"/>
-<g>
-  <text class="num" x="470" y="228" opacity="0">0.0<animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="discrete" values="1;0;0;0;0;0;0;0;1" keyTimes="0;0.14;0.26;0.38;0.50;0.60;0.70;0.80;0.90"/></text>
-  <text class="num" x="470" y="228" opacity="0">3.2<animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="discrete" values="0;1;0;0;0;0;0;0;0" keyTimes="0;0.14;0.26;0.38;0.50;0.60;0.70;0.80;0.90"/></text>
-  <text class="num" x="470" y="228" opacity="0">9.8<animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="discrete" values="0;0;1;0;0;0;0;0;0" keyTimes="0;0.14;0.26;0.38;0.50;0.60;0.70;0.80;0.90"/></text>
-  <text class="num" x="470" y="228" opacity="0">17.4<animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="discrete" values="0;0;0;1;0;0;0;0;0" keyTimes="0;0.14;0.26;0.38;0.50;0.60;0.70;0.80;0.90"/></text>
-  <text class="num" x="470" y="228" opacity="0">24.9<animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="discrete" values="0;0;0;0;1;0;0;0;0" keyTimes="0;0.14;0.26;0.38;0.50;0.60;0.70;0.80;0.90"/></text>
-  <text class="num" x="470" y="228" opacity="0">31.6<animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="discrete" values="0;0;0;0;0;1;0;0;0" keyTimes="0;0.14;0.26;0.38;0.50;0.60;0.70;0.80;0.90"/></text>
-  <text class="num" x="470" y="228" opacity="0">38.3<animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="discrete" values="0;0;0;0;0;0;1;0;0" keyTimes="0;0.14;0.26;0.38;0.50;0.60;0.70;0.80;0.90"/></text>
-  <text class="num" x="470" y="228" opacity="0">41.6<animate attributeName="opacity" dur="11s" repeatCount="indefinite" calcMode="discrete" values="0;0;0;0;0;0;0;1;0" keyTimes="0;0.14;0.26;0.38;0.50;0.60;0.70;0.80;0.90"/></text>
-  <text class="unit" x="536" y="226">GB RECLAIMABLE</text>
-</g>
+  <line class="rail" x1="552" y1="200" x2="838" y2="200"/>
+  <text class="axis" x="552" y="216">EARLIEST RECORD</text>
+  <text class="axis" x="838" y="216" text-anchor="end">TODAY</text>
+  <text class="axis" x="552" y="240">READ-ONLY &#160;·&#160; NO NETWORK &#160;·&#160; NO DEPENDENCIES</text>
 </svg>

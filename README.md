@@ -1,14 +1,16 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img alt="Ameya Panse — AI engineer, Pune. I build agents that know when they're guessing." src="assets/hero-light.svg" width="100%">
+  <img alt="Ameya — AI engineer. I build agents that know when they're guessing." src="assets/hero-light.svg" width="100%">
 </picture>
 
 Three years teaching language models to behave in rooms where being wrong is expensive —
-automotive security, compliance, threat intel. In practice that means orchestration you can
-audit, retrieval that understands relationships instead of vibes, and a surprising amount of
+security, compliance, threat intel. In practice that means orchestration you can audit,
+retrieval that understands relationships instead of vibes, and a surprising amount of
 engineering dedicated to making a model say *I don't know that yet*.
 
-The rest of the time I build small sharp tools for problems that annoy me.
+The rest of the time I build small sharp tools for problems that annoy me. Both of the ones
+below are local-first, read-only where it counts, and deliberately unexciting about what they
+claim.
 
 <br>
 
@@ -16,7 +18,7 @@ The rest of the time I build small sharp tools for problems that annoy me.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/assay-dark.svg">
-  <img alt="assay — your agents are hoarders. Scans the machine for what Claude Code, Cursor, Codex and Antigravity left behind and reports what you can reclaim." src="assets/assay-light.svg" width="100%">
+  <img alt="assay — what left the machine, and when. Reconstructs which of your repositories went to which AI vendor, from session records your coding agents already wrote to disk." src="assets/assay-light.svg" width="100%">
 </picture>
 
 **[github.com/a-dawg010/assay →](https://github.com/a-dawg010/assay)**
@@ -26,14 +28,25 @@ The rest of the time I build small sharp tools for problems that annoy me.
 
 <br>
 
-Coding agents are messy guests. They spin up scratch directories, half-finished checkouts,
-dependency caches and whole VMs, and then the session ends and nobody remembers any of it existed.
-Six months later you are out sixty gigabytes and you have no idea why.
+Your coding agents write every session to disk in plaintext, at predictable paths, with the
+working directory attached to each record. Nobody reads those files, so nobody notices that they
+add up to an egress log — a record of what left the machine that the vendors themselves do not
+provide. Copilot's admin audit log excludes client-side prompt content; Claude Code and Cursor
+make no durable-audit commitment.
 
-`assay` walks the filesystem looking for the fingerprints each harness leaves — directory shapes,
-lockfile patterns, VM disk images, orphaned caches — attributes each find to the agent that made it,
-and sorts by what you would actually get back. Nothing is deleted without you saying so; the whole
-point is a list you can read, not a cleaner that surprises you.
+The corollary that makes it worth running: **a gateway cannot be installed retroactively.** A
+proxy deployed today knows nothing about last quarter. These files do.
+
+It reads Claude Code's JSONL sessions, Codex rollouts, the VS Code and Cursor workspace
+databases, and Gemini's shadow git repos, then reports which repository went to which vendor and
+when. It is equally clear about what it cannot see: inline completion leaves no local record,
+and Antigravity's conversations are encrypted at rest, so they are counted and never decrypted.
+
+Findings are pattern shapes, not verdicts. "Thirteen files contain strings matching a token
+pattern" is a true sentence; "thirteen secrets leaked" is not. Matches are redacted to
+first-six and last-two characters — enough to deduplicate, not enough to use — and `--share`
+prints counts and date ranges only, with the test suite asserting that no repository name or
+path escapes. Standard library only. No dependencies, no install, no network.
 
 </details>
 
@@ -41,7 +54,7 @@ point is a list you can read, not a cleaner that surprises you.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/shelfmark-dark.svg">
-  <img alt="shelfmark — talk to your storage. Ask your drive a question in plain English and get the file back." src="assets/shelfmark-light.svg" width="100%">
+  <img alt="shelfmark — not what it's about, where it is. Ask where a file is and get the path, from two indexes shown side by side and never blended." src="assets/shelfmark-light.svg" width="100%">
 </picture>
 
 **[github.com/a-dawg010/shelfmark →](https://github.com/a-dawg010/shelfmark)**
@@ -51,13 +64,21 @@ point is a list you can read, not a cleaner that surprises you.
 
 <br>
 
-Search on your own machine is still filename matching wearing a nicer coat. You know what the
-document *said*; you do not remember what you called it or which of four folders it ended up in.
+A *shelfmark* is the notation a library puts on an item saying exactly where it lives. Not what
+it is about — where it is. That is the whole product: it finds the file and tells you the path.
+Not a summary, not a chat.
 
-`shelfmark` indexes content rather than names — text, documents, the readable parts of what you
-already have — and answers a question in plain English with the file itself. No folder tree to
-walk, no page of results ranked by how closely a filename matched. Ask the way you'd ask a person
-who had read all of it.
+Type a question and you get two lists, labelled and kept separate. **Matches your words** is a
+lexical index — SQLite FTS5, BM25, plus a filename prior that only engages when the query
+strongly names a file. **Matches the meaning** is a local embedding index: MiniLM on Accelerate,
+384 dimensions, cosine similarity with a floor at 0.45, so nonsense returns nothing instead of
+six confident wrong files. The two are shown side by side rather than fused into one list,
+because fusing them measured worse than either column alone.
+
+Swift 6, no dependencies, macOS. Everything runs on the machine and nothing is sent anywhere —
+the embeddings come from a 22M-parameter model inside the app, not an API. There is a CLI and an
+MCP server, so Claude Code and Cursor can search the disk through it too. When neither column
+scores well it offers the closest folder rather than a confident wrong answer.
 
 </details>
 
@@ -65,4 +86,4 @@ who had read all of it.
 
 ---
 
-<sub>more, and it moves: **[a-dawg010.github.io](https://a-dawg010.github.io/a-dawg010/)** &nbsp;·&nbsp; no analytics on this page, no newsletter, the worm is load-bearing</sub>
+<sub>more, and it moves: **[a-dawg010.github.io](https://a-dawg010.github.io/a-dawg010/)** &nbsp;·&nbsp; no analytics on this page, no newsletter, the crow is load-bearing</sub>
