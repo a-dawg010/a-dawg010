@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 312" width="880" height="312" role="img" aria-label="Technical stack by layer: agents, retrieval, models, service, data, domain, languages.">
+<style>
+:root{--mono:ui-monospace,SFMono-Regular,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace;--bg:#FFFFFF;--bg2:#F6F8FA;--bg3:#EDF1F5;--grid:#E3E9EF;--stroke:#D3DBE3;--stroke2:#B9C4CF;--text:#0E1620;--dim:#55606C;--faint:#7D8996;--accent:#0D9488;--accent2:#0369A1;--warn:#B45309;--vio:#6D28D9;--glow:0.07;}
+.bg{fill:var(--bg)}
+.lay{font:600 11px var(--mono);fill:var(--faint);letter-spacing:1.9px}
+.comp{font:500 13px var(--mono);fill:var(--text)}
+.rail{stroke:var(--grid);stroke-width:1}
+.tick{fill:var(--stroke2)}
+</style>
+<defs>
+  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="var(--accent)" stop-opacity="0"/>
+    <stop offset="45%" stop-color="var(--accent)" stop-opacity="0.16"/>
+    <stop offset="55%" stop-color="var(--accent)" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect class="bg" width="880" height="312"/>
+
+<rect x="0" y="0" width="880" height="44" fill="url(#beam)">
+  <animateTransform attributeName="transform" type="translate" dur="7s" repeatCount="indefinite"
+    calcMode="linear" values="0,-10; 0,290; 0,290" keyTimes="0;0.86;1"/>
+</rect>
+
+<g>
+  <text class="lay" x="128" y="42" text-anchor="end">AGENTS</text>
+  <rect class="tick" x="144" y="36" width="6" height="6"/>
+  <line class="rail" x1="144" y1="52" x2="844" y2="52"/>
+  <text class="comp" x="162" y="42" opacity=".55">LangGraph · LangChain · sub-agent routing · hand-off · guardrails
+    <animate attributeName="opacity" dur="7s" repeatCount="indefinite" calcMode="linear" values=".55;.55;1;.55;.55" keyTimes="0;0.03;0.08;0.13;1"/>
+  </text>
+</g>
+<g>
+  <text class="lay" x="128" y="80" text-anchor="end">RETRIEVAL</text>
+  <rect class="tick" x="144" y="74" width="6" height="6"/>
+  <line class="rail" x1="144" y1="90" x2="844" y2="90"/>
+  <text class="comp" x="162" y="80" opacity=".55">Graph RAG · Neo4j + Cypher · FAISS · re-ranking · citation
+    <animate attributeName="opacity" dur="7s" repeatCount="indefinite" calcMode="linear" values=".55;.55;1;.55;.55" keyTimes="0;0.15;0.20;0.25;1"/>
+  </text>
+</g>
+<g>
+  <text class="lay" x="128" y="118" text-anchor="end">MODELS</text>
+  <rect class="tick" x="144" y="112" width="6" height="6"/>
+  <line class="rail" x1="144" y1="128" x2="844" y2="128"/>
+  <text class="comp" x="162" y="118" opacity=".55">OpenAI / Claude / Gemini · fine-tuning · CRF NER · PyTorch · TensorFlow
+    <animate attributeName="opacity" dur="7s" repeatCount="indefinite" calcMode="linear" values=".55;.55;1;.55;.55" keyTimes="0;0.27;0.32;0.37;1"/>
+  </text>
+</g>
+<g>
+  <text class="lay" x="128" y="156" text-anchor="end">SERVICE</text>
+  <rect class="tick" x="144" y="150" width="6" height="6"/>
+  <line class="rail" x1="144" y1="166" x2="844" y2="166"/>
+  <text class="comp" x="162" y="156" opacity=".55">FastAPI · REST · serverless microservices · Docker · AWS
+    <animate attributeName="opacity" dur="7s" repeatCount="indefinite" calcMode="linear" values=".55;.55;1;.55;.55" keyTimes="0;0.39;0.44;0.49;1"/>
+  </text>
+</g>
+<g>
+  <text class="lay" x="128" y="194" text-anchor="end">DATA</text>
+  <rect class="tick" x="144" y="188" width="6" height="6"/>
+  <line class="rail" x1="144" y1="204" x2="844" y2="204"/>
+  <text class="comp" x="162" y="194" opacity=".55">PostgreSQL · MongoDB · Neo4j · FAISS · pandas · SQL
+    <animate attributeName="opacity" dur="7s" repeatCount="indefinite" calcMode="linear" values=".55;.55;1;.55;.55" keyTimes="0;0.51;0.56;0.61;1"/>
+  </text>
+</g>
+<g>
+  <text class="lay" x="128" y="232" text-anchor="end">DOMAIN</text>
+  <rect class="tick" x="144" y="226" width="6" height="6"/>
+  <line class="rail" x1="144" y1="242" x2="844" y2="242"/>
+  <text class="comp" x="162" y="232" opacity=".55">ISO/SAE 21434 · UNECE R155 · TARA · MITRE ATT&amp;CK · EMB3D
+    <animate attributeName="opacity" dur="7s" repeatCount="indefinite" calcMode="linear" values=".55;.55;1;.55;.55" keyTimes="0;0.63;0.68;0.73;1"/>
+  </text>
+</g>
+<g>
+  <text class="lay" x="128" y="270" text-anchor="end">LANGUAGES</text>
+  <rect class="tick" x="144" y="264" width="6" height="6"/>
+  <line class="rail" x1="144" y1="280" x2="844" y2="280"/>
+  <text class="comp" x="162" y="270" opacity=".55">Python · C · C++ · SQL · Cypher
+    <animate attributeName="opacity" dur="7s" repeatCount="indefinite" calcMode="linear" values=".55;.55;1;.55;.55" keyTimes="0;0.75;0.80;0.85;1"/>
+  </text>
+</g>
+</svg>

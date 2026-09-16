@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img" aria-label="Ameya Panse — AI engineer. A query enters an orchestrator, routes through specialist sub-agents, and resolves into a grounded answer.">
+<style>
+__VARS__
+.bg{fill:var(--bg)}
+.dot{fill:var(--grid)}
+.name{font:700 44px var(--mono);fill:var(--text);letter-spacing:1.6px}
+.sub{font:500 15px var(--mono);fill:var(--dim);letter-spacing:.6px}
+.meta{font:400 12px var(--mono);fill:var(--faint);letter-spacing:.9px}
+.cap{font:600 10px var(--mono);fill:var(--faint);letter-spacing:2.2px}
+.pill{font:600 11.5px var(--mono);fill:var(--accent);letter-spacing:1.3px}
+.node{fill:var(--bg2);stroke:var(--stroke);stroke-width:1.25}
+.nlab{font:600 13px var(--mono);fill:var(--text);letter-spacing:.7px}
+.nsub{font:400 10px var(--mono);fill:var(--faint);letter-spacing:.3px}
+.edge{fill:none;stroke:var(--stroke2);stroke-width:1.25}
+.pkt{fill:var(--accent)}
+.rule{stroke:var(--stroke);stroke-width:1}
+.tick{font:500 14px var(--mono);fill:var(--dim)}
+.tick tspan.k{fill:var(--accent)}
+</style>
+<defs>
+  <pattern id="d" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1" class="dot"/></pattern>
+  <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="var(--accent)" stop-opacity="var(--glow)"/>
+    <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3.2"/></filter>
+
+  <path id="eIn"  d="M176,258 L202,258"/>
+  <path id="eR1"  d="M306,258 C322,258 320,180 336,180"/>
+  <path id="eR2"  d="M306,258 C322,258 320,232 336,232"/>
+  <path id="eR3"  d="M306,258 C322,258 320,284 336,284"/>
+  <path id="eR4"  d="M306,258 C322,258 320,336 336,336"/>
+  <path id="eA1"  d="M562,180 C578,180 576,258 592,258"/>
+  <path id="eA2"  d="M562,232 C578,232 576,258 592,258"/>
+  <path id="eA3"  d="M562,284 C578,284 576,258 592,258"/>
+  <path id="eA4"  d="M562,336 C578,336 576,258 592,258"/>
+  <path id="eOut" d="M696,258 L722,258"/>
+
+  <clipPath id="typeclip"><rect x="30" y="374" width="0" height="22">
+    <animate attributeName="width" dur="9s" repeatCount="indefinite" calcMode="linear"
+      values="0;0;624;624;624" keyTimes="0;0.035;0.34;0.94;1"/>
+  </rect></clipPath>
+</defs>
+
+<rect class="bg" width="880" height="420"/>
+<rect width="880" height="420" fill="url(#d)"/>
+<ellipse cx="450" cy="262" rx="430" ry="150" fill="url(#halo)"/>
+
+<!-- identity -->
+<text class="name" x="36" y="66">AMEYA PANSE</text>
+<text class="sub" x="38" y="92">AI ENGINEER · AGENTIC SYSTEMS / GRAPH-RAG / AUTOMOTIVE SECURITY</text>
+<text class="meta" x="38" y="112">3+ YRS · PUNE, IN · LANGGRAPH · NEO4J · FASTAPI · AWS · ISO/SAE 21434</text>
+
+<g>
+  <rect x="654" y="45" width="190" height="27" rx="13.5" fill="var(--bg2)" stroke="var(--accent)" stroke-opacity=".45"/>
+  <circle cx="672" cy="58.5" r="3.4" fill="var(--accent)">
+    <animate attributeName="opacity" dur="2.4s" repeatCount="indefinite" values="1;.25;1" keyTimes="0;.5;1"/>
+  </circle>
+  <circle cx="672" cy="58.5" r="3.4" fill="var(--accent)" filter="url(#soft)">
+    <animate attributeName="r" dur="2.4s" repeatCount="indefinite" values="3.4;9;3.4" keyTimes="0;.5;1"/>
+    <animate attributeName="opacity" dur="2.4s" repeatCount="indefinite" values=".7;0;.7" keyTimes="0;.5;1"/>
+  </circle>
+  <text class="pill" x="685" y="62.5">OPEN TO CONVERSATIONS</text>
+</g>
+
+<line class="rule" x1="36" y1="128" x2="844" y2="128"/>
+
+<!-- stage captions -->
+<text class="cap" x="36"  y="150">INGEST</text>
+<text class="cap" x="206" y="150">ROUTE</text>
+<text class="cap" x="336" y="150">SPECIALIST SUB-AGENTS</text>
+<text class="cap" x="592" y="150">SYNTHESIZE</text>
+<text class="cap" x="722" y="150">RESPOND</text>
+
+<!-- edges -->
+<use href="#eIn" class="edge"/>
+<use href="#eR1" class="edge"/><use href="#eR2" class="edge"/><use href="#eR3" class="edge"/><use href="#eR4" class="edge"/>
+<use href="#eA1" class="edge"/><use href="#eA2" class="edge"/><use href="#eA3" class="edge"/><use href="#eA4" class="edge"/>
+<use href="#eOut" class="edge"/>
+
+<!-- query -->
+<rect class="node" x="36" y="232" width="140" height="52" rx="7"/>
+<text class="nlab" x="50" y="256">QUERY</text>
+<text class="nsub" x="50" y="271">natural language</text>
+
+<!-- router -->
+<g>
+  <polygon class="node" points="218,228 294,228 306,258 294,288 218,288 206,258"/>
+  <polygon points="218,228 294,228 306,258 294,288 218,288 206,258" fill="none" stroke="var(--accent)" stroke-width="1.6" opacity="0">
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear"
+      values="0;0;1;1;0;0" keyTimes="0;0.095;0.115;0.175;0.20;1"/>
+  </polygon>
+  <text class="nlab" x="256" y="263" text-anchor="middle">ROUTER</text>
+  <text class="nsub" x="256" y="306" text-anchor="middle">guardrails · hand-off</text>
+</g>
+
+<!-- agents -->
+<g>
+  <rect class="node" x="336" y="160" width="226" height="40" rx="6"/>
+  <rect x="337.5" y="180" width="3" height="0" rx="1.5" fill="var(--accent)">
+    <animate attributeName="height" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;37;37;0;0" keyTimes="0;0.189;0.30;0.925;0.94;1"/>
+    <animate attributeName="y" dur="9s" repeatCount="indefinite" calcMode="linear" values="180;180;161.5;161.5;180;180" keyTimes="0;0.189;0.30;0.925;0.94;1"/>
+  </rect>
+  <rect x="336" y="160" width="226" height="40" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.4" opacity="0">
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;.85;.85;0;0" keyTimes="0;0.189;0.21;0.925;0.94;1"/>
+  </rect>
+  <text class="nlab" x="354" y="181">RETRIEVAL</text>
+  <text class="nsub" x="354" y="194">graph-rag · neo4j · faiss</text>
+</g>
+<g>
+  <rect class="node" x="336" y="212" width="226" height="40" rx="6"/>
+  <rect x="337.5" y="232" width="3" height="0" rx="1.5" fill="var(--warn)">
+    <animate attributeName="height" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;37;37;0;0" keyTimes="0;0.206;0.317;0.925;0.94;1"/>
+    <animate attributeName="y" dur="9s" repeatCount="indefinite" calcMode="linear" values="232;232;213.5;213.5;232;232" keyTimes="0;0.206;0.317;0.925;0.94;1"/>
+  </rect>
+  <rect x="336" y="212" width="226" height="40" rx="6" fill="none" stroke="var(--warn)" stroke-width="1.4" opacity="0">
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;.85;.85;0;0" keyTimes="0;0.206;0.226;0.925;0.94;1"/>
+  </rect>
+  <text class="nlab" x="354" y="233">THREAT ANALYSIS</text>
+  <text class="nsub" x="354" y="246">attack paths · mitre att&amp;ck</text>
+</g>
+<g>
+  <rect class="node" x="336" y="264" width="226" height="40" rx="6"/>
+  <rect x="337.5" y="284" width="3" height="0" rx="1.5" fill="var(--accent)">
+    <animate attributeName="height" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;37;37;0;0" keyTimes="0;0.222;0.333;0.925;0.94;1"/>
+    <animate attributeName="y" dur="9s" repeatCount="indefinite" calcMode="linear" values="284;284;265.5;265.5;284;284" keyTimes="0;0.222;0.333;0.925;0.94;1"/>
+  </rect>
+  <rect x="336" y="264" width="226" height="40" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.4" opacity="0">
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;.85;.85;0;0" keyTimes="0;0.222;0.242;0.925;0.94;1"/>
+  </rect>
+  <text class="nlab" x="354" y="285">COMPLIANCE</text>
+  <text class="nsub" x="354" y="298">iso 21434 · unece r155 · tara</text>
+</g>
+<g>
+  <rect class="node" x="336" y="316" width="226" height="40" rx="6"/>
+  <rect x="337.5" y="336" width="3" height="0" rx="1.5" fill="var(--vio)">
+    <animate attributeName="height" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;37;37;0;0" keyTimes="0;0.239;0.35;0.925;0.94;1"/>
+    <animate attributeName="y" dur="9s" repeatCount="indefinite" calcMode="linear" values="336;336;317.5;317.5;336;336" keyTimes="0;0.239;0.35;0.925;0.94;1"/>
+  </rect>
+  <rect x="336" y="316" width="226" height="40" rx="6" fill="none" stroke="var(--vio)" stroke-width="1.4" opacity="0">
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;.85;.85;0;0" keyTimes="0;0.239;0.259;0.925;0.94;1"/>
+  </rect>
+  <text class="nlab" x="354" y="337">EXTRACTION</text>
+  <text class="nsub" x="354" y="350">crf-ner · cves · assets</text>
+</g>
+
+<!-- synthesis -->
+<g>
+  <polygon class="node" points="604,228 680,228 692,258 680,288 604,288 592,258"/>
+  <polygon points="604,228 680,228 692,258 680,288 604,288 592,258" fill="none" stroke="var(--accent)" stroke-width="1.6" opacity="0">
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.53;0.55;0.62;0.65;1"/>
+  </polygon>
+  <text class="nlab" x="642" y="263" text-anchor="middle">SYNTHESIS</text>
+  <text class="nsub" x="642" y="306" text-anchor="middle">rank · reconcile · cite</text>
+</g>
+
+<!-- answer -->
+<g>
+  <rect class="node" x="722" y="232" width="122" height="52" rx="7"/>
+  <rect x="722" y="232" width="122" height="52" rx="7" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0">
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;.9;.9;0;0" keyTimes="0;0.695;0.72;0.925;0.94;1"/>
+  </rect>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.695;0.72;0.925;0.94;1"/>
+    <text class="nlab" x="736" y="256" fill="var(--accent)">ANSWER</text>
+    <text class="nsub" x="736" y="271">grounded · cited</text>
+  </g>
+  <g opacity="1">
+    <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="1;1;0;0;1;1" keyTimes="0;0.695;0.72;0.925;0.94;1"/>
+    <text class="nlab" x="736" y="256" fill="var(--faint)">ANSWER</text>
+    <text class="nsub" x="736" y="271">pending</text>
+  </g>
+</g>
+
+<!-- packets -->
+<circle class="pkt" r="3.6">
+  <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;1;1;0;0" keyTimes="0;0.032;0.093;0.098;1"/>
+  <animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.03;0.095;1"><mpath href="#eIn"/></animateMotion>
+</circle>
+<circle class="pkt" r="3.6">
+  <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.118;0.126;0.183;0.19;1"/>
+  <animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.122;0.187;1"><mpath href="#eR1"/></animateMotion>
+</circle>
+<circle class="pkt" r="3.6" fill="var(--warn)">
+  <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.135;0.143;0.200;0.207;1"/>
+  <animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.139;0.204;1"><mpath href="#eR2"/></animateMotion>
+</circle>
+<circle class="pkt" r="3.6">
+  <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.152;0.160;0.217;0.224;1"/>
+  <animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.156;0.221;1"><mpath href="#eR3"/></animateMotion>
+</circle>
+<circle class="pkt" r="3.6" fill="var(--vio)">
+  <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.168;0.176;0.233;0.240;1"/>
+  <animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.172;0.238;1"><mpath href="#eR4"/></animateMotion>
+</circle>
+
+<circle class="pkt" r="3.6">
+  <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.374;0.382;0.428;0.435;1"/>
+  <animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.378;0.432;1"><mpath href="#eA1"/></animateMotion>
+</circle>
+<circle class="pkt" r="3.6" fill="var(--warn)">
+  <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.391;0.399;0.445;0.452;1"/>
+  <animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.395;0.449;1"><mpath href="#eA2"/></animateMotion>
+</circle>
+<circle class="pkt" r="3.6">
+  <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.407;0.415;0.461;0.468;1"/>
+  <animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.411;0.465;1"><mpath href="#eA3"/></animateMotion>
+</circle>
+<circle class="pkt" r="3.6" fill="var(--vio)">
+  <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.424;0.432;0.478;0.485;1"/>
+  <animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.428;0.482;1"><mpath href="#eA4"/></animateMotion>
+</circle>
+
+<circle class="pkt" r="4.2">
+  <animate attributeName="opacity" dur="9s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.618;0.628;0.688;0.695;1"/>
+  <animateMotion dur="9s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.622;0.692;1"><mpath href="#eOut"/></animateMotion>
+</circle>
+
+<!-- typed query ticker -->
+<g clip-path="url(#typeclip)">
+  <text class="tick" x="36" y="391"><tspan class="k">&gt;</tspan> which safety assets are reachable if the telematics ECU is compromised?</text>
+</g>
+<rect x="36" y="378" width="8" height="15" fill="var(--accent)">
+  <animate attributeName="x" dur="9s" repeatCount="indefinite" calcMode="linear" values="36;36;660;660;36;36" keyTimes="0;0.035;0.34;0.94;0.945;1"/>
+  <animate attributeName="opacity" dur="1s" repeatCount="indefinite" calcMode="discrete" values="1;0" keyTimes="0;0.5"/>
+</rect>
+</svg>

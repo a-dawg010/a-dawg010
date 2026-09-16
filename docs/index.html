@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ameya Panse — system map</title>
+<meta name="description" content="An interactive map of what Ameya Panse builds: multi-agent orchestration, knowledge-graph-backed retrieval, and automotive cybersecurity. Run a query and watch it route.">
+<meta property="og:title" content="Ameya Panse — system map">
+<meta property="og:description" content="Run a query and watch it route through the sub-agents, the graph, and the compliance layer.">
+<meta property="og:image" content="https://raw.githubusercontent.com/a-dawg010/a-dawg010/main/assets/hero-dark.svg">
+<style>
+:root{
+  --bg:#0B0E13; --grid:#141B24; --text:#E6EDF3; --dim:#93A1B1; --faint:#61707F;
+  --line:#26303D; --accent:#2DD4BF; --warn:#F59E0B; --vio:#A78BFA; --sky:#7DD3FC;
+  --panel:rgba(14,19,26,.72); --edge:#26303D;
+  --mono:ui-monospace,SFMono-Regular,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace;
+}
+:root[data-theme="light"]{
+  --bg:#FFFFFF; --grid:#EDF1F5; --text:#0E1620; --dim:#55606C; --faint:#7D8996;
+  --line:#D3DBE3; --accent:#0D9488; --warn:#B45309; --vio:#6D28D9; --sky:#0369A1;
+  --panel:rgba(255,255,255,.78); --edge:#D3DBE3;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;
+     -webkit-font-smoothing:antialiased;overflow:hidden}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:var(--accent)}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+
+.wrap{display:grid;grid-template-columns:330px minmax(0,1fr);height:100dvh}
+.side{border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+.stage{position:relative;min-width:0;min-height:0}
+canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
+
+header{padding:20px 20px 16px;border-bottom:1px solid var(--line)}
+h1{font-size:19px;margin:0;letter-spacing:1.2px;font-weight:700}
+.role{color:var(--dim);font-size:11.5px;margin:6px 0 0;line-height:1.55}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.links a{border:1px solid var(--line);border-radius:5px;padding:4px 9px;font-size:11px;
+         color:var(--dim);letter-spacing:.5px}
+.links a:hover{color:var(--accent);border-color:var(--accent)}
+
+.block{padding:16px 20px;border-bottom:1px solid var(--line)}
+.h{font-size:9.5px;letter-spacing:2.2px;color:var(--faint);margin:0 0 11px}
+.q{display:block;width:100%;text-align:left;border:1px solid var(--line);border-radius:6px;
+   padding:9px 11px;font-size:11.5px;line-height:1.45;color:var(--dim);margin-bottom:7px}
+.q:hover{color:var(--text);border-color:var(--accent)}
+.q[aria-pressed="true"]{color:var(--text);border-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.q b{color:var(--accent);font-weight:500}
+
+.log{flex:1;min-height:0;overflow:auto;padding:16px 20px 24px;font-size:11px;line-height:1.85;color:var(--dim)}
+.log div{white-space:pre-wrap;word-break:break-word}
+.log .t{color:var(--faint)}
+.log .k{color:var(--accent)}
+.log .w{color:var(--warn)}
+
+.legend{position:absolute;top:14px;left:14px;display:flex;gap:13px;flex-wrap:wrap;
+        background:var(--panel);backdrop-filter:blur(8px);border:1px solid var(--line);
+        border-radius:7px;padding:8px 11px;font-size:10px;letter-spacing:1px;color:var(--faint)}
+.legend i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:1px}
+.hint{position:absolute;bottom:14px;left:14px;font-size:10px;color:var(--faint);letter-spacing:.8px}
+.toggle{position:absolute;top:14px;right:14px;background:var(--panel);backdrop-filter:blur(8px);
+        border:1px solid var(--line);border-radius:7px;padding:7px 11px;font-size:10px;
+        letter-spacing:1.4px;color:var(--faint)}
+.toggle:hover{color:var(--accent);border-color:var(--accent)}
+
+.detail{position:absolute;right:14px;bottom:14px;width:290px;max-width:calc(100% - 28px);
+        background:var(--panel);backdrop-filter:blur(10px);border:1px solid var(--line);
+        border-radius:8px;padding:14px 15px;opacity:0;transform:translateY(6px);
+        transition:opacity .18s,transform .18s;pointer-events:none}
+.detail.on{opacity:1;transform:none}
+.detail .kind{font-size:9.5px;letter-spacing:2px;margin-bottom:7px}
+.detail .nm{font-size:14px;margin-bottom:7px;letter-spacing:.4px}
+.detail p{margin:0;font-size:11px;line-height:1.65;color:var(--dim)}
+
+@media (max-width:860px){
+  body{overflow:auto}
+  .wrap{grid-template-columns:1fr;grid-template-rows:56dvh auto;height:auto;min-height:100dvh}
+  .side{order:2;border-right:none;border-top:1px solid var(--line)}
+  .stage{order:1;position:sticky;top:0;height:56dvh;background:var(--bg);z-index:2}
+  .log{max-height:none;overflow:visible}
+  .detail{width:auto;left:14px;padding:11px 13px}
+  .detail p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .legend{font-size:9px;gap:9px;padding:7px 9px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <aside class="side">
+    <header>
+      <h1>AMEYA PANSE</h1>
+      <p class="role">AI engineer · Pune, India<br>Multi-agent orchestration, graph-backed retrieval, automotive cybersecurity.</p>
+      <div class="links">
+        <a href="https://github.com/a-dawg010">GitHub</a>
+        <a href="https://www.linkedin.com/in/ameya-p-453abb106/">LinkedIn</a>
+        <a href="mailto:ameypanse786@gmail.com">Email</a>
+        <a href="resume.pdf">Résumé</a>
+      </div>
+    </header>
+
+    <div class="block">
+      <p class="h">RUN A QUERY</p>
+      <div id="qs"></div>
+    </div>
+
+    <div class="log" id="log"><div class="t">// click a query above, or drag a node.</div></div>
+  </aside>
+
+  <div class="stage">
+    <canvas id="g"></canvas>
+    <div class="legend">
+      <span><i style="background:var(--accent)"></i>SUB-AGENT</span>
+      <span><i style="background:var(--sky)"></i>TOOLING</span>
+      <span><i style="background:var(--warn)"></i>DOMAIN</span>
+      <span><i style="background:var(--vio)"></i>WHERE</span>
+    </div>
+    <button class="toggle" id="tt">THEME</button>
+    <div class="hint">drag a node · tap one for detail</div>
+    <div class="detail" id="detail"></div>
+  </div>
+</div>
+
+<script>
+const N = [
+ ['me','Ameya Panse','root','AI engineer, 3+ years. Builds LLM systems that have to be right: multi-agent orchestration, relationship-aware retrieval, and security work where a wrong answer is a finding.'],
+
+ ['router','Router','agent','Classifies intent, picks the sub-agent and the data source, and applies guardrails before anything executes. The part that decides is separate from the parts that do.'],
+ ['retrieval','Retrieval','agent','Graph first, vectors second. Cypher walks the relationships, FAISS covers the rest, then results are re-ranked and cited.'],
+ ['threat','Threat Analysis','agent','Traverses attack paths across a vehicle architecture and scores what an attacker can actually reach, and in how many hops.'],
+ ['compliance','Compliance','agent','Validates submitted evidence against ISO/SAE 21434 clauses and flags the gaps in a TARA before it reaches an OEM.'],
+ ['extraction','Extraction','agent','Turns unstructured incident text into structured rows: assets, threats, CVEs, attack vectors.'],
+ ['synthesis','Synthesis','agent','Reconciles what the sub-agents returned, resolves disagreement, and answers with citations rather than vibes.'],
+
+ ['langgraph','LangGraph','tool','State machine for the agent graph — explicit nodes, explicit hand-offs, no implicit control flow.'],
+ ['langchain','LangChain','tool','Tool and model plumbing under the orchestration layer.'],
+ ['llm','LLM APIs','tool','OpenAI, Claude, Gemini. Prompt engineering and fine-tuning where a prompt is not enough.'],
+ ['graphrag','Graph RAG','tool','Retrieval over a knowledge graph instead of a flat index, so the answer knows how two facts are connected.'],
+ ['neo4j','Neo4j','tool','The graph itself: an automotive cybersecurity ontology linking threats, assets and mitigations.'],
+ ['cypher','Cypher','tool','Query language for the traversals — variable-length paths are the whole point.'],
+ ['faiss','FAISS','tool','Dense vector index for the part of the corpus that has no useful structure.'],
+ ['crf','CRF NER','tool','A conditional random field with hand-built domain features. Beat the generic model on security entities.'],
+ ['pytorch','PyTorch','tool','Model development and fine-tuning.'],
+ ['tensorflow','TensorFlow','tool','Earlier model work, classification and predictive modelling.'],
+ ['pandas','pandas','tool','Data pipelines, annotation workflows, the unglamorous 60%.'],
+ ['fastapi','FastAPI','tool','Every one of these systems ships as an API someone else depends on.'],
+ ['aws','AWS','tool','Serverless microservices, deployment, the part that has to stay up.'],
+ ['docker','Docker','tool','Reproducible builds for everything above.'],
+ ['postgres','PostgreSQL','tool','Relational store for structured output and audit trails.'],
+ ['mongo','MongoDB','tool','Document store for raw reports and intermediate artefacts.'],
+ ['python','Python','tool','Primary language.'],
+ ['cpp','C / C++','tool','From the scientific-computing side. Useful when the thing has to be fast or close to firmware.'],
+
+ ['iso','ISO/SAE 21434','domain','The automotive cybersecurity engineering standard. Most of the compliance work is clause-wise evidence against it.'],
+ ['r155','UNECE R155','domain','Regulation requiring a certified cybersecurity management system for vehicle type approval.'],
+ ['tara','TARA','domain','Threat analysis and risk assessment. Built tooling that finds what a TARA is missing.'],
+ ['mitre','MITRE ATT&CK','domain','Adversary technique taxonomy, mapped onto attack paths.'],
+ ['emb3d','EMB3D','domain','Threat model for embedded devices — the layer below the vehicle network.'],
+ ['firmware','Firmware security','domain','Rollback, secure boot, key storage, the things an attacker goes for first.'],
+ ['supply','Supply-chain security','domain','Where the components came from and whether that can be proven.'],
+
+ ['eq','Equations Work','org','AI Engineer, Apr 2026 → now. Sub-agent design and orchestration for an enterprise agentic-AI engagement with a global manufacturing client.'],
+ ['ark','Arkcore','org','Founding Engineer, Jan 2025 – Mar 2026. Owned LLM systems end to end: architecture, multi-agent frameworks, domain RAG, deployment.'],
+ ['st','SecureThings','org','Intern then Associate SWE, 2023 – 2024. Custom NER, the Neo4j knowledge graph, the ISO 21434 compliance assistant and TARA gap tool.'],
+ ['sppu','MSc Sci. Computing','org','Savitribai Phule Pune University, 2023. GPA 9.45 / 10.'],
+];
+
+const L = [
+ ['me','router'],['me','eq'],['me','ark'],['me','st'],['me','sppu'],['me','python'],
+ ['router','retrieval'],['router','threat'],['router','compliance'],['router','extraction'],
+ ['router','synthesis'],['router','langgraph'],['router','llm'],
+ ['langgraph','langchain'],['langchain','llm'],
+ ['retrieval','graphrag'],['retrieval','faiss'],['retrieval','neo4j'],
+ ['graphrag','neo4j'],['graphrag','cypher'],['neo4j','cypher'],
+ ['threat','mitre'],['threat','emb3d'],['threat','firmware'],['threat','neo4j'],
+ ['compliance','iso'],['compliance','r155'],['compliance','tara'],
+ ['extraction','crf'],['extraction','pytorch'],['crf','tensorflow'],['crf','pandas'],
+ ['synthesis','llm'],['synthesis','fastapi'],
+ ['fastapi','aws'],['fastapi','postgres'],['fastapi','mongo'],['aws','docker'],
+ ['iso','tara'],['iso','r155'],['mitre','tara'],['supply','firmware'],['supply','iso'],
+ ['eq','langgraph'],['eq','fastapi'],
+ ['ark','graphrag'],['ark','neo4j'],['ark','aws'],['ark','iso'],
+ ['st','crf'],['st','mitre'],['st','iso'],
+ ['sppu','python'],['sppu','cpp'],['python','pandas'],['python','fastapi'],
+];
+
+const Q = [
+ {q:'Which safety assets are reachable if the telematics ECU is compromised?',
+  path:['router','threat','neo4j','mitre','synthesis'],
+  log:[['route','threat-analysis · guardrail: read-only graph session'],
+       ['cypher','MATCH (t:Threat)-[:COMPROMISES*1..3]->(a:Asset)'],
+       ['map','4 candidate paths mapped to ATT&CK for ICS'],
+       ['rank','brake ECU reachable in 2 hops, via CAN bus'],
+       ['ok','3 safety-relevant assets · 1 mitigation gap · cited']]},
+ {q:'Does this TARA cover every threat in the ontology?',
+  path:['router','compliance','iso','tara','synthesis'],
+  log:[['route','compliance · clause-wise evidence check'],
+       ['load','TARA worksheet + 21434 clause set 8.3 – 8.9'],
+       ['diff','ontology threats not present in the worksheet'],
+       ['gap','2 threats, 1 asset and 3 mitigations unaccounted for'],
+       ['ok','gap report generated, traceable to clause']]},
+ {q:'Pull the assets and CVEs out of this incident report.',
+  path:['router','extraction','crf','pytorch','synthesis'],
+  log:[['route','extraction · unstructured security event text'],
+       ['ner','CRF + domain features over 1.2k tokens'],
+       ['tag','ASSET×7  THREAT×4  CVE×3  VECTOR×2'],
+       ['link','entities resolved against the graph, 2 new nodes'],
+       ['ok','structured rows written, ready for the TARA']]},
+ {q:'Now ship it to the OEM as an API.',
+  path:['router','synthesis','fastapi','aws','docker'],
+  log:[['route','delivery path'],
+       ['api','FastAPI service, typed contracts, auth at the edge'],
+       ['infra','serverless microservices on AWS, containerised'],
+       ['ok','deployed · the demo was never the hard part']]},
+];
+
+/* ---------- state ---------- */
+const byId = {};
+const nodes = N.map(([id,label,kind,blurb]) => {
+  const a = Math.random()*Math.PI*2, ring = kind==='root'?0:kind==='agent'?150:300;
+  const n = {id,label,kind,blurb,
+    x:Math.cos(a)*ring+(Math.random()-.5)*60, y:Math.sin(a)*ring+(Math.random()-.5)*60,
+    vx:0, vy:0, r: kind==='root'?22:kind==='agent'?14:9, hot:0};
+  byId[id]=n; return n;
+});
+const links = L.map(([a,b]) => ({a:byId[a], b:byId[b], hot:0}));
+const adj = new Map(nodes.map(n=>[n,[]]));
+links.forEach(l=>{adj.get(l.a).push(l.b); adj.get(l.b).push(l.a);});
+
+const KIND = {root:'--text', agent:'--accent', tool:'--sky', domain:'--warn', org:'--vio'};
+const KIND_LABEL = {root:'', agent:'SUB-AGENT', tool:'TOOLING', domain:'DOMAIN', org:'WHERE'};
+
+const cv = document.getElementById('g'), ctx = cv.getContext('2d');
+const detail = document.getElementById('detail'), logEl = document.getElementById('log');
+let W=0, H=0, spread=1, alpha=1, hover=null, sel=null, drag=null, running=null;
+const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+
+/* ---------- theme ---------- */
+const root = document.documentElement;
+const mq = matchMedia('(prefers-color-scheme: light)');
+const applyTheme = t => root.setAttribute('data-theme', t);
+applyTheme(localStorage.getItem('theme') || (mq.matches ? 'light' : 'dark'));
+mq.addEventListener('change', e => { if(!localStorage.getItem('theme')) applyTheme(e.matches?'light':'dark'); });
+document.getElementById('tt').onclick = () => {
+  const t = root.getAttribute('data-theme')==='light' ? 'dark' : 'light';
+  localStorage.setItem('theme', t); applyTheme(t);
+};
+
+/* ---------- sizing ---------- */
+function resize(){
+  const r = cv.getBoundingClientRect(), dpr = Math.min(devicePixelRatio||1, 2);
+  W = r.width; H = r.height;
+  cv.width = Math.round(W*dpr); cv.height = Math.round(H*dpr);
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  spread = Math.max(.72, Math.min(1.45, Math.sqrt(W*H)/660));
+  alpha = Math.max(alpha, .35);
+}
+new ResizeObserver(resize).observe(cv);
+resize();
+
+/* ---------- force sim ---------- */
+function tick(){
+  const cx = W/2, cy = H/2;
+  for(let i=0;i<nodes.length;i++){
+    const a = nodes[i];
+    for(let j=i+1;j<nodes.length;j++){
+      const b = nodes[j];
+      let dx = b.x-a.x, dy = b.y-a.y, d2 = dx*dx+dy*dy;
+      if(d2 < 1){ dx = Math.random()-.5; dy = Math.random()-.5; d2 = 1; }
+      const d = Math.sqrt(d2);
+      const f = Math.min(2600*spread*(a.r+b.r)/26/d2, 20) * alpha;
+      const ux = dx/d, uy = dy/d;
+      a.vx -= ux*f; a.vy -= uy*f; b.vx += ux*f; b.vy += uy*f;
+    }
+  }
+  for(const l of links){
+    const dx = l.b.x-l.a.x, dy = l.b.y-l.a.y;
+    const d = Math.hypot(dx,dy) || 1;
+    const rest = ((l.a.kind==='root'||l.b.kind==='root') ? 130 : 96) * Math.min(1.25, spread);
+    const f = (d-rest) * 0.012 * alpha;
+    const ux = dx/d, uy = dy/d;
+    l.a.vx += ux*f; l.a.vy += uy*f; l.b.vx -= ux*f; l.b.vy -= uy*f;
+  }
+  for(const n of nodes){
+    n.vx += (cx - n.x) * 0.0016 * alpha;
+    n.vy += (cy - n.y) * 0.0016 * alpha;
+    if(n === drag) { n.vx = n.vy = 0; continue; }
+    n.vx *= .84; n.vy *= .84;
+    n.x += n.vx; n.y += n.vy;
+    const px = n.r + 62, py = n.r + 24;
+    n.x = Math.max(px, Math.min(W-px, n.x));
+    n.y = Math.max(py + 46, Math.min(H-py-26, n.y));
+  }
+  alpha = Math.max(alpha*0.994, 0.03);
+}
+
+/* ---------- draw ---------- */
+function draw(){
+  const c = {bg:css('--bg'), grid:css('--grid'), text:css('--text'), dim:css('--dim'),
+             faint:css('--faint'), edge:css('--edge'), accent:css('--accent')};
+  ctx.fillStyle = c.bg; ctx.fillRect(0,0,W,H);
+
+  ctx.fillStyle = c.grid;
+  for(let x=0;x<W;x+=26) for(let y=0;y<H;y+=26){ ctx.fillRect(x,y,1,1); }
+
+  const now = performance.now();
+  const near = hover ? new Set(adj.get(hover)) : null;
+
+  for(const l of links){
+    const lit = l.hot && now < l.hot;
+    const adjHl = hover && (l.a===hover || l.b===hover);
+    ctx.beginPath();
+    ctx.moveTo(l.a.x, l.a.y); ctx.lineTo(l.b.x, l.b.y);
+    ctx.strokeStyle = lit ? c.accent : (adjHl ? c.dim : c.edge);
+    ctx.lineWidth = lit ? 2 : adjHl ? 1.4 : 1;
+    ctx.globalAlpha = lit ? 1 : (hover && !adjHl ? .3 : .85);
+    ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+
+  for(const n of nodes){
+    const col = css(KIND[n.kind]);
+    const lit = n.hot && now < n.hot;
+    const dimmed = hover && n !== hover && !near.has(n);
+    ctx.globalAlpha = dimmed ? .3 : 1;
+
+    if(lit || n === sel){
+      const t = (now/22) % 60;
+      ctx.beginPath(); ctx.arc(n.x, n.y, n.r + 6 + (lit ? (t<30?t/6:(60-t)/6) : 3), 0, 7);
+      ctx.strokeStyle = lit ? c.accent : col; ctx.lineWidth = 1.2;
+      ctx.globalAlpha = (dimmed?.3:1) * .55; ctx.stroke();
+      ctx.globalAlpha = dimmed ? .3 : 1;
+    }
+
+    ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, 7);
+    ctx.fillStyle = c.bg; ctx.fill();
+    ctx.strokeStyle = lit ? c.accent : col;
+    ctx.lineWidth = n.kind==='root' ? 2 : 1.4; ctx.stroke();
+    ctx.globalAlpha = (dimmed?.3:1) * (n.kind==='tool' ? .10 : .16);
+    ctx.fillStyle = lit ? c.accent : col; ctx.fill();
+
+    ctx.globalAlpha = dimmed ? .28 : 1;
+    const big = n.kind==='root' || n.kind==='agent' || n===hover || n===sel || lit;
+    if(big || spread > (n.kind==='tool' ? 1.02 : 0.95)){
+      ctx.font = (n.kind==='root' ? '600 13px ' : big ? '500 11px ' : '400 10px ') + css('--mono');
+      ctx.fillStyle = big ? c.text : c.faint;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+      ctx.fillText(n.label, n.x, n.y + n.r + 6);
+    }
+  }
+  ctx.globalAlpha = 1;
+}
+
+let raf;
+function loop(){ tick(); draw(); raf = requestAnimationFrame(loop); }
+loop();
+document.addEventListener('visibilitychange', () => {
+  if(document.hidden) cancelAnimationFrame(raf); else loop();
+});
+
+/* ---------- picking + interaction ---------- */
+function pick(ev){
+  const r = cv.getBoundingClientRect();
+  const x = ev.clientX - r.left, y = ev.clientY - r.top;
+  let best = null, bd = Infinity;
+  for(const n of nodes){
+    const d = Math.hypot(n.x-x, n.y-y) - n.r;
+    if(d < 15 && d < bd){ best = n; bd = d; }
+  }
+  return {n:best, x, y};
+}
+cv.addEventListener('pointermove', ev => {
+  if(drag){
+    const r = cv.getBoundingClientRect();
+    drag.x = ev.clientX - r.left; drag.y = ev.clientY - r.top;
+    alpha = Math.max(alpha, .5);
+    return;
+  }
+  const {n} = pick(ev);
+  if(n !== hover){ hover = n; cv.style.cursor = n ? 'pointer' : 'default'; }
+});
+cv.addEventListener('pointerdown', ev => {
+  const {n} = pick(ev);
+  if(n){ drag = n; cv.setPointerCapture(ev.pointerId); select(n); }
+  else { sel = null; detail.classList.remove('on'); }
+});
+addEventListener('pointerup', () => { if(drag){ alpha = Math.max(alpha,.4); drag = null; } });
+cv.addEventListener('pointerleave', () => { hover = null; });
+
+function select(n){
+  sel = n;
+  detail.innerHTML =
+    (KIND_LABEL[n.kind] ? `<div class="kind" style="color:var(${KIND[n.kind]})">${KIND_LABEL[n.kind]}</div>` : '') +
+    `<div class="nm">${n.label}</div><p>${n.blurb}</p>`;
+  detail.classList.add('on');
+}
+
+/* ---------- query runner ---------- */
+const qs = document.getElementById('qs');
+Q.forEach((q,i) => {
+  const b = document.createElement('button');
+  b.className = 'q'; b.type = 'button'; b.setAttribute('aria-pressed','false');
+  b.innerHTML = '<b>&gt;</b> ' + q.q;
+  b.onclick = () => run(i, b);
+  qs.appendChild(b);
+});
+
+function line(tag, text){
+  const d = document.createElement('div');
+  const cls = tag==='ok' ? 'k' : tag==='gap' ? 'w' : 't';
+  d.innerHTML = `<span class="${cls}">${tag.padEnd(6)}</span>${text}`;
+  logEl.appendChild(d);
+  logEl.scrollTop = logEl.scrollHeight;
+}
+
+function run(i, btn){
+  if(running) clearTimeout(running);
+  qs.querySelectorAll('.q').forEach(b => b.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed','true');
+  const q = Q[i];
+  logEl.innerHTML = '';
+  line('query', q.q);
+  const path = q.path.map(id => byId[id]);
+  let step = 0;
+  const HOLD = 4200;
+
+  (function next(){
+    if(step >= path.length){ running = null; return; }
+    const n = path[step];
+    n.hot = performance.now() + HOLD;
+    if(step > 0){
+      const prev = path[step-1];
+      const l = links.find(l => (l.a===prev&&l.b===n) || (l.b===prev&&l.a===n));
+      if(l) l.hot = performance.now() + HOLD;
+      else { const virt = {a:prev, b:n, hot:performance.now()+HOLD}; links.push(virt);
+             setTimeout(() => links.splice(links.indexOf(virt),1), HOLD); }
+    }
+    select(n);
+    if(q.log[step]) line(q.log[step][0], q.log[step][1]);
+    alpha = Math.max(alpha, .12);
+    step++;
+    running = setTimeout(next, 760);
+  })();
+}
+</script>
+</body>
+</html>

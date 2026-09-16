@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 362" width="880" height="362" role="img" aria-label="A cybersecurity knowledge graph assembling: threats linked to assets linked to mitigations, then a traversal from CAN injection to a CMAC message authentication mitigation.">
+<style>
+:root{--mono:ui-monospace,SFMono-Regular,'SF Mono','JetBrains Mono',Menlo,Consolas,monospace;--bg:#FFFFFF;--bg2:#F6F8FA;--bg3:#EDF1F5;--grid:#E3E9EF;--stroke:#D3DBE3;--stroke2:#B9C4CF;--text:#0E1620;--dim:#55606C;--faint:#7D8996;--accent:#0D9488;--accent2:#0369A1;--warn:#B45309;--vio:#6D28D9;--glow:0.07;}
+.bg{fill:var(--bg)}
+.hd{font:600 10.5px var(--mono);letter-spacing:2px}
+.n{fill:var(--bg2);stroke-width:1.25}
+.nt{font:500 12px var(--mono);fill:var(--text)}
+.e{fill:none;stroke:var(--stroke2);stroke-width:1.1;stroke-dasharray:100;stroke-dashoffset:0}
+.hi{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:100;stroke-dashoffset:100;stroke-linecap:round}
+.cap{font:500 11px var(--mono);fill:var(--dim)}
+</style>
+<defs>
+  <path id="p1" d="M208,65 C268,65 294,181 354,181"/>
+  <path id="p2" d="M526,181 C562,181 562,239 526,239"/>
+  <path id="p3" d="M526,239 C586,239 612,94 672,94"/>
+</defs>
+<rect class="bg" width="880" height="362"/>
+
+<text class="hd" x="36"  y="26" fill="var(--warn)">THREAT</text>
+<text class="hd" x="354" y="26" fill="var(--accent)">ASSET</text>
+<text class="hd" x="672" y="26" fill="var(--vio)">MITIGATION</text>
+
+<!-- edges: draw themselves once -->
+<g>
+  <path class="e" d="M208,65 C268,65 294,181 354,181"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.1714;0.4857;1" fill="freeze"/></path>
+  <path class="e" d="M208,65 C268,65 294,65 354,65"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.2143;0.5286;1" fill="freeze"/></path>
+  <path class="e" d="M208,123 C268,123 294,65 354,65"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.2571;0.5714;1" fill="freeze"/></path>
+  <path class="e" d="M208,181 C268,181 294,123 354,123"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.3;0.6143;1" fill="freeze"/></path>
+  <path class="e" d="M208,239 C268,239 294,297 354,297"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.3429;0.6571;1" fill="freeze"/></path>
+  <path class="e" d="M526,65 C562,65 562,123 526,123"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.4286;0.7429;1" fill="freeze"/></path>
+  <path class="e" d="M526,181 C562,181 562,239 526,239"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.4714;0.7857;1" fill="freeze"/></path>
+  <path class="e" d="M526,65 C586,65 612,152 672,152"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.5143;0.8286;1" fill="freeze"/></path>
+  <path class="e" d="M526,123 C586,123 612,210 672,210"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.5571;0.8714;1" fill="freeze"/></path>
+  <path class="e" d="M526,181 C586,181 612,94 672,94"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.6;0.9143;1" fill="freeze"/></path>
+  <path class="e" d="M526,239 C586,239 612,94 672,94"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.6429;0.9571;1" fill="freeze"/></path>
+  <path class="e" d="M526,297 C586,297 612,268 672,268"><animate attributeName="stroke-dashoffset" begin="0s" dur="3.5s" calcMode="linear" values="100;100;0;0" keyTimes="0;0.6857;1;1" fill="freeze"/></path>
+</g>
+
+<!-- traversal highlight, loops -->
+<g>
+  <use href="#p1" class="hi"><animate attributeName="stroke-dashoffset" begin="4s;t.end" dur="0.55s" values="100;0" fill="freeze"/><animate id="t" attributeName="opacity" begin="4s;t.end" dur="8s" calcMode="linear" values="1;1;1;0;0" keyTimes="0;0.8;0.86;0.93;1" fill="freeze"/></use>
+  <use href="#p2" class="hi"><animate attributeName="stroke-dashoffset" begin="4.75s;t.end+0.75s" dur="0.55s" values="100;0" fill="freeze"/><animate attributeName="opacity" begin="4s;t.end" dur="8s" calcMode="linear" values="1;1;1;0;0" keyTimes="0;0.8;0.86;0.93;1" fill="freeze"/></use>
+  <use href="#p3" class="hi"><animate attributeName="stroke-dashoffset" begin="5.5s;t.end+1.5s" dur="0.55s" values="100;0" fill="freeze"/><animate attributeName="opacity" begin="4s;t.end" dur="8s" calcMode="linear" values="1;1;1;0;0" keyTimes="0;0.8;0.86;0.93;1" fill="freeze"/></use>
+</g>
+
+<!-- threats -->
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.025;0.275;1" fill="freeze"/>
+  <rect class="n" x="36" y="48" width="172" height="34" rx="17" stroke="var(--warn)" stroke-opacity=".75"/>
+  <circle cx="54" cy="65" r="3.5" fill="var(--warn)"/><text class="nt" x="68" y="69">CAN injection</text>
+  <circle cx="122" cy="65" r="0" fill="none" stroke="var(--accent)" stroke-width="0"/>
+</g>
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.075;0.325;1" fill="freeze"/>
+  <rect class="n" x="36" y="106" width="172" height="34" rx="17" stroke="var(--warn)" stroke-opacity=".75"/>
+  <circle cx="54" cy="123" r="3.5" fill="var(--warn)"/><text class="nt" x="68" y="127">OTA MITM</text>
+</g>
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.125;0.375;1" fill="freeze"/>
+  <rect class="n" x="36" y="164" width="172" height="34" rx="17" stroke="var(--warn)" stroke-opacity=".75"/>
+  <circle cx="54" cy="181" r="3.5" fill="var(--warn)"/><text class="nt" x="68" y="185">Firmware rollback</text>
+</g>
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.175;0.425;1" fill="freeze"/>
+  <rect class="n" x="36" y="222" width="172" height="34" rx="17" stroke="var(--warn)" stroke-opacity=".75"/>
+  <circle cx="54" cy="239" r="3.5" fill="var(--warn)"/><text class="nt" x="68" y="243">Key extraction</text>
+</g>
+
+<!-- assets -->
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.225;0.475;1" fill="freeze"/>
+  <rect class="n" x="354" y="48" width="172" height="34" rx="6" stroke="var(--accent)" stroke-opacity=".75"/>
+  <text class="nt" x="372" y="69">Telematics ECU</text>
+</g>
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.275;0.525;1" fill="freeze"/>
+  <rect class="n" x="354" y="106" width="172" height="34" rx="6" stroke="var(--accent)" stroke-opacity=".75"/>
+  <text class="nt" x="372" y="127">Gateway</text>
+</g>
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.325;0.575;1" fill="freeze"/>
+  <rect class="n" x="354" y="164" width="172" height="34" rx="6" stroke="var(--accent)" stroke-opacity=".75"/>
+  <text class="nt" x="372" y="185">CAN bus</text>
+</g>
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.375;0.625;1" fill="freeze"/>
+  <rect class="n" x="354" y="222" width="172" height="34" rx="6" stroke="var(--accent)" stroke-opacity=".75"/>
+  <text class="nt" x="372" y="243">Brake ECU</text>
+</g>
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.425;0.675;1" fill="freeze"/>
+  <rect class="n" x="354" y="280" width="172" height="34" rx="6" stroke="var(--accent)" stroke-opacity=".75"/>
+  <text class="nt" x="372" y="301">Secure boot key</text>
+</g>
+
+<!-- mitigations -->
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.475;0.725;1" fill="freeze"/>
+  <rect class="n" x="672" y="77" width="172" height="34" rx="6" stroke="var(--vio)" stroke-opacity=".75"/>
+  <text class="nt" x="690" y="98">CMAC message auth</text>
+</g>
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.525;0.775;1" fill="freeze"/>
+  <rect class="n" x="672" y="135" width="172" height="34" rx="6" stroke="var(--vio)" stroke-opacity=".75"/>
+  <text class="nt" x="690" y="156">Secure boot chain</text>
+</g>
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.575;0.825;1" fill="freeze"/>
+  <rect class="n" x="672" y="193" width="172" height="34" rx="6" stroke="var(--vio)" stroke-opacity=".75"/>
+  <text class="nt" x="690" y="214">Gateway filtering</text>
+</g>
+<g opacity="1"><animate attributeName="opacity" begin="0s" dur="2s" calcMode="linear" values="0;0;1;1" keyTimes="0;0.625;0.875;1" fill="freeze"/>
+  <rect class="n" x="672" y="251" width="172" height="34" rx="6" stroke="var(--vio)" stroke-opacity=".75"/>
+  <text class="nt" x="690" y="272">HSM key storage</text>
+</g>
+
+<!-- traversal node rings -->
+<rect x="36"  y="48"  width="172" height="34" rx="17" fill="none" stroke="var(--accent)" stroke-width="1.8" opacity="0">
+  <animate attributeName="opacity" begin="4s;t.end" dur="8s" calcMode="linear" values="0;1;1;0;0" keyTimes="0;0.005;0.86;0.93;1" fill="freeze"/></rect>
+<rect x="354" y="164" width="172" height="34" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.8" opacity="0">
+  <animate attributeName="opacity" begin="4s;t.end" dur="8s" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.068;0.076;0.86;0.93;1" fill="freeze"/></rect>
+<rect x="354" y="222" width="172" height="34" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.8" opacity="0">
+  <animate attributeName="opacity" begin="4s;t.end" dur="8s" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.162;0.170;0.86;0.93;1" fill="freeze"/></rect>
+<rect x="672" y="77"  width="172" height="34" rx="6" fill="none" stroke="var(--accent)" stroke-width="1.8" opacity="0">
+  <animate attributeName="opacity" begin="4s;t.end" dur="8s" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.256;0.264;0.86;0.93;1" fill="freeze"/></rect>
+
+<!-- travelling packets -->
+<circle r="3.8" fill="var(--accent)" opacity="0">
+  <animate attributeName="opacity" begin="4s;t.end" dur="8s" calcMode="linear" values="0;1;1;0;0;0" keyTimes="0;0.004;0.068;0.072;0.08;1" fill="freeze"/>
+  <animateMotion begin="4s;t.end" dur="8s" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.004;0.068;1"><mpath href="#p1"/></animateMotion>
+</circle>
+<circle r="3.8" fill="var(--accent)" opacity="0">
+  <animate attributeName="opacity" begin="4s;t.end" dur="8s" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.09;0.098;0.162;0.166;1" fill="freeze"/>
+  <animateMotion begin="4s;t.end" dur="8s" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.098;0.162;1"><mpath href="#p2"/></animateMotion>
+</circle>
+<circle r="3.8" fill="var(--accent)" opacity="0">
+  <animate attributeName="opacity" begin="4s;t.end" dur="8s" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.184;0.192;0.256;0.260;1" fill="freeze"/>
+  <animateMotion begin="4s;t.end" dur="8s" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.192;0.256;1"><mpath href="#p3"/></animateMotion>
+</circle>
+
+<line x1="36" y1="332" x2="844" y2="332" stroke="var(--grid)"/>
+<text class="cap" x="36" y="352">MATCH (t:Threat)-[:COMPROMISES*1..3]-&gt;(a:Asset)&lt;-[:PROTECTS]-(m:Mitigation)  ·  Neo4j over an ISO/SAE 21434 ontology</text>
+</svg>

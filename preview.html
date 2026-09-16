@@ -1,0 +1,24 @@
+<!doctype html><meta charset="utf-8"><title>asset preview</title>
+<!-- Local check harness. Open with ?n=hero | stack | graph | timeline
+     Shows each built SVG in both themes, at GitHub's ~850px column and at phone width. -->
+<style>
+ body{margin:0;font:12px ui-monospace,SFMono-Regular,Menlo,monospace;background:#444;color:#fff}
+ .row{display:flex;align-items:flex-start}
+ .lab{padding:5px 9px;background:#222;letter-spacing:1px}
+ .d{background:#0d1117;padding:16px}.l{background:#fff;padding:16px}
+ .w850 img{width:772px;display:block}.w343 img{width:343px;display:block}
+ .w343{width:375px}
+ nav{padding:8px}nav a{color:#7dd3fc;margin-right:14px}
+</style>
+<nav><a href="?n=hero">hero</a><a href="?n=stack">stack</a><a href="?n=graph">graph</a><a href="?n=timeline">timeline</a></nav>
+<div><div class="lab">DARK · 850</div><div class="d w850"><img id="a"></div></div>
+<div><div class="lab">LIGHT · 850</div><div class="l w850"><img id="b"></div></div>
+<div class="row">
+ <div class="w343"><div class="lab">DARK · 343</div><div class="d w343"><img id="c"></div></div>
+ <div class="w343"><div class="lab">LIGHT · 343</div><div class="l w343"><img id="d"></div></div>
+</div>
+<script>
+ const n = new URLSearchParams(location.search).get('n') || 'hero';
+ a.src = c.src = 'assets/' + n + '-dark.svg';
+ b.src = d.src = 'assets/' + n + '-light.svg';
+</script>
