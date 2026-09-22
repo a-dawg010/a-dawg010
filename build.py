@@ -12,7 +12,7 @@ import base64, pathlib
 
 FACES = {
     # css var -> (family name, file, weight, style)
-    "disp":  ("APDisplay", "display.woff2",      "800", "normal"),
+    "disp":  ("APDisplay", "display.woff2",      "900", "normal"),
     "body":  ("APBody",    "body.woff2",         "500", "normal"),
     "serif": ("APSerif",   "serif-italic.woff2", "400", "italic"),
     "mono":  ("APMono",    "mono.woff2",         "500", "normal"),
@@ -25,20 +25,20 @@ STACKS = {
     "mono":  "'APMono',ui-monospace,Menlo,monospace",
 }
 
-DARK = {
-    "paper": "#0D0D0F", "card": "#16161A", "sunk": "#101014",
-    "ink": "#F4F0E6", "dim": "#9D978B", "faint": "#6A6459",
-    "rule": "#26262C", "rule2": "#34343C",
-    "yellow": "#FFD429", "ytext": "#14141A",
-    "violet": "#A98BFF", "coral": "#FF7A57", "grain": "0.055",
+DARK = {   # CRT: near-black, bone, one acid signal colour
+    "paper": "#0A0A0B", "card": "#111113", "sunk": "#0D0D0F",
+    "ink": "#EDEBE4", "dim": "#8E8B83", "faint": "#5A5852",
+    "rule": "#232326", "rule2": "#36363C",
+    "acid": "#D4FF3A", "atext": "#0A0A0B", "hot": "#FF4F2E", "violet": "#8B6CFF",
+    "trace": "#D4FF3A", "grain": "0.06", "scan": "0.07",
 }
 
-LIGHT = {
-    "paper": "#F4F0E6", "card": "#FBF8F1", "sunk": "#EDE8DA",
-    "ink": "#14141A", "dim": "#5C5850", "faint": "#968F82",
-    "rule": "#DFD8C8", "rule2": "#C9C0AC",
-    "yellow": "#FFD429", "ytext": "#14141A",
-    "violet": "#4B2BF0", "coral": "#D8431F", "grain": "0.038",
+LIGHT = {  # print: bone paper, black ink, the same acid used only as a fill
+    "paper": "#EDEBE4", "card": "#F6F4EE", "sunk": "#E3E0D7",
+    "ink": "#0A0A0B", "dim": "#55534D", "faint": "#8D897F",
+    "rule": "#D6D2C7", "rule2": "#BDB8AA",
+    "acid": "#D4FF3A", "atext": "#0A0A0B", "hot": "#E0391A", "violet": "#5B3DF5",
+    "trace": "#E0391A", "grain": "0.045", "scan": "0",
 }
 
 

@@ -1,83 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img" aria-label="Ameya, AI engineer. I build agents that know when they are guessing.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img" aria-label="AMEYA — builds agents that know when they're guessing. Now broadcasting three channels: assay, shelfmark and inference.">
 <style>
 __FONTS__
 __VARS__
 .paper{fill:var(--paper)}
-.eyebrow{font:500 11px var(--mono);fill:var(--dim);letter-spacing:2.4px}
-.eyebrow tspan.n{fill:var(--ink)}
-.corner{font:500 10.5px var(--mono);fill:var(--faint);letter-spacing:1.9px}
-.h{font:800 60px var(--disp);fill:var(--ink);letter-spacing:-2.2px}
-.h.on{fill:var(--ytext)}
-.sub{font:500 15.5px var(--body);fill:var(--dim);letter-spacing:-.1px}
-.caw{font:italic 400 21px var(--serif);fill:var(--ink)}
-.floor{stroke:var(--rule);stroke-width:1}
-.crumb{fill:var(--rule2)}
-.bird{fill:var(--ink)}
-.legs{stroke:var(--ink);stroke-width:2.5;stroke-linecap:round;fill:none}
-.toes{stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;fill:none}
-.wing{stroke:var(--paper);stroke-width:1.2;fill:none;opacity:.34;stroke-linecap:round}
-.eye{fill:var(--paper)}
+.bar{font:500 9.5px var(--mono);fill:var(--faint);letter-spacing:1.8px}
+.bar.on{fill:var(--ink)}
+.word{font:900 168.6px var(--disp);letter-spacing:-5px}
+.sub{font:500 25px var(--body);fill:var(--ink);letter-spacing:-.3px}
+.ser{font:italic 400 31px var(--serif);fill:var(--atext)}
+.g{stroke:var(--rule);stroke-width:1;stroke-dasharray:1 3}
+.frame{stroke:var(--rule2);stroke-width:1}
+.trace{fill:none;stroke:var(--trace);stroke-width:1.6;stroke-linejoin:round}
+.lab{font:500 8.5px var(--mono);fill:var(--faint);letter-spacing:1.6px}
+.ch{font:500 9px var(--mono);fill:var(--atext);letter-spacing:1.4px}
+.chn{font:900 15px var(--disp);fill:var(--ink);letter-spacing:-.2px}
+.chd{font:italic 400 15px var(--serif);fill:var(--dim)}
 </style>
 <defs>
-  <path id="hop" d="M-40,366 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0 q14,-17 28,0"/>
+  <pattern id="scan" width="4" height="3" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000"/></pattern>
   <filter id="grain" x="0" y="0" width="100%" height="100%">
-    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
     <feColorMatrix type="saturate" values="0"/>
   </filter>
+  <filter id="tear" x="-5%" y="-20%" width="110%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.001 0.28" numOctaves="1" seed="4" result="n">
+      <animate attributeName="seed" dur="0.24s" repeatCount="indefinite" calcMode="discrete" values="4;11;2;17;8"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G">
+      <animate attributeName="scale" dur="8s" repeatCount="indefinite" calcMode="linear"
+        values="0;0;46;6;30;0;0;22;0;0" keyTimes="0;0.62;0.628;0.64;0.652;0.668;0.86;0.866;0.874;1"/>
+    </feDisplacementMap>
+  </filter>
+  <clipPath id="scope"><rect x="36" y="304" width="808" height="88"/></clipPath>
 </defs>
 
-<rect class="paper" width="880" height="400"/>
-<rect width="880" height="400" filter="url(#grain)" opacity="var(--grain)"/>
+<rect class="paper" width="880" height="460"/>
+<rect width="880" height="460" filter="url(#grain)" opacity="var(--grain)"/>
 
-<rect x="44" y="40" width="9" height="9" fill="var(--yellow)"/>
-<text class="eyebrow" x="64" y="48"><tspan class="n">AMEYA</tspan>   AI ENGINEER   MULTI-AGENT SYSTEMS</text>
-<text class="corner" x="836" y="48" text-anchor="end">A-DAWG010.GITHUB.IO  ↗</text>
+<!-- top bar -->
+<circle cx="40" cy="34" r="4" fill="var(--hot)">
+  <animate attributeName="opacity" dur="1.6s" repeatCount="indefinite" calcMode="discrete" values="1;.15" keyTimes="0;.62"/>
+</circle>
+<text class="bar on" x="52" y="37.5">ON AIR</text>
+<text class="bar" x="440" y="37.5" text-anchor="middle">TRANSMITTING SINCE 2023</text>
+<text class="bar" x="844" y="37.5" text-anchor="end">A-DAWG010.GITHUB.IO ↗</text>
+<line class="frame" x1="36" y1="52" x2="844" y2="52"/>
 
-<text class="h" x="42" y="142">I build agents that</text>
-<text class="h" x="42" y="204">know when they’re</text>
-<g transform="rotate(-0.7 44 244)">
-  <rect x="34" y="220" width="292" height="50" rx="3" fill="var(--yellow)"/>
-  <text class="h on" x="42" y="260">guessing.</text>
+<!-- wordmark: two chromatic ghosts that only surface when the signal tears -->
+<g filter="url(#tear)">
+  <text class="word" x="33" y="212" fill="var(--acid)" opacity="0">AMEYA
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" calcMode="discrete" values="0;1;0;1;0" keyTimes="0;0.62;0.668;0.86;0.874"/>
+    <animate attributeName="x" dur="0.12s" repeatCount="indefinite" calcMode="discrete" values="31;35;29"/>
+  </text>
+  <text class="word" x="39" y="212" fill="var(--hot)" opacity="0">AMEYA
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite" calcMode="discrete" values="0;1;0;1;0" keyTimes="0;0.62;0.668;0.86;0.874"/>
+    <animate attributeName="x" dur="0.12s" repeatCount="indefinite" calcMode="discrete" values="41;38;43"/>
+  </text>
+  <text class="word" x="36" y="212" fill="var(--ink)">AMEYA</text>
 </g>
 
-<text class="sub" x="44" y="308">Orchestration you can audit. Retrieval that understands relationships.</text>
-<text class="sub" x="44" y="330">Built where a confident wrong answer becomes somebody’s audit finding.</text>
-
-<line class="floor" x1="42" y1="366" x2="838" y2="366"/>
-
-<g>
-  <rect class="crumb" x="546" y="360" width="6" height="6" rx="1.5">
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite" calcMode="linear" values="1;1;0;0;1;1" keyTimes="0;0.457;0.468;0.95;0.965;1"/>
-  </rect>
-  <rect class="crumb" x="560" y="360" width="6" height="6" rx="1.5">
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite" calcMode="linear" values="1;1;0;0;1;1" keyTimes="0;0.517;0.528;0.95;0.965;1"/>
-  </rect>
-  <rect class="crumb" x="572" y="360" width="6" height="6" rx="1.5">
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite" calcMode="linear" values="1;1;0;0;1;1" keyTimes="0;0.577;0.588;0.95;0.965;1"/>
-  </rect>
+<!-- subline -->
+<text class="sub" x="38" y="266">builds agents that know when they’re </text>
+<g transform="rotate(-1.2 451.4 256)">
+  <rect x="445.4" y="239" width="116.0" height="36" fill="var(--acid)"/>
+  <text class="ser" x="452.4" y="267">guessing.</text>
 </g>
 
-<text class="caw" x="622" y="340" opacity="0">caw.
-  <animate attributeName="opacity" dur="16s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.60;0.635;0.71;0.76;1"/>
-  <animate attributeName="y" dur="16s" repeatCount="indefinite" calcMode="linear" values="344;344;336;334;334;344" keyTimes="0;0.60;0.65;0.71;0.76;1"/>
-</text>
-
-<g>
-  <animateMotion dur="16s" repeatCount="indefinite" calcMode="linear"
-    keyPoints="0;0;0.588;0.618;1;1" keyTimes="0;0.04;0.42;0.60;0.92;1"><mpath href="#hop"/></animateMotion>
-  <g transform="scale(0.55)">
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      calcMode="linear" values="0 4 0;0 4 0;22 4 0;0 4 0;22 4 0;0 4 0;22 4 0;0 4 0;0 4 0"
-      keyTimes="0;0.44;0.457;0.478;0.517;0.538;0.577;0.598;1"/>
-    <path class="legs" d="M1,-13 L0,-2 M8,-13 L7,-2"/>
-    <path class="toes" d="M-4,-0.7 L0,-2.2 L5.6,-0.7 M0,-2.2 L-2.6,0.2"/>
-    <path class="toes" d="M3,-0.7 L7,-2.2 L12.6,-0.7 M7,-2.2 L4.4,0.2"/>
-    <path class="bird" d="M-4,-28 L-48,-13 L-45,-5 L-2,-13 Z"/>
-    <ellipse class="bird" cx="0" cy="-22" rx="18" ry="11" transform="rotate(-12 0 -22)"/>
-    <path class="bird" d="M2,-26 C4,-38 13,-46 22,-45 C30,-44 34,-38 33,-32 C32,-27 26,-24 19,-25 C11,-26 5,-24 2,-26 Z"/>
-    <path class="bird" d="M31,-39.5 C37,-38.6 44,-36 48,-33.6 C43.6,-31.2 36,-30.4 30.4,-31.2 Z"/>
-    <path class="wing" d="M-14,-21 C-4,-25 8,-26 15,-25"/>
-    <circle class="eye" cx="26" cy="-37.5" r="1.6"/>
-  </g>
+<!-- scope -->
+<line class="frame" x1="36" y1="304" x2="844" y2="304"/>
+<line class="frame" x1="36" y1="392" x2="844" y2="392"/>
+<line class="g" x1="76" y1="304" x2="76" y2="392"/><line class="g" x1="116" y1="304" x2="116" y2="392"/><line class="g" x1="156" y1="304" x2="156" y2="392"/><line class="g" x1="196" y1="304" x2="196" y2="392"/><line class="g" x1="236" y1="304" x2="236" y2="392"/><line class="g" x1="276" y1="304" x2="276" y2="392"/><line class="g" x1="316" y1="304" x2="316" y2="392"/><line class="g" x1="356" y1="304" x2="356" y2="392"/><line class="g" x1="396" y1="304" x2="396" y2="392"/><line class="g" x1="436" y1="304" x2="436" y2="392"/><line class="g" x1="476" y1="304" x2="476" y2="392"/><line class="g" x1="516" y1="304" x2="516" y2="392"/><line class="g" x1="556" y1="304" x2="556" y2="392"/><line class="g" x1="596" y1="304" x2="596" y2="392"/><line class="g" x1="636" y1="304" x2="636" y2="392"/><line class="g" x1="676" y1="304" x2="676" y2="392"/><line class="g" x1="716" y1="304" x2="716" y2="392"/><line class="g" x1="756" y1="304" x2="756" y2="392"/><line class="g" x1="796" y1="304" x2="796" y2="392"/><line class="g" x1="836" y1="304" x2="836" y2="392"/>
+<line class="g" x1="36" y1="348.0" x2="844" y2="348.0"/>
+<g clip-path="url(#scope)">
+  <path class="trace" d="M36,347.5 L38,347.8 L40,347.7 L42,349.3 L44,349.6 L46,348.3 L48,349.8 L50,350.0 L52,349.8 L54,349.2 L56,349.4 L58,350.8 L60,349.7 L62,349.8 L64,350.9 L66,350.0 L68,350.1 L70,350.1 L72,351.0 L74,350.9 L76,351.9 L78,350.0 L80,349.9 L82,350.0 L84,350.8 L86,350.6 L88,351.3 L90,350.1 L92,349.8 L94,349.1 L96,350.3 L98,350.0 L100,347.3 L102,349.1 L104,348.8 L106,347.1 L108,346.4 L110,346.1 L112,345.7 L114,346.0 L116,345.7 L118,346.8 L120,344.9 L122,344.7 L124,349.3 L126,352.3 L128,347.1 L130,328.3 L132,311.1 L134,328.9 L136,346.8 L138,353.1 L140,349.0 L142,345.0 L144,345.4 L146,345.5 L148,345.0 L150,344.9 L152,345.1 L154,346.0 L156,345.9 L158,346.1 L160,346.0 L162,347.5 L164,347.8 L166,347.8 L168,346.9 L170,347.2 L172,348.4 L174,348.6 L176,348.9 L178,350.0 L180,349.9 L182,350.2 L184,349.3 L186,351.3 L188,351.6 L190,349.5 L192,350.5 L194,350.6 L196,351.6 L198,350.2 L200,350.2 L202,351.2 L204,350.0 L206,350.0 L208,351.6 L210,351.8 L212,351.7 L214,351.1 L216,351.7 L218,351.5 L220,349.9 L222,350.7 L224,350.5 L226,349.9 L228,349.6 L230,349.4 L232,348.8 L234,349.5 L236,349.2 L238,349.2 L240,347.6 L242,347.3 L244,347.5 L246,345.7 L248,345.4 L250,346.8 L252,346.4 L254,346.2 L256,346.9 L258,346.3 L260,346.1 L262,344.6 L264,344.7 L266,344.6 L268,345.3 L270,343.6 L272,343.6 L274,344.7 L276,344.0 L278,344.1 L280,344.0 L282,344.0 L284,344.2 L286,346.2 L288,344.7 L290,347.4 L292,349.8 L294,347.2 L296,335.8 L298,325.9 L300,335.7 L302,348.5 L304,353.8 L306,351.6 L308,349.1 L310,349.7 L312,349.8 L314,350.1 L316,350.5 L318,349.2 L320,349.4 L322,350.0 L324,350.1 L326,350.3 L328,351.8 L330,352.1 L332,352.2 L334,350.2 L336,350.3 L338,350.4 L340,350.5 L342,350.5 L344,350.4 L346,351.0 L348,351.2 L350,351.0 L352,350.0 L354,349.2 L356,349.0 L358,349.8 L360,349.4 L362,349.2 L364,349.4 L366,351.7 L368,352.6 L370,349.6 L372,341.4 L374,333.9 L376,341.2 L378,349.0 L380,351.3 L382,347.7 L384,347.8 L386,347.2 L388,346.6 L390,346.7 L392,346.5 L394,346.1 L396,344.9 L398,344.8 L400,344.7 L402,343.8 L404,343.8 L406,345.1 L408,343.7 L410,343.7 L412,343.8 L414,344.2 L416,344.4 L418,344.4 L420,345.0 L422,345.2 L424,344.7 L426,344.8 L428,345.0 L430,345.7 L432,345.8 L434,346.1 L436,347.1 L438,346.5 L440,347.5 L442,347.8 L444,347.7 L446,349.3 L448,349.6 L450,348.3 L452,349.8 L454,350.0 L456,349.8 L458,349.2 L460,349.4 L462,350.8 L464,349.7 L466,349.8 L468,350.9 L470,350.0 L472,350.1 L474,350.1 L476,351.0 L478,350.9 L480,351.9 L482,350.0 L484,349.9 L486,350.0 L488,350.8 L490,350.6 L492,351.3 L494,350.1 L496,349.8 L498,349.1 L500,350.3 L502,350.0 L504,347.3 L506,349.1 L508,348.8 L510,347.1 L512,346.4 L514,346.1 L516,345.7 L518,346.0 L520,345.7 L522,346.8 L524,344.9 L526,344.7 L528,349.3 L530,352.3 L532,347.1 L534,328.3 L536,311.1 L538,328.9 L540,346.8 L542,353.1 L544,349.0 L546,345.0 L548,345.4 L550,345.5 L552,345.0 L554,344.9 L556,345.1 L558,346.0 L560,345.9 L562,346.1 L564,346.0 L566,347.5 L568,347.8 L570,347.8 L572,346.9 L574,347.2 L576,348.4 L578,348.6 L580,348.9 L582,350.0 L584,349.9 L586,350.2 L588,349.3 L590,351.3 L592,351.6 L594,349.5 L596,350.5 L598,350.6 L600,351.6 L602,350.2 L604,350.2 L606,351.2 L608,350.0 L610,350.0 L612,351.6 L614,351.8 L616,351.7 L618,351.1 L620,351.7 L622,351.5 L624,349.9 L626,350.7 L628,350.5 L630,349.9 L632,349.6 L634,349.4 L636,348.8 L638,349.5 L640,349.2 L642,349.2 L644,347.6 L646,347.3 L648,347.5 L650,345.7 L652,345.4 L654,346.8 L656,346.4 L658,346.2 L660,346.9 L662,346.3 L664,346.1 L666,344.6 L668,344.7 L670,344.6 L672,345.3 L674,343.6 L676,343.6 L678,344.7 L680,344.0 L682,344.1 L684,344.0 L686,344.0 L688,344.2 L690,346.2 L692,344.7 L694,347.4 L696,349.8 L698,347.2 L700,335.8 L702,325.9 L704,335.7 L706,348.5 L708,353.8 L710,351.6 L712,349.1 L714,349.7 L716,349.8 L718,350.1 L720,350.5 L722,349.2 L724,349.4 L726,350.0 L728,350.1 L730,350.3 L732,351.8 L734,352.1 L736,352.2 L738,350.2 L740,350.3 L742,350.4 L744,350.5 L746,350.5 L748,350.4 L750,351.0 L752,351.2 L754,351.0 L756,350.0 L758,349.2 L760,349.0 L762,349.8 L764,349.4 L766,349.2 L768,349.4 L770,351.7 L772,352.6 L774,349.6 L776,341.4 L778,333.9 L780,341.2 L782,349.0 L784,351.3 L786,347.7 L788,347.8 L790,347.2 L792,346.6 L794,346.7 L796,346.5 L798,346.1 L800,344.9 L802,344.8 L804,344.7 L806,343.8 L808,343.8 L810,345.1 L812,343.7 L814,343.7 L816,343.8 L818,344.2 L820,344.4 L822,344.4 L824,345.0 L826,345.2 L828,344.7 L830,344.8 L832,345.0 L834,345.7 L836,345.8 L838,346.1 L840,347.1 L842,346.5 L844,347.5 L846,347.8 L848,347.7 L850,349.3 L852,349.6 L854,348.3 L856,349.8 L858,350.0 L860,349.8 L862,349.2 L864,349.4 L866,350.8 L868,349.7 L870,349.8 L872,350.9 L874,350.0 L876,350.1 L878,350.1 L880,351.0 L882,350.9 L884,351.9 L886,350.0 L888,349.9 L890,350.0 L892,350.8 L894,350.6 L896,351.3 L898,350.1 L900,349.8 L902,349.1 L904,350.3 L906,350.0 L908,347.3 L910,349.1 L912,348.8 L914,347.1 L916,346.4 L918,346.1 L920,345.7 L922,346.0 L924,345.7 L926,346.8 L928,344.9 L930,344.7 L932,349.3 L934,352.3 L936,347.1 L938,328.3 L940,311.1 L942,328.9 L944,346.8 L946,353.1 L948,349.0 L950,345.0 L952,345.4 L954,345.5 L956,345.0 L958,344.9 L960,345.1 L962,346.0 L964,345.9 L966,346.1 L968,346.0 L970,347.5 L972,347.8 L974,347.8 L976,346.9 L978,347.2 L980,348.4 L982,348.6 L984,348.9 L986,350.0 L988,349.9 L990,350.2 L992,349.3 L994,351.3 L996,351.6 L998,349.5 L1000,350.5 L1002,350.6 L1004,351.6 L1006,350.2 L1008,350.2 L1010,351.2 L1012,350.0 L1014,350.0 L1016,351.6 L1018,351.8 L1020,351.7 L1022,351.1 L1024,351.7 L1026,351.5 L1028,349.9 L1030,350.7 L1032,350.5 L1034,349.9 L1036,349.6 L1038,349.4 L1040,348.8 L1042,349.5 L1044,349.2 L1046,349.2 L1048,347.6 L1050,347.3 L1052,347.5 L1054,345.7 L1056,345.4 L1058,346.8 L1060,346.4 L1062,346.2 L1064,346.9 L1066,346.3 L1068,346.1 L1070,344.6 L1072,344.7 L1074,344.6 L1076,345.3 L1078,343.6 L1080,343.6 L1082,344.7 L1084,344.0 L1086,344.1 L1088,344.0 L1090,344.0 L1092,344.2 L1094,346.2 L1096,344.7 L1098,347.4 L1100,349.8 L1102,347.2 L1104,335.8 L1106,325.9 L1108,335.7 L1110,348.5 L1112,353.8 L1114,351.6 L1116,349.1 L1118,349.7 L1120,349.8 L1122,350.1 L1124,350.5 L1126,349.2 L1128,349.4 L1130,350.0 L1132,350.1 L1134,350.3 L1136,351.8 L1138,352.1 L1140,352.2 L1142,350.2 L1144,350.3 L1146,350.4 L1148,350.5 L1150,350.5 L1152,350.4 L1154,351.0 L1156,351.2 L1158,351.0 L1160,350.0 L1162,349.2 L1164,349.0 L1166,349.8 L1168,349.4 L1170,349.2 L1172,349.4 L1174,351.7 L1176,352.6 L1178,349.6 L1180,341.4 L1182,333.9 L1184,341.2 L1186,349.0 L1188,351.3 L1190,347.7 L1192,347.8 L1194,347.2 L1196,346.6 L1198,346.7 L1200,346.5 L1202,346.1 L1204,344.9 L1206,344.8 L1208,344.7 L1210,343.8 L1212,343.8 L1214,345.1 L1216,343.7 L1218,343.7 L1220,343.8 L1222,344.2 L1224,344.4 L1226,344.4 L1228,345.0 L1230,345.2 L1232,344.7 L1234,344.8 L1236,345.0 L1238,345.7 L1240,345.8 L1242,346.1 L1244,347.1 L1246,346.5 L1248,347.5 L1250,347.8">
+    <animateTransform attributeName="transform" type="translate" dur="7s" repeatCount="indefinite" values="0 0;-404.0 0"/>
+  </path>
 </g>
+<line x1="700" y1="304" x2="700" y2="392" stroke="var(--hot)" stroke-width="1"/>
+<rect x="696" y="300" width="8" height="8" fill="var(--hot)"/>
+<text class="lab" x="36" y="408">SIGNAL</text>
+<text class="lab" x="700" y="408" text-anchor="middle">NOW</text>
+<text class="lab" x="844" y="408" text-anchor="end">NOISE: FILTERED</text>
+
+<!-- program guide -->
+<rect width="880" height="460" fill="url(#scan)" opacity="var(--scan)" pointer-events="none"/>
+<rect x="36" y="424" width="44" height="16" fill="var(--acid)"/><text class="ch" x="42" y="435.5">CH.01</text><text class="chn" x="90" y="438">ASSAY</text><text class="chd" x="165" y="438">egress ledger</text>
+<rect x="308" y="424" width="44" height="16" fill="var(--acid)"/><text class="ch" x="314" y="435.5">CH.02</text><text class="chn" x="362" y="438">SHELFMARK</text><text class="chd" x="492" y="438">file → path</text>
+<rect x="580" y="424" width="44" height="16" fill="var(--acid)"/><text class="ch" x="586" y="435.5">CH.03</text><text class="chn" x="634" y="438">INFERENCE</text><text class="chd" x="753" y="438">the AI briefing</text>
 </svg>

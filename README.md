@@ -1,27 +1,23 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img alt="Ameya — AI engineer. I build agents that know when they're guessing." src="assets/hero-light.svg" width="100%">
+  <img alt="AMEYA — builds agents that know when they're guessing. Now broadcasting three channels: assay, shelfmark, inference." src="assets/hero-light.svg" width="100%">
 </picture>
 
-Three years teaching language models to behave in rooms where being wrong is expensive —
-security, compliance, threat intel. In practice that means orchestration you can audit,
-retrieval that understands relationships instead of vibes, and a surprising amount of
-engineering dedicated to making a model say *I don't know that yet*.
+Three years getting language models to behave in rooms where being wrong is expensive —
+security, compliance, threat intel. Mostly that means orchestration you can audit, retrieval that
+understands relationships instead of vibes, and a surprising amount of engineering spent teaching
+a model to say *I don't know that yet*.
 
-The rest of the time I build small sharp tools for problems that annoy me. Both of the ones
-below are local-first, read-only where it counts, and deliberately unexciting about what they
-claim.
+Off the clock I build small, sharp, local-first tools. Three are on air.
 
 <br>
 
-## two of those
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/assay-dark.svg">
-  <img alt="assay — what left the machine, and when. Reconstructs which of your repositories went to which AI vendor, from session records your coding agents already wrote to disk." src="assets/assay-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ch1-assay-dark.svg">
+  <img alt="Channel 01, assay — what left the machine, and when. Reconstructs which of your repositories went to which AI vendor, from session logs your coding agents already wrote to disk." src="assets/ch1-assay-light.svg" width="100%">
 </picture>
 
-**[github.com/a-dawg010/assay →](https://github.com/a-dawg010/assay)**
+**[tune in → assay](https://github.com/a-dawg010/assay)**
 
 <details>
 <summary><b>how it works</b></summary>
@@ -29,61 +25,86 @@ claim.
 <br>
 
 Your coding agents write every session to disk in plaintext, at predictable paths, with the
-working directory attached to each record. Nobody reads those files, so nobody notices that they
-add up to an egress log — a record of what left the machine that the vendors themselves do not
-provide. Copilot's admin audit log excludes client-side prompt content; Claude Code and Cursor
-make no durable-audit commitment.
+working directory attached to each record. Nobody reads those files, so nobody notices they add
+up to an egress log — a record of what left the machine that the vendors themselves don't
+provide. A gateway can't be installed retroactively; a proxy deployed today knows nothing about
+last quarter. These files do.
 
-The corollary that makes it worth running: **a gateway cannot be installed retroactively.** A
-proxy deployed today knows nothing about last quarter. These files do.
+It reads Claude Code's JSONL sessions, Codex rollouts, the VS Code and Cursor workspace databases
+and Gemini's shadow git repos, and reports which repository went to which vendor and when. It's
+equally blunt about what it can't see: inline completions leave no local record, and Antigravity's
+conversations are encrypted at rest, so they're counted and never decrypted.
 
-It reads Claude Code's JSONL sessions, Codex rollouts, the VS Code and Cursor workspace
-databases, and Gemini's shadow git repos, then reports which repository went to which vendor and
-when. It is equally clear about what it cannot see: inline completion leaves no local record,
-and Antigravity's conversations are encrypted at rest, so they are counted and never decrypted.
-
-Findings are pattern shapes, not verdicts. "Thirteen files contain strings matching a token
-pattern" is a true sentence; "thirteen secrets leaked" is not. Matches are redacted to
-first-six and last-two characters — enough to deduplicate, not enough to use — and `--share`
-prints counts and date ranges only, with the test suite asserting that no repository name or
-path escapes. Standard library only. No dependencies, no install, no network.
+Findings are pattern shapes, not verdicts. Matches are redacted to first-six and last-two
+characters, and `--share` prints counts and date ranges only — with a test asserting no repo name
+or path escapes. Standard library only. No dependencies, no network.
 
 </details>
 
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/shelfmark-dark.svg">
-  <img alt="shelfmark — not what it's about, where it is. Ask where a file is and get the path, from two indexes shown side by side and never blended." src="assets/shelfmark-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ch2-shelfmark-dark.svg">
+  <img alt="Channel 02, shelfmark — not what it's about, where it is. Ask where a file is and get the path, from a lexical index and an on-device embedding index shown side by side." src="assets/ch2-shelfmark-light.svg" width="100%">
 </picture>
 
-**[github.com/a-dawg010/shelfmark →](https://github.com/a-dawg010/shelfmark)**
+**[tune in → shelfmark](https://github.com/a-dawg010/shelfmark)**
 
 <details>
 <summary><b>how it works</b></summary>
 
 <br>
 
-A *shelfmark* is the notation a library puts on an item saying exactly where it lives. Not what
-it is about — where it is. That is the whole product: it finds the file and tells you the path.
-Not a summary, not a chat.
+A *shelfmark* is the notation a library puts on an item saying exactly where it lives — not what
+it's about, where it is. That's the whole product.
 
-Type a question and you get two lists, labelled and kept separate. **Matches your words** is a
-lexical index — SQLite FTS5, BM25, plus a filename prior that only engages when the query
-strongly names a file. **Matches the meaning** is a local embedding index: MiniLM on Accelerate,
-384 dimensions, cosine similarity with a floor at 0.45, so nonsense returns nothing instead of
-six confident wrong files. The two are shown side by side rather than fused into one list,
-because fusing them measured worse than either column alone.
+Type a question and you get two lists, labelled and kept apart. **Matches your words** is SQLite
+FTS5 with BM25 and a filename prior. **Matches the meaning** is a MiniLM embedding index on
+Accelerate — 384 dimensions, cosine floored at 0.45 so nonsense returns nothing instead of six
+confident wrong files. They're shown side by side rather than fused, because fusing them measured
+worse than either column alone.
 
-Swift 6, no dependencies, macOS. Everything runs on the machine and nothing is sent anywhere —
-the embeddings come from a 22M-parameter model inside the app, not an API. There is a CLI and an
-MCP server, so Claude Code and Cursor can search the disk through it too. When neither column
-scores well it offers the closest folder rather than a confident wrong answer.
+Swift 6, no dependencies, macOS. The embeddings come from a 22M-parameter model inside the app, so
+nothing leaves the machine. There's a CLI and an MCP server, so Claude Code and Cursor can search
+your disk through it too.
 
 </details>
 
 <br>
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ch3-inference-dark.svg">
+  <img alt="Channel 03, inference — one page, everything happening in AI. Pulls about 64 sources, ranks and de-duplicates them, three Claude calls, one static HTML file." src="assets/ch3-inference-light.svg" width="100%">
+</picture>
 
-<sub>more, and it moves: **[a-dawg010.github.io](https://a-dawg010.github.io/a-dawg010/)** &nbsp;·&nbsp; no analytics on this page, no newsletter, the crow is load-bearing</sub>
+**[tune in → inference](https://github.com/a-dawg010/inference)**
+
+<details>
+<summary><b>how it works</b></summary>
+
+<br>
+
+Most AI news is either a firehose you can't drink from or a newsletter that arrives a day late
+with four links. Inference is the third thing: one page you open once and see the whole field —
+what shipped, what's winning, what broke.
+
+It fans out across ~64 endpoints in parallel — RSS, Hacker News, GitHub, HF Daily Papers, arXiv,
+Reddit — then de-duplicates, drops non-AI noise, and scores everything. Under-followed sources get
+an explicit boost: an Interconnects or Embrace The Red post outranks a TechCrunch rewrite of the
+same news, because surfacing what the majors miss is the point.
+
+A full rebuild is three `claude -p` calls, not hundreds, on an existing subscription — $0.00 in
+metered API. Claude picks stories **by list index**, never by emitting a URL, so a hallucinated link
+is structurally impossible. If the CLI is down it falls back to a cache, then to a raw ranked
+render. Thin days render thin. Node 18 built-ins only; the output is one HTML file.
+
+</details>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/signoff-dark.svg">
+  <img alt="End of transmission. Still here, just quiet." src="assets/signoff-light.svg" width="100%">
+</picture>
+
+<div align="center"><sub>change the channel yourself → <b><a href="https://a-dawg010.github.io/a-dawg010/">a-dawg010.github.io</a></b></sub></div>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 120" width="880" height="120" role="img" aria-label="End of transmission.">
+<style>
+__FONTS__
+__VARS__
+.paper{fill:var(--paper)}
+.flat{fill:none;stroke:var(--trace);stroke-width:1.5}
+.eot{font:500 9.5px var(--mono);fill:var(--faint);letter-spacing:2.2px}
+.bye{font:italic 400 26px var(--serif);fill:var(--ink)}
+</style>
+<defs>
+  <path id="blip" d="M0,0 L10,0 L13,-3 L16,0 L20,0 L23,-24 L26,10 L29,0 L36,0 L40,-5 L44,0 L60,0"/>
+  <clipPath id="line"><rect x="200" y="20" width="644" height="80"/></clipPath>
+</defs>
+<rect class="paper" width="880" height="120"/>
+<rect x="36" y="30" width="140" height="60" fill="none" stroke="var(--rule2)"/>
+<rect x="36" y="30" width="20" height="60" fill="var(--ink)"/><rect x="56" y="30" width="20" height="60" fill="var(--acid)"/><rect x="76" y="30" width="20" height="60" fill="var(--hot)"/><rect x="96" y="30" width="20" height="60" fill="var(--violet)"/><rect x="116" y="30" width="20" height="60" fill="var(--dim)"/><rect x="136" y="30" width="20" height="60" fill="var(--rule2)"/><rect x="156" y="30" width="20" height="60" fill="var(--paper)"/>
+<g clip-path="url(#line)">
+  <line class="flat" x1="200" y1="60" x2="844" y2="60"/>
+  <g>
+    <animateTransform attributeName="transform" type="translate" dur="9s" repeatCount="indefinite" calcMode="linear"
+      values="854 60;854 60;156 60;156 60" keyTimes="0;0.55;0.95;1"/>
+    <use href="#blip" class="flat"/>
+  </g>
+</g>
+<text class="eot" x="844" y="44" text-anchor="end">END OF TRANSMISSION</text>
+<text class="bye" x="844" y="92" text-anchor="end">still here. just quiet.</text>
+</svg>

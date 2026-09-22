@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="Channel 01, assay: reconstructs which of your repositories went to which AI vendor, and when, from records already on your machine.">
+<style>
+__FONTS__
+__VARS__
+.paper{fill:var(--paper)}
+.frame{fill:var(--card);stroke:var(--rule2);stroke-width:1}
+.rule{stroke:var(--rule);stroke-width:1}
+.ch{font:500 9px var(--mono);fill:var(--atext);letter-spacing:1.4px}
+.stack{font:500 8.5px var(--mono);fill:var(--faint);letter-spacing:1.6px}
+.name{font:900 50px var(--disp);fill:var(--ink);letter-spacing:-1.6px}
+.ghost{font:900 230px var(--disp);fill:none;stroke:var(--rule);stroke-width:1;letter-spacing:-8px}
+.tag{font:italic 400 22px var(--serif);fill:var(--ink)}
+.body{font:500 12.8px var(--body);fill:var(--dim)}
+.link{font:500 9.5px var(--mono);fill:var(--violet);letter-spacing:1.3px}
+.lab{font:500 8px var(--mono);fill:var(--faint);letter-spacing:1.4px}
+.tick{fill:var(--ink)}
+</style>
+<defs>
+  <clipPath id="card"><rect x="14" y="10" width="852" height="280"/></clipPath>
+
+</defs>
+<rect class="paper" width="880" height="300"/>
+<rect class="frame" x="14.5" y="10.5" width="851" height="279"/>
+<g clip-path="url(#card)"><text class="ghost" x="874" y="286" text-anchor="end">01</text></g>
+
+<rect x="14.5" y="10.5" width="62" height="26" fill="var(--acid)"/>
+<text class="ch" x="24" y="27.5">CH.01</text>
+<text class="stack" x="844" y="27" text-anchor="end">PYTHON  ·  STDLIB ONLY  ·  CLI</text>
+<line class="rule" x1="14.5" y1="36.5" x2="865.5" y2="36.5"/>
+
+<text class="name" x="34" y="104">assay</text>
+<text class="tag" x="36" y="138">what left the machine, and when.</text>
+<rect x="36" y="146" width="263" height="2" fill="var(--acid)"/>
+<text class="body" x="36" y="176">Reconstructs which of your repositories went to which</text>
+<text class="body" x="36" y="195">AI vendor, from the session logs your coding agents</text>
+<text class="body" x="36" y="214">already wrote to disk. A gateway can’t be installed</text>
+<text class="body" x="36" y="233">retroactively. These files are already there.</text>
+<text class="link" x="36" y="264">GITHUB.COM/A-DAWG010/ASSAY  ↗</text>
+
+<text class="lab" x="534" y="77" text-anchor="end">ANTHROPIC</text>
+<line class="rule" x1="544" y1="74" x2="844" y2="74"/>
+<rect class="tick" x="552.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.0971;0.1051;0.86;0.9;1"/></rect>
+<rect class="tick" x="565.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1248;0.1328;0.86;0.9;1"/></rect>
+<rect class="tick" x="578.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1525;0.1605;0.86;0.9;1"/></rect>
+<rect class="tick" x="590.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1781;0.1861;0.86;0.9;1"/></rect>
+<rect class="tick" x="609.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2187;0.2267;0.86;0.9;1"/></rect>
+<rect class="tick" x="622.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2464;0.2544;0.86;0.9;1"/></rect>
+<rect class="tick" x="635.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2741;0.2821;0.86;0.9;1"/></rect>
+<rect class="tick" x="653.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3125;0.3205;0.86;0.9;1"/></rect>
+<rect class="tick" x="666.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3403;0.3483;0.86;0.9;1"/></rect>
+<rect class="tick" x="684.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3787;0.3867;0.86;0.9;1"/></rect>
+<rect class="tick" x="697.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4064;0.4144;0.86;0.9;1"/></rect>
+<rect class="tick" x="715.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4448;0.4528;0.86;0.9;1"/></rect>
+<rect class="tick" x="733.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4832;0.4912;0.86;0.9;1"/></rect>
+<rect class="tick" x="746.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5109;0.5189;0.86;0.9;1"/></rect>
+<rect class="tick" x="764.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5493;0.5573;0.86;0.9;1"/></rect>
+<rect class="tick" x="782.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5877;0.5957;0.86;0.9;1"/></rect>
+<rect class="tick" x="795.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6155;0.6235;0.86;0.9;1"/></rect>
+<rect class="tick" x="813.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6539;0.6619;0.86;0.9;1"/></rect>
+<rect class="tick" x="831.0" y="67" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6923;0.7003;0.86;0.9;1"/></rect>
+<text class="lab" x="534" y="111" text-anchor="end">OPENAI</text>
+<line class="rule" x1="544" y1="108" x2="844" y2="108"/>
+<rect class="tick" x="560.0" y="101" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1141;0.1221;0.86;0.9;1"/></rect>
+<rect class="tick" x="593.0" y="101" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1845;0.1925;0.86;0.9;1"/></rect>
+<rect class="tick" x="626.0" y="101" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2549;0.2629;0.86;0.9;1"/></rect>
+<rect class="tick" x="659.0" y="101" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3253;0.3333;0.86;0.9;1"/></rect>
+<rect class="tick" x="695.0" y="101" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4021;0.4101;0.86;0.9;1"/></rect>
+<rect class="tick" x="731.0" y="101" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4789;0.4869;0.86;0.9;1"/></rect>
+<rect class="tick" x="767.0" y="101" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5557;0.5637;0.86;0.9;1"/></rect>
+<rect class="tick" x="804.0" y="101" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6347;0.6427;0.86;0.9;1"/></rect>
+<text class="lab" x="534" y="145" text-anchor="end">COPILOT</text>
+<line class="rule" x1="544" y1="142" x2="844" y2="142"/>
+<rect class="tick" x="548.0" y="135" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.0885;0.0965;0.86;0.9;1"/></rect>
+<rect class="tick" x="581.0" y="135" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1589;0.1669;0.86;0.9;1"/></rect>
+<rect class="tick" x="614.0" y="135" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2293;0.2373;0.86;0.9;1"/></rect>
+<rect class="tick" x="670.0" y="135" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3488;0.3568;0.86;0.9;1"/></rect>
+<rect class="tick" x="722.0" y="135" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4597;0.4677;0.86;0.9;1"/></rect>
+<rect class="tick" x="783.0" y="135" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5899;0.5979;0.86;0.9;1"/></rect>
+<text class="lab" x="534" y="179" text-anchor="end">GOOGLE</text>
+<line class="rule" x1="544" y1="176" x2="844" y2="176"/>
+<rect class="tick" x="586.0" y="169" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.1696;0.1776;0.86;0.9;1"/></rect>
+<rect class="tick" x="642.0" y="169" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.2891;0.2971;0.86;0.9;1"/></rect>
+<rect class="tick" x="698.0" y="169" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.4085;0.4165;0.86;0.9;1"/></rect>
+<rect class="tick" x="754.0" y="169" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.5280;0.5360;0.86;0.9;1"/></rect>
+<rect class="tick" x="811.0" y="169" width="2.6" height="14" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.6496;0.6576;0.86;0.9;1"/></rect>
+<rect x="544" y="56" width="1.5" height="138" fill="var(--hot)" opacity="0">
+  <animate attributeName="x" dur="12s" repeatCount="indefinite" calcMode="linear" values="544;544;844;844;544;544" keyTimes="0;0.08;0.72;0.86;0.9;1"/>
+  <animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;1;1;0;0" keyTimes="0;0.08;0.72;0.78;1"/>
+</rect>
+<line class="rule" x1="544" y1="208" x2="844" y2="208"/>
+<text class="lab" x="544" y="222">EARLIEST RECORD</text>
+<text class="lab" x="844" y="222" text-anchor="end">TODAY</text>
+<text class="lab" x="544" y="264">READ-ONLY  ·  NO NETWORK  ·  NOTHING DELETED</text>
+</svg>
