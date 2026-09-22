@@ -4,12 +4,13 @@ Everything that moves in the README is a hand-authored SVG animated with SMIL in
 itself. That is a constraint, not a preference: GitHub strips `<script>`, `<style>` blocks and
 inline `style=` from a README, and an SVG loaded through `<img>` is also blocked from fetching
 anything external — no Google Fonts, no stylesheets. So each panel carries its own typography.
-`assets/fonts/` holds four cuts subset down to the characters actually used (Bricolage Grotesque
-instanced at 800 and 480, Instrument Serif italic, DM Mono), and `build.py` inlines them as
+`assets/fonts/` holds four cuts subset down to the characters actually used (Archivo instanced
+at Expanded Black and at text weight, Martian Mono, Instrument Serif italic), and `build.py` inlines them as
 base64 `@font-face` blocks. Only the faces a source really uses get embedded, which is why the
 built files land around 55–60 KB rather than 200.
 
-The sources are in [`assets/src/`](../assets/src) — `hero.svg`, `assay.svg`, `shelfmark.svg` —
+The sources are in [`assets/src/`](../assets/src) — `hero.svg`, one `chN-*.svg` per project channel,
+and `signoff.svg` —
 and each contains two tokens: `__FONTS__` where the font faces go and `__VARS__` where that
 theme's CSS custom properties go. Running `python3 build.py` writes a `-dark` and a `-light`
 variant of each, and the README's `<picture>` elements pick between them with
@@ -20,13 +21,14 @@ themed-picture wrapper ejects the `<img>` out of the anchor and breaks both the 
 theme swap. Put the link on a line of its own underneath.
 
 To check your work, run `python3 -m http.server` at the repo root and open
-`preview.html?n=hero` (or `assay`, `shelfmark`), which renders each panel in both themes at
+`preview.html?n=hero` (or `ch1-assay`, `ch2-shelfmark`, `ch3-inference`, `signoff`), which renders each panel in both themes at
 GitHub's ~850 px content column and at phone width. `python3 render-readme.py` pushes README.md
 through GitHub's own markdown API and writes `readme-render.html` so you can see the real page
 before pushing.
 
 `docs/` is the GitHub Pages site (Settings → Pages → `main` / `/docs`): a single dependency-free
 `index.html` using the same palette and type, loaded from Google Fonts since a real page is
-allowed to. The worm on the hero strip crawls by itself, chases the pointer while you hover the
-strip, and eats the crumbs it passes — about fifty lines at the bottom of the file. It grows the
-crumbs back after six seconds.
+allowed to. It is built as a broadcast: the name decodes and tears on hover, the oscilloscope
+reacts to the pointer, and the channel set switches with a static burst on click, `1`–`3`, the
+arrow keys or a swipe. Each channel is an `<article>` plus a small block in the script that draws
+its readout; adding a fourth project means one more of each and one more dial button.
