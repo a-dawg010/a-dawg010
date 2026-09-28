@@ -127,7 +127,7 @@ hit@5 of 0.75 on fiction, 0.80 scientific, 0.89 non-fiction. The cross-encoder r
 
 Chat runs headless `claude -p` on your own login — no API key — and Claude reaches the library
 through exactly four MCP tools: search, expand, read a chapter, trace characters. No shell, no
-filesystem, no network. Tell it you're on chapter 12 and nothing past chapter 12 can be retrieved;
+filesystem, no network. Tell it you're on chapter 18 and nothing past chapter 18 can be retrieved;
 that limit is enforced server-side, so a clever question can't walk around it.
 
 </details>
