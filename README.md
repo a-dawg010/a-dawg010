@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img alt="AMEYA — builds agents that know when they're guessing. Now broadcasting three channels: assay, shelfmark, inference." src="assets/hero-light.svg" width="100%">
+  <img alt="AMEYA — builds agents that know when they're guessing. Now broadcasting four channels: assay, shelfmark, inference, folio." src="assets/hero-light.svg" width="100%">
 </picture>
 
 Three years getting language models to behave in rooms where being wrong is expensive —
@@ -8,7 +8,7 @@ security, compliance, threat intel. Mostly that means orchestration you can audi
 understands relationships instead of vibes, and a surprising amount of engineering spent teaching
 a model to say *I don't know that yet*.
 
-Off the clock I build small, sharp, local-first tools. Three are on air.
+Off the clock I build small, sharp, local-first tools. Four are on air.
 
 <br>
 
@@ -97,6 +97,38 @@ A full rebuild is three `claude -p` calls, not hundreds, on an existing subscrip
 metered API. Claude picks stories **by list index**, never by emitting a URL, so a hallucinated link
 is structurally impossible. If the CLI is down it falls back to a cache, then to a raw ranked
 render. Thin days render thin. Node 18 built-ins only; the output is one HTML file.
+
+</details>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ch4-folio-dark.svg">
+  <img alt="Channel 04, folio — every page, within reach. A private library for your own books, indexed on your machine and read by Claude, with a spoiler guard that blocks anything past the chapter you're on." src="assets/ch4-folio-light.svg" width="100%">
+</picture>
+
+**[tune in → folio](https://github.com/a-dawg010/folio)**
+
+<details>
+<summary><b>how it works</b></summary>
+
+<br>
+
+Drop in a PDF or EPUB. folio extracts its real structure — chapters, sections, pages, figures —
+chunks it the way *that* book deserves, embeds it locally, and gives you a reading room where you
+can ask questions and get answers in plain prose. One SQLite file on your disk: FTS5 for keywords,
+`sqlite-vec` for vectors, blended per book.
+
+There is no LLM inside the code. Every judgment call — how a book should be chunked, who its
+characters are, what a chapter means — is made by Claude Code and written to plain files you can
+read and edit. Each book carries its own eval set, and the chunking is tuned until recall is good:
+hit@5 of 0.75 on fiction, 0.80 scientific, 0.89 non-fiction. The cross-encoder reranker scored
+*worse* on all three, so it ships switched off.
+
+Chat runs headless `claude -p` on your own login — no API key — and Claude reaches the library
+through exactly four MCP tools: search, expand, read a chapter, trace characters. No shell, no
+filesystem, no network. Tell it you're on chapter 12 and nothing past chapter 12 can be retrieved;
+that limit is enforced server-side, so a clever question can't walk around it.
 
 </details>
 

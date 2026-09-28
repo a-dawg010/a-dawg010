@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="Channel 04, folio: a private library for your own books, indexed locally and read by Claude, with a spoiler guard that blocks anything past the chapter you are on.">
+<style>
+__FONTS__
+__VARS__
+.paper{fill:var(--paper)}
+.frame{fill:var(--card);stroke:var(--rule2);stroke-width:1}
+.rule{stroke:var(--rule);stroke-width:1}
+.ch{font:500 9px var(--mono);fill:var(--atext);letter-spacing:1.4px}
+.stack{font:500 8.5px var(--mono);fill:var(--faint);letter-spacing:1.6px}
+.name{font:900 50px var(--disp);fill:var(--ink);letter-spacing:-1.6px}
+.ghost{font:900 230px var(--disp);fill:none;stroke:var(--rule);stroke-width:1;letter-spacing:-8px}
+.tag{font:italic 400 22px var(--serif);fill:var(--ink)}
+.body{font:500 12.8px var(--body);fill:var(--dim)}
+.link{font:500 9.5px var(--mono);fill:var(--violet);letter-spacing:1.3px}
+.lab{font:500 8px var(--mono);fill:var(--faint);letter-spacing:1.4px}
+.ask{font:500 11.5px var(--mono);fill:var(--ink)}
+.big{font:900 30px var(--disp);fill:var(--ink);letter-spacing:-1px}
+</style>
+<defs>
+  <clipPath id="card"><rect x="14" y="10" width="852" height="280"/></clipPath>
+  <pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="var(--sunk)"/><line x1="0" y1="0" x2="0" y2="5" stroke="var(--rule2)" stroke-width="1.4"/></pattern>
+  <clipPath id="typing"><rect x="492" y="54" width="0" height="26">
+    <animate attributeName="width" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;300;300;300;0" keyTimes="0;0.03;0.24;0.88;0.93;1"/>
+  </rect></clipPath>
+
+</defs>
+<rect class="paper" width="880" height="300"/>
+<rect class="frame" x="14.5" y="10.5" width="851" height="279"/>
+<g clip-path="url(#card)"><text class="ghost" x="874" y="286" text-anchor="end">04</text></g>
+
+<rect x="14.5" y="10.5" width="62" height="26" fill="var(--acid)"/>
+<text class="ch" x="24" y="27.5">CH.04</text>
+<text class="stack" x="844" y="27" text-anchor="end">PYTHON 3.11  ·  SQLITE-VEC  ·  100% LOCAL</text>
+<line class="rule" x1="14.5" y1="36.5" x2="865.5" y2="36.5"/>
+
+<text class="name" x="34" y="104">folio</text>
+<text class="tag" x="36" y="138">every page, within reach.</text>
+<rect x="36" y="146" width="198" height="2" fill="var(--acid)"/>
+<text class="body" x="36" y="176">A private library for your own books, indexed on your</text>
+<text class="body" x="36" y="195">machine and read by Claude through four MCP tools — no</text>
+<text class="body" x="36" y="214">shell, no network. Say you’re on chapter 18 and nothing</text>
+<text class="body" x="36" y="233">past chapter 18 can be retrieved. Not even a hint.</text>
+<text class="link" x="36" y="264">GITHUB.COM/A-DAWG010/FOLIO  ↗</text>
+
+<rect x="478" y="48" width="366" height="36" fill="var(--sunk)" stroke="var(--rule2)"/>
+<g clip-path="url(#typing)"><text class="ask" x="492" y="71"><tspan fill="var(--hot)">&gt;</tspan> why is dorothea unhappy in rome?</text></g>
+<text class="lab" x="478" y="108">MIDDLEMARCH</text>
+<text class="lab" x="696.3" y="108" text-anchor="middle" style="fill:var(--ink)">YOU ARE HERE · CH.18</text>
+<rect x="478.0" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="490.2" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="502.4" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="514.6" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="526.8" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="539.0" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="551.2" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="563.4" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="575.6" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="587.8" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="600.0" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="612.2" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="624.4" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="636.6" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="648.8" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="661.0" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="673.2" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="685.4" y="118" width="9.6" height="28" fill="var(--rule2)" stroke="var(--rule2)" stroke-width=".6"/><rect x="697.6" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="709.8" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="722.0" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="734.2" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="746.4" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="758.6" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="770.8" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="783.0" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="795.2" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="807.4" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="819.6" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/><rect x="831.8" y="118" width="9.6" height="28" fill="url(#hatch)" stroke="var(--rule2)" stroke-width=".6"/>
+<rect x="514.6" y="118" width="9.6" height="28" fill="var(--acid)" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3;0.32;0.88;0.92;1"/></rect><rect x="587.8" y="118" width="9.6" height="28" fill="var(--acid)" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.34;0.36;0.88;0.92;1"/></rect><rect x="648.8" y="118" width="9.6" height="28" fill="var(--acid)" opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.38;0.40;0.88;0.92;1"/></rect>
+<line x1="696.3" y1="112" x2="696.3" y2="152" stroke="var(--ink)" stroke-width="1.4"/>
+<g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.46;0.48;0.88;0.92;1"/>
+  <rect x="770.8" y="118" width="9.6" height="28" fill="var(--hot)"/>
+  <path d="M772.3,122 l6.6,20 M778.9,122 l-6.6,20" stroke="var(--paper)" stroke-width="1.6"/>
+  <text class="lab" x="776.9" y="162" text-anchor="middle" style="fill:var(--hot)">BLOCKED</text>
+</g>
+<text class="lab" x="478" y="162">RETRIEVABLE</text>
+<line class="rule" x1="478" y1="184" x2="844" y2="184"/>
+<text class="lab" x="844" y="178" text-anchor="end">HIT@5, THREE TEST BOOKS</text>
+<text class="big" x="478" y="216">0.75</text><text class="lab" x="478" y="232">FICTION</text>
+<text class="big" x="602" y="216">0.80</text><text class="lab" x="602" y="232">SCIENTIFIC</text>
+<text class="big" x="726" y="216">0.89</text><text class="lab" x="726" y="232">NON-FICTION</text>
+<text class="lab" x="478" y="264">ONE SQLITE FILE  ·  NO API KEY  ·  NOTHING UPLOADED</text>
+</svg>
