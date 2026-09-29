@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img" aria-label="AMEYA — builds agents that know when they're guessing. Now broadcasting four channels: assay, shelfmark, inference and folio.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 484" width="880" height="484" role="img" aria-label="AMEYA — builds agents that know when they're guessing. Now broadcasting six channels: threebody, assay, folio, inference, shelfmark and deadwax.">
 <style>
 __FONTS__
 __VARS__
@@ -13,7 +13,7 @@ __VARS__
 .trace{fill:none;stroke:var(--trace);stroke-width:1.6;stroke-linejoin:round}
 .lab{font:500 8.5px var(--mono);fill:var(--faint);letter-spacing:1.6px}
 .ch{font:500 9px var(--mono);fill:var(--atext);letter-spacing:1.4px}
-.chn{font:900 15px var(--disp);fill:var(--ink);letter-spacing:-.2px}
+.chn{font:900 14px var(--disp);fill:var(--ink);letter-spacing:-.2px}
 .chd{font:italic 400 15px var(--serif);fill:var(--dim)}
 </style>
 <defs>
@@ -34,8 +34,8 @@ __VARS__
   <clipPath id="scope"><rect x="36" y="304" width="808" height="88"/></clipPath>
 </defs>
 
-<rect class="paper" width="880" height="460"/>
-<rect width="880" height="460" filter="url(#grain)" opacity="var(--grain)"/>
+<rect class="paper" width="880" height="484"/>
+<rect width="880" height="484" filter="url(#grain)" opacity="var(--grain)"/>
 
 <!-- top bar -->
 <circle cx="40" cy="34" r="4" fill="var(--hot)">
@@ -83,9 +83,11 @@ __VARS__
 <text class="lab" x="844" y="408" text-anchor="end">NOISE: FILTERED</text>
 
 <!-- program guide -->
-<rect width="880" height="460" fill="url(#scan)" opacity="var(--scan)" pointer-events="none"/>
-<rect x="36" y="424" width="44" height="16" fill="var(--acid)"/><text class="ch" x="42" y="435.5">CH.01</text><text class="chn" x="90" y="438">ASSAY</text>
-<rect x="240" y="424" width="44" height="16" fill="var(--acid)"/><text class="ch" x="246" y="435.5">CH.02</text><text class="chn" x="294" y="438">SHELFMARK</text>
-<rect x="444" y="424" width="44" height="16" fill="var(--acid)"/><text class="ch" x="450" y="435.5">CH.03</text><text class="chn" x="498" y="438">INFERENCE</text>
-<rect x="648" y="424" width="44" height="16" fill="var(--acid)"/><text class="ch" x="654" y="435.5">CH.04</text><text class="chn" x="702" y="438">FOLIO</text>
+<rect width="880" height="484" fill="url(#scan)" opacity="var(--scan)" pointer-events="none"/>
+<rect x="36" y="424" width="24" height="16" fill="var(--acid)"/><text class="ch" x="41" y="435.5">01</text><text class="chn" x="68" y="438">THREEBODY</text>
+<rect x="308" y="424" width="24" height="16" fill="var(--acid)"/><text class="ch" x="313" y="435.5">02</text><text class="chn" x="340" y="438">ASSAY</text>
+<rect x="580" y="424" width="24" height="16" fill="var(--acid)"/><text class="ch" x="585" y="435.5">03</text><text class="chn" x="612" y="438">FOLIO</text>
+<rect x="36" y="450" width="24" height="16" fill="var(--acid)"/><text class="ch" x="41" y="461.5">04</text><text class="chn" x="68" y="464">INFERENCE</text>
+<rect x="308" y="450" width="24" height="16" fill="var(--acid)"/><text class="ch" x="313" y="461.5">05</text><text class="chn" x="340" y="464">SHELFMARK</text>
+<rect x="580" y="450" width="24" height="16" fill="var(--acid)"/><text class="ch" x="585" y="461.5">06</text><text class="chn" x="612" y="464">DEADWAX</text>
 </svg>

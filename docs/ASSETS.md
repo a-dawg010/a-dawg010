@@ -21,7 +21,7 @@ themed-picture wrapper ejects the `<img>` out of the anchor and breaks both the 
 theme swap. Put the link on a line of its own underneath.
 
 To check your work, run `python3 -m http.server` at the repo root and open
-`preview.html?n=hero` (or `ch1-assay`, `ch2-shelfmark`, `ch3-inference`, `signoff`), which renders each panel in both themes at
+`preview.html?n=hero` (or `ch1-threebody` … `ch6-deadwax`, `signoff`), which renders each panel in both themes at
 GitHub's ~850 px content column and at phone width. `python3 render-readme.py` pushes README.md
 through GitHub's own markdown API and writes `readme-render.html` so you can see the real page
 before pushing.
@@ -29,6 +29,9 @@ before pushing.
 `docs/` is the GitHub Pages site (Settings → Pages → `main` / `/docs`): a single dependency-free
 `index.html` using the same palette and type, loaded from Google Fonts since a real page is
 allowed to. It is built as a broadcast: the name decodes and tears on hover, the oscilloscope
-reacts to the pointer, and the channel set switches with a static burst on click, `1`–`3`, the
-arrow keys or a swipe. Each channel is an `<article>` plus a small block in the script that draws
-its readout; adding a fourth project means one more of each and one more dial button.
+reacts to the pointer, and the channel set switches with a static burst on click, the number
+keys, the arrow keys or a swipe. Each channel is an `<article>` plus a small block in the script that draws
+its readout; adding a project means one more of each, one more dial button, and a slot in the hero's
+program guide (three across, two rows). Channel order is deliberate: security work first,
+retrieval next, product craft last. Renumbering means the `CH.0N` badge, the ghost numeral and
+the aria-label in the source, the file name, and the README block.

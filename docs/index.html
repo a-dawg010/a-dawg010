@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AMEYA — on air</title>
-<meta name="description" content="Builds agents that know when they're guessing. Now broadcasting: assay, shelfmark, inference, folio.">
+<meta name="description" content="Builds agents that know when they're guessing. Now broadcasting: threebody, assay, folio, inference, shelfmark, deadwax.">
 <meta property="og:title" content="AMEYA — on air">
 <meta property="og:description" content="Builds agents that know when they're guessing.">
 <meta property="og:image" content="https://raw.githubusercontent.com/a-dawg010/a-dawg010/main/assets/hero-dark.svg">
@@ -90,6 +90,7 @@ header nav a:hover,header nav button:hover{color:var(--ink)}
 .tvhead{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
 .tvhead h2{margin:0;font-weight:900;font-stretch:125%;font-size:clamp(26px,3.6vw,46px);letter-spacing:-.03em;line-height:1}
 .dial{display:flex;gap:6px}
+@media (max-width:480px){.dial span{display:none}.dial button{padding:9px 11px}}
 .dial button{font-size:10px;padding:9px 12px;border:1px solid var(--rule2);color:var(--faint);transition:all .15s}
 .dial button:hover{color:var(--ink);border-color:var(--ink)}
 .dial button[aria-selected="true"]{background:var(--acid);color:var(--atext);border-color:var(--acid)}
@@ -252,10 +253,12 @@ footer .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-ite
   <div class="tvhead rv">
     <h2>now broadcasting</h2>
     <div class="dial mono" role="tablist" aria-label="Channels">
-      <button role="tab" aria-selected="true"  aria-controls="c1" data-ch="1">CH.01</button>
-      <button role="tab" aria-selected="false" aria-controls="c2" data-ch="2">CH.02</button>
-      <button role="tab" aria-selected="false" aria-controls="c3" data-ch="3">CH.03</button>
-      <button role="tab" aria-selected="false" aria-controls="c4" data-ch="4">CH.04</button>
+      <button role="tab" aria-selected="true"  aria-controls="c1" data-ch="1"><span>CH.</span>01</button>
+      <button role="tab" aria-selected="false" aria-controls="c2" data-ch="2"><span>CH.</span>02</button>
+      <button role="tab" aria-selected="false" aria-controls="c3" data-ch="3"><span>CH.</span>03</button>
+      <button role="tab" aria-selected="false" aria-controls="c4" data-ch="4"><span>CH.</span>04</button>
+      <button role="tab" aria-selected="false" aria-controls="c5" data-ch="5"><span>CH.</span>05</button>
+      <button role="tab" aria-selected="false" aria-controls="c6" data-ch="6"><span>CH.</span>06</button>
     </div>
   </div>
 
@@ -265,10 +268,42 @@ footer .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-ite
       <div class="osd" id="osd" aria-hidden="true">CH 01</div>
 
       <!-- CH.01 -->
-      <article class="chan" id="c1" role="tabpanel" data-ch="1">
+      <article data-name="threebody" class="chan" id="c1" role="tabpanel" data-ch="1">
         <div class="ghost" aria-hidden="true">01</div>
         <div>
-          <p class="chk mono"><b>CH.01</b>PYTHON · STDLIB ONLY · CLI</p>
+          <p class="chk mono"><b>CH.01</b>PYTHON 3.11 · ZERO DEPENDENCIES · NEVER ONLINE</p>
+          <h3 class="pn">threebody</h3>
+          <p class="pt">three capabilities, one bad afternoon.</p>
+          <p class="pb">An AI agent turns dangerous when three things meet in one session: it reads what
+          strangers wrote, it can reach your secrets, and it can send things out. threebody resolves every
+          settings layer across Claude Code, Codex, Cursor and Claude Desktop, finds the sessions where all
+          three meet with nobody asking first, and prints the attack as one sentence — scored with ISO/SAE
+          21434 attack potential, replayed against your own transcripts, with the smallest fix as a diff it
+          never applies itself.</p>
+          <a class="go mono" href="https://github.com/a-dawg010/threebody">TUNE IN <span>→</span></a>
+        </div>
+        <div class="viz"><svg viewBox="0 0 380 250" id="v-threebody" aria-label="Three capabilities orbit on the figure-eight solution of the three-body problem; when they meet, the attack prints as one sentence">
+<path d="M190.0,60.0 L186.5,63.3 L182.9,66.6 L179.3,69.8 L175.8,73.0 L172.1,76.2 L168.5,79.3 L164.8,82.4 L161.0,85.4 L157.3,88.3 L153.4,91.1 L149.5,93.8 L145.5,96.3 L141.5,98.8 L137.4,101.1 L133.3,103.2 L129.2,105.1 L125.0,106.9 L120.8,108.4 L116.6,109.8 L112.4,111.0 L108.2,111.9 L104.1,112.7 L100.0,113.2 L96.0,113.6 L92.0,113.7 L88.2,113.7 L84.5,113.4 L80.8,113.0 L77.3,112.5 L73.9,111.8 L70.7,110.9 L67.6,110.0 L64.6,108.9 L61.8,107.7 L59.1,106.5 L56.5,105.1 L54.1,103.7 L51.8,102.2 L49.6,100.7 L47.6,99.2 L45.7,97.6 L43.9,95.9 L42.2,94.3 L40.7,92.6 L39.2,90.9 L37.9,89.1 L36.6,87.4 L35.5,85.7 L34.4,83.9 L33.4,82.1 L32.5,80.4 L31.7,78.6 L31.0,76.8 L30.4,75.1 L29.8,73.3 L29.3,71.5 L28.9,69.8 L28.5,68.0 L28.3,66.2 L28.1,64.4 L27.9,62.7 L27.9,60.9 L27.9,59.1 L27.9,57.3 L28.1,55.6 L28.3,53.8 L28.5,52.0 L28.9,50.2 L29.3,48.5 L29.8,46.7 L30.4,44.9 L31.0,43.2 L31.7,41.4 L32.5,39.6 L33.4,37.9 L34.4,36.1 L35.5,34.3 L36.6,32.6 L37.9,30.9 L39.2,29.1 L40.7,27.4 L42.2,25.8 L43.9,24.1 L45.7,22.5 L47.6,20.8 L49.6,19.3 L51.8,17.8 L54.1,16.3 L56.5,14.9 L59.1,13.5 L61.8,12.3 L64.6,11.1 L67.6,10.0 L70.7,9.1 L73.9,8.2 L77.3,7.5 L80.8,7.0 L84.5,6.6 L88.2,6.3 L92.0,6.3 L96.0,6.4 L100.0,6.8 L104.1,7.3 L108.2,8.1 L112.4,9.0 L116.6,10.2 L120.8,11.6 L125.0,13.1 L129.2,14.9 L133.3,16.8 L137.4,18.9 L141.5,21.2 L145.5,23.7 L149.5,26.2 L153.4,28.9 L157.2,31.7 L161.0,34.6 L164.8,37.6 L168.5,40.7 L172.1,43.8 L175.8,47.0 L179.3,50.2 L182.9,53.4 L186.5,56.7 L190.0,60.0 L193.5,63.3 L197.1,66.5 L200.7,69.8 L204.2,73.0 L207.9,76.2 L211.5,79.3 L215.2,82.4 L219.0,85.4 L222.7,88.3 L226.6,91.1 L230.5,93.8 L234.5,96.3 L238.5,98.8 L242.6,101.1 L246.7,103.2 L250.8,105.1 L255.0,106.9 L259.2,108.4 L263.4,109.8 L267.6,111.0 L271.8,111.9 L275.9,112.7 L280.0,113.2 L284.0,113.6 L288.0,113.7 L291.8,113.7 L295.5,113.4 L299.2,113.0 L302.7,112.5 L306.1,111.8 L309.3,110.9 L312.4,110.0 L315.4,108.9 L318.2,107.7 L320.9,106.5 L323.5,105.1 L325.9,103.7 L328.2,102.2 L330.4,100.7 L332.4,99.2 L334.3,97.5 L336.1,95.9 L337.8,94.2 L339.3,92.6 L340.8,90.9 L342.1,89.1 L343.4,87.4 L344.5,85.7 L345.6,83.9 L346.6,82.1 L347.5,80.4 L348.3,78.6 L349.0,76.8 L349.6,75.1 L350.2,73.3 L350.7,71.5 L351.1,69.8 L351.5,68.0 L351.7,66.2 L351.9,64.4 L352.1,62.7 L352.1,60.9 L352.1,59.1 L352.1,57.3 L351.9,55.6 L351.7,53.8 L351.5,52.0 L351.1,50.2 L350.7,48.5 L350.2,46.7 L349.6,44.9 L349.0,43.2 L348.3,41.4 L347.5,39.6 L346.6,37.9 L345.6,36.1 L344.5,34.3 L343.4,32.6 L342.1,30.9 L340.8,29.1 L339.3,27.4 L337.8,25.7 L336.1,24.1 L334.3,22.4 L332.4,20.8 L330.4,19.3 L328.2,17.8 L325.9,16.3 L323.5,14.9 L320.9,13.5 L318.2,12.3 L315.4,11.1 L312.4,10.0 L309.3,9.1 L306.1,8.2 L302.7,7.5 L299.2,7.0 L295.5,6.6 L291.8,6.3 L288.0,6.3 L284.0,6.4 L280.0,6.8 L275.9,7.3 L271.8,8.1 L267.6,9.0 L263.4,10.2 L259.2,11.6 L255.0,13.1 L250.8,14.9 L246.7,16.8 L242.6,18.9 L238.5,21.2 L234.5,23.7 L230.5,26.2 L226.6,28.9 L222.8,31.7 L219.0,34.6 L215.2,37.6 L211.5,40.7 L207.9,43.8 L204.2,47.0 L200.7,50.2 L197.1,53.4 L193.5,56.7 Z" fill="none" stroke="var(--rule2)" stroke-width="1.2" stroke-dasharray="2 4"/>
+<polygon fill="var(--hot)" fill-opacity=".09" stroke="var(--hot)" stroke-opacity=".55" stroke-width=".9"><animate attributeName="points" dur="7.5s" repeatCount="indefinite" values="190.0,60.0 44.5,23.5 335.5,96.5;180.2,69.0 49.8,19.2 339.9,91.9;170.0,78.0 56.3,15.0 343.7,87.0;159.8,86.4 63.6,11.5 346.6,82.1;149.2,94.0 72.0,8.7 348.8,77.3;137.8,100.9 81.7,6.9 350.5,72.3;126.4,106.3 92.0,6.3 351.6,67.4;114.9,110.3 103.1,7.2 352.1,62.5;103.1,112.8 114.8,9.7 352.1,57.5;92.0,113.7 126.4,13.7 351.6,52.6;81.7,113.1 137.8,19.1 350.5,47.7;72.0,111.3 149.2,26.0 348.8,42.7;63.6,108.5 159.8,33.6 346.6,37.9;56.3,105.0 170.0,42.0 343.7,33.0;49.8,100.8 180.2,51.0 339.9,28.1;44.5,96.5 190.0,60.0 335.5,23.5;40.1,91.9 199.8,69.0 330.2,19.2;36.3,87.0 210.0,78.0 323.7,15.0;33.4,82.1 220.2,86.4 316.4,11.5;31.2,77.3 230.8,94.0 308.0,8.7;29.5,72.3 242.2,100.9 298.3,6.9;28.4,67.4 253.6,106.3 288.0,6.3;27.9,62.5 265.1,110.3 276.9,7.2;27.9,57.5 276.9,112.8 265.2,9.7;28.4,52.6 288.0,113.7 253.6,13.7;29.5,47.7 298.3,113.1 242.2,19.1;31.2,42.7 308.0,111.3 230.8,26.0;33.4,37.9 316.4,108.5 220.2,33.6;36.3,33.0 323.7,105.0 210.0,42.0;40.1,28.1 330.2,100.8 199.8,51.0;44.5,23.5 335.5,96.5 190.0,60.0;49.8,19.2 339.9,91.9 180.2,69.0;56.3,15.0 343.7,87.0 170.0,78.0;63.6,11.5 346.6,82.1 159.8,86.4;72.0,8.7 348.8,77.3 149.2,94.0;81.7,6.9 350.5,72.3 137.8,100.9;92.0,6.3 351.6,67.4 126.4,106.3;103.1,7.2 352.1,62.5 114.9,110.3;114.8,9.7 352.1,57.5 103.1,112.8;126.4,13.7 351.6,52.6 92.0,113.7;137.8,19.1 350.5,47.7 81.7,113.1;149.2,26.0 348.8,42.7 72.0,111.3;159.8,33.6 346.6,37.9 63.6,108.5;170.0,42.0 343.7,33.0 56.3,105.0;180.2,51.0 339.9,28.1 49.8,100.8;190.0,60.0 335.5,23.5 44.5,96.5;199.8,69.0 330.2,19.2 40.1,91.9;210.0,78.0 323.7,15.0 36.3,87.0;220.2,86.4 316.4,11.5 33.4,82.1;230.8,94.0 308.0,8.7 31.2,77.3;242.2,100.9 298.3,6.9 29.5,72.3;253.6,106.3 288.0,6.3 28.4,67.4;265.1,110.3 276.9,7.2 27.9,62.5;276.9,112.8 265.2,9.7 27.9,57.5;288.0,113.7 253.6,13.7 28.4,52.6;298.3,113.1 242.2,19.1 29.5,47.7;308.0,111.3 230.8,26.0 31.2,42.7;316.4,108.5 220.2,33.6 33.4,37.9;323.7,105.0 210.0,42.0 36.3,33.0;330.2,100.8 199.8,51.0 40.1,28.1;335.5,96.5 190.0,60.0 44.5,23.5;339.9,91.9 180.2,69.0 49.8,19.2;343.7,87.0 170.0,78.0 56.3,15.0;346.6,82.1 159.8,86.4 63.6,11.5;348.8,77.3 149.2,94.0 72.0,8.7;350.5,72.3 137.8,100.9 81.7,6.9;351.6,67.4 126.4,106.3 92.0,6.3;352.1,62.5 114.9,110.3 103.1,7.2;352.1,57.5 103.1,112.8 114.8,9.7;351.6,52.6 92.0,113.7 126.4,13.7;350.5,47.7 81.7,113.1 137.8,19.1;348.8,42.7 72.0,111.3 149.2,26.0;346.6,37.9 63.6,108.5 159.8,33.6;343.7,33.0 56.3,105.0 170.0,42.0;339.9,28.1 49.8,100.8 180.2,51.0;335.5,23.5 44.5,96.5 190.0,60.0;330.2,19.2 40.1,91.9 199.8,69.0;323.7,15.0 36.3,87.0 210.0,78.0;316.4,11.5 33.4,82.1 220.2,86.4;308.0,8.7 31.2,77.3 230.8,94.0;298.3,6.9 29.5,72.3 242.2,100.9;288.0,6.3 28.4,67.4 253.6,106.3;276.9,7.2 27.9,62.5 265.1,110.3;265.2,9.7 27.9,57.5 276.9,112.8;253.6,13.7 28.4,52.6 288.0,113.7;242.2,19.1 29.5,47.7 298.3,113.1;230.8,26.0 31.2,42.7 308.0,111.3;220.2,33.6 33.4,37.9 316.4,108.5;210.0,42.0 36.3,33.0 323.7,105.0;199.8,51.0 40.1,28.1 330.2,100.8;190.0,60.0 44.5,23.5 335.5,96.5"/></polygon>
+<circle r="11" fill="var(--violet)" opacity=".16"><animate attributeName="cx" dur="7.5s" repeatCount="indefinite" values="190.0;180.2;170.0;159.8;149.2;137.8;126.4;114.9;103.1;92.0;81.7;72.0;63.6;56.3;49.8;44.5;40.1;36.3;33.4;31.2;29.5;28.4;27.9;27.9;28.4;29.5;31.2;33.4;36.3;40.1;44.5;49.8;56.3;63.6;72.0;81.7;92.0;103.1;114.8;126.4;137.8;149.2;159.8;170.0;180.2;190.0;199.8;210.0;220.2;230.8;242.2;253.6;265.1;276.9;288.0;298.3;308.0;316.4;323.7;330.2;335.5;339.9;343.7;346.6;348.8;350.5;351.6;352.1;352.1;351.6;350.5;348.8;346.6;343.7;339.9;335.5;330.2;323.7;316.4;308.0;298.3;288.0;276.9;265.2;253.6;242.2;230.8;220.2;210.0;199.8;190.0"/><animate attributeName="cy" dur="7.5s" repeatCount="indefinite" values="60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0"/></circle><circle r="5.5" fill="var(--violet)"><animate attributeName="cx" dur="7.5s" repeatCount="indefinite" values="190.0;180.2;170.0;159.8;149.2;137.8;126.4;114.9;103.1;92.0;81.7;72.0;63.6;56.3;49.8;44.5;40.1;36.3;33.4;31.2;29.5;28.4;27.9;27.9;28.4;29.5;31.2;33.4;36.3;40.1;44.5;49.8;56.3;63.6;72.0;81.7;92.0;103.1;114.8;126.4;137.8;149.2;159.8;170.0;180.2;190.0;199.8;210.0;220.2;230.8;242.2;253.6;265.1;276.9;288.0;298.3;308.0;316.4;323.7;330.2;335.5;339.9;343.7;346.6;348.8;350.5;351.6;352.1;352.1;351.6;350.5;348.8;346.6;343.7;339.9;335.5;330.2;323.7;316.4;308.0;298.3;288.0;276.9;265.2;253.6;242.2;230.8;220.2;210.0;199.8;190.0"/><animate attributeName="cy" dur="7.5s" repeatCount="indefinite" values="60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0"/></circle>
+<circle r="11" fill="var(--ink)" opacity=".16"><animate attributeName="cx" dur="7.5s" repeatCount="indefinite" values="44.5;49.8;56.3;63.6;72.0;81.7;92.0;103.1;114.8;126.4;137.8;149.2;159.8;170.0;180.2;190.0;199.8;210.0;220.2;230.8;242.2;253.6;265.1;276.9;288.0;298.3;308.0;316.4;323.7;330.2;335.5;339.9;343.7;346.6;348.8;350.5;351.6;352.1;352.1;351.6;350.5;348.8;346.6;343.7;339.9;335.5;330.2;323.7;316.4;308.0;298.3;288.0;276.9;265.2;253.6;242.2;230.8;220.2;210.0;199.8;190.0;180.2;170.0;159.8;149.2;137.8;126.4;114.9;103.1;92.0;81.7;72.0;63.6;56.3;49.8;44.5;40.1;36.3;33.4;31.2;29.5;28.4;27.9;27.9;28.4;29.5;31.2;33.4;36.3;40.1;44.5"/><animate attributeName="cy" dur="7.5s" repeatCount="indefinite" values="23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5"/></circle><circle r="5.5" fill="var(--ink)"><animate attributeName="cx" dur="7.5s" repeatCount="indefinite" values="44.5;49.8;56.3;63.6;72.0;81.7;92.0;103.1;114.8;126.4;137.8;149.2;159.8;170.0;180.2;190.0;199.8;210.0;220.2;230.8;242.2;253.6;265.1;276.9;288.0;298.3;308.0;316.4;323.7;330.2;335.5;339.9;343.7;346.6;348.8;350.5;351.6;352.1;352.1;351.6;350.5;348.8;346.6;343.7;339.9;335.5;330.2;323.7;316.4;308.0;298.3;288.0;276.9;265.2;253.6;242.2;230.8;220.2;210.0;199.8;190.0;180.2;170.0;159.8;149.2;137.8;126.4;114.9;103.1;92.0;81.7;72.0;63.6;56.3;49.8;44.5;40.1;36.3;33.4;31.2;29.5;28.4;27.9;27.9;28.4;29.5;31.2;33.4;36.3;40.1;44.5"/><animate attributeName="cy" dur="7.5s" repeatCount="indefinite" values="23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5"/></circle>
+<circle r="11" fill="var(--hot)" opacity=".16"><animate attributeName="cx" dur="7.5s" repeatCount="indefinite" values="335.5;339.9;343.7;346.6;348.8;350.5;351.6;352.1;352.1;351.6;350.5;348.8;346.6;343.7;339.9;335.5;330.2;323.7;316.4;308.0;298.3;288.0;276.9;265.2;253.6;242.2;230.8;220.2;210.0;199.8;190.0;180.2;170.0;159.8;149.2;137.8;126.4;114.9;103.1;92.0;81.7;72.0;63.6;56.3;49.8;44.5;40.1;36.3;33.4;31.2;29.5;28.4;27.9;27.9;28.4;29.5;31.2;33.4;36.3;40.1;44.5;49.8;56.3;63.6;72.0;81.7;92.0;103.1;114.8;126.4;137.8;149.2;159.8;170.0;180.2;190.0;199.8;210.0;220.2;230.8;242.2;253.6;265.1;276.9;288.0;298.3;308.0;316.4;323.7;330.2;335.5"/><animate attributeName="cy" dur="7.5s" repeatCount="indefinite" values="96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5"/></circle><circle r="5.5" fill="var(--hot)"><animate attributeName="cx" dur="7.5s" repeatCount="indefinite" values="335.5;339.9;343.7;346.6;348.8;350.5;351.6;352.1;352.1;351.6;350.5;348.8;346.6;343.7;339.9;335.5;330.2;323.7;316.4;308.0;298.3;288.0;276.9;265.2;253.6;242.2;230.8;220.2;210.0;199.8;190.0;180.2;170.0;159.8;149.2;137.8;126.4;114.9;103.1;92.0;81.7;72.0;63.6;56.3;49.8;44.5;40.1;36.3;33.4;31.2;29.5;28.4;27.9;27.9;28.4;29.5;31.2;33.4;36.3;40.1;44.5;49.8;56.3;63.6;72.0;81.7;92.0;103.1;114.8;126.4;137.8;149.2;159.8;170.0;180.2;190.0;199.8;210.0;220.2;230.8;242.2;253.6;265.1;276.9;288.0;298.3;308.0;316.4;323.7;330.2;335.5"/><animate attributeName="cy" dur="7.5s" repeatCount="indefinite" values="96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5;91.9;87.0;82.1;77.3;72.3;67.4;62.5;57.5;52.6;47.7;42.7;37.9;33.0;28.1;23.5;19.2;15.0;11.5;8.7;6.9;6.3;7.2;9.7;13.7;19.1;26.0;33.6;42.0;51.0;60.0;69.0;78.0;86.4;94.0;100.9;106.3;110.3;112.8;113.7;113.1;111.3;108.5;105.0;100.8;96.5"/></circle>
+<circle cx="8" cy="131" r="3.5" fill="var(--violet)"/><text class="lab" x="17" y="134.5" style="font-size:8px">UNTRUSTED IN</text><circle cx="136" cy="131" r="3.5" fill="var(--ink)"/><text class="lab" x="145" y="134.5" style="font-size:8px">PRIVATE READ</text><circle cx="264" cy="131" r="3.5" fill="var(--hot)"/><text class="lab" x="273" y="134.5" style="font-size:8px">EGRESS</text>
+<clipPath id="tb-type"><rect x="16" y="150" width="0" height="30"><animate attributeName="width" dur="12s" repeatCount="indefinite" values="0;0;356;356;356;0" keyTimes="0;0.03;0.26;0.88;0.93;1"/></rect></clipPath>
+<rect class="q" x="4" y="146" width="372" height="38"/>
+<g clip-path="url(#tb-type)"><text class="qt" x="16" y="169" style="font-size:10.5px"><tspan fill="var(--hot)">&gt;</tspan> a github issue can post your aws keys to slack.</text></g>
+<g opacity="0"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.28;0.30;0.88;0.92;1"/>
+<rect x="4" y="196" width="150" height="17" fill="var(--hot)"/><text class="lab" x="11" y="207.5" style="font-size:8px;fill:var(--paper)">3 STEPS · NO APPROVAL</text></g>
+<text class="lab" x="376" y="207.5" text-anchor="end" style="font-size:8px">RISK 4 / 5</text>
+<text class="lab" x="4" y="240">ISO/SAE 21434 TARA · NEVER NETWORKS · READ-ONLY</text>
+        </svg></div>
+      </article>
+
+      <!-- CH.02 -->
+      <article data-name="assay" class="chan" id="c2" role="tabpanel" data-ch="2" hidden>
+        <div class="ghost" aria-hidden="true">02</div>
+        <div>
+          <p class="chk mono"><b>CH.02</b>PYTHON · STDLIB ONLY · CLI</p>
           <h3 class="pn">assay</h3>
           <p class="pt">what left the machine, and when.</p>
           <p class="pb">Your coding agents write every session to disk in plaintext, with the working
@@ -277,45 +312,14 @@ footer .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-ite
           it can’t see. A gateway can’t be installed retroactively. These files are already there.</p>
           <a class="go mono" href="https://github.com/a-dawg010/assay">TUNE IN <span>→</span></a>
         </div>
-        <div class="viz"><svg viewBox="0 0 380 250" id="v1" aria-label="Four vendor lanes filling with session ticks as a playhead reconstructs them"></svg></div>
-      </article>
-
-      <!-- CH.02 -->
-      <article class="chan" id="c2" role="tabpanel" data-ch="2" hidden>
-        <div class="ghost" aria-hidden="true">02</div>
-        <div>
-          <p class="chk mono"><b>CH.02</b>SWIFT 6 · macOS · NO DEPENDENCIES</p>
-          <h3 class="pn">shelfmark</h3>
-          <p class="pt">not what it’s about. where it is.</p>
-          <p class="pb">Ask where a file is and get the path — not a summary, not a chat. Two answers,
-          never blended: BM25 over a lexical index, and a MiniLM embedding index running on device with a
-          cosine floor, so nonsense returns nothing instead of six confident wrong files. Nothing leaves
-          the Mac.</p>
-          <a class="go mono" href="https://github.com/a-dawg010/shelfmark">TUNE IN <span>→</span></a>
-        </div>
-        <div class="viz"><svg viewBox="0 0 380 250" id="v2" aria-label="A query returns two separate result columns; the highlighted meaning match contains none of the query's words"></svg></div>
+        <div class="viz"><svg viewBox="0 0 380 250" id="v-assay" aria-label="Four vendor lanes filling with session ticks as a playhead reconstructs them"></svg></div>
       </article>
 
       <!-- CH.03 -->
-      <article class="chan" id="c3" role="tabpanel" data-ch="3" hidden>
+      <article data-name="folio" class="chan" id="c3" role="tabpanel" data-ch="3" hidden>
         <div class="ghost" aria-hidden="true">03</div>
         <div>
-          <p class="chk mono"><b>CH.03</b>NODE 18 · ZERO DEPENDENCIES · STATIC</p>
-          <h3 class="pn">inference</h3>
-          <p class="pt">one page. everything happening in AI.</p>
-          <p class="pb">Pulls ~64 sources, ranks and de-duplicates them, and gives under-followed writers
-          a boost over the rewrites. Claude writes only the glue — three calls, picking stories by list
-          index, so it can’t invent a link. Renders one static HTML file. Thin days render thin.</p>
-          <a class="go mono" href="https://github.com/a-dawg010/inference">TUNE IN <span>→</span></a>
-        </div>
-        <div class="viz"><svg viewBox="0 0 380 250" id="v3" aria-label="Sixty-four source dots light up, flow into a ranking node, and fill a one-page briefing"></svg></div>
-      </article>
-
-      <!-- CH.04 -->
-      <article class="chan" id="c4" role="tabpanel" data-ch="4" hidden>
-        <div class="ghost" aria-hidden="true">04</div>
-        <div>
-          <p class="chk mono"><b>CH.04</b>PYTHON 3.11 · SQLITE-VEC · 100% LOCAL</p>
+          <p class="chk mono"><b>CH.03</b>PYTHON 3.11 · SQLITE-VEC · 100% LOCAL</p>
           <h3 class="pn">folio</h3>
           <p class="pt">every page, within reach.</p>
           <p class="pb">A private library for your own books — indexed on your machine, read by Claude.
@@ -324,7 +328,55 @@ footer .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-ite
           you’re on chapter 18 and nothing past chapter 18 can be retrieved. Not even a hint.</p>
           <a class="go mono" href="https://github.com/a-dawg010/folio">TUNE IN <span>→</span></a>
         </div>
-        <div class="viz"><svg viewBox="0 0 380 250" id="v4" aria-label="A book's chapters as a strip; retrieval hits light up before the reader's chapter, and a hit past it is blocked"></svg></div>
+        <div class="viz"><svg viewBox="0 0 380 250" id="v-folio" aria-label="A book's chapters as a strip; retrieval hits light up before the reader's chapter, and a hit past it is blocked"></svg></div>
+      </article>
+
+      <!-- CH.04 -->
+      <article data-name="inference" class="chan" id="c4" role="tabpanel" data-ch="4" hidden>
+        <div class="ghost" aria-hidden="true">04</div>
+        <div>
+          <p class="chk mono"><b>CH.04</b>NODE 18 · ZERO DEPENDENCIES · STATIC</p>
+          <h3 class="pn">inference</h3>
+          <p class="pt">one page. everything happening in AI.</p>
+          <p class="pb">Pulls ~64 sources, ranks and de-duplicates them, and gives under-followed writers
+          a boost over the rewrites. Claude writes only the glue — three calls, picking stories by list
+          index, so it can’t invent a link. Renders one static HTML file. Thin days render thin.</p>
+          <a class="go mono" href="https://github.com/a-dawg010/inference">TUNE IN <span>→</span></a>
+        </div>
+        <div class="viz"><svg viewBox="0 0 380 250" id="v-inference" aria-label="Sixty-four source dots light up, flow into a ranking node, and fill a one-page briefing"></svg></div>
+      </article>
+
+      <!-- CH.05 -->
+      <article data-name="shelfmark" class="chan" id="c5" role="tabpanel" data-ch="5" hidden>
+        <div class="ghost" aria-hidden="true">05</div>
+        <div>
+          <p class="chk mono"><b>CH.05</b>SWIFT 6 · macOS · NO DEPENDENCIES</p>
+          <h3 class="pn">shelfmark</h3>
+          <p class="pt">not what it’s about. where it is.</p>
+          <p class="pb">Ask where a file is and get the path — not a summary, not a chat. Two answers,
+          never blended: BM25 over a lexical index, and a MiniLM embedding index running on device with a
+          cosine floor, so nonsense returns nothing instead of six confident wrong files. Nothing leaves
+          the Mac.</p>
+          <a class="go mono" href="https://github.com/a-dawg010/shelfmark">TUNE IN <span>→</span></a>
+        </div>
+        <div class="viz"><svg viewBox="0 0 380 250" id="v-shelfmark" aria-label="A query returns two separate result columns; the highlighted meaning match contains none of the query's words"></svg></div>
+      </article>
+
+      <!-- CH.06 -->
+      <article data-name="deadwax" class="chan" id="c6" role="tabpanel" data-ch="6" hidden>
+        <div class="ghost" aria-hidden="true">06</div>
+        <div>
+          <p class="chk mono"><b>CH.06</b>REACT 19 · CLOUDFLARE WORKERS · $0 / MONTH</p>
+          <h3 class="pn">deadwax</h3>
+          <p class="pt">the part of the record only you can read.</p>
+          <p class="pb">A music player you host yourself, for free, for exactly one person. Hi-res FLAC
+          on Cloudflare’s free tier, played as-is. The record is the seek bar, notes etched onto a second
+          of a song fade in when playback gets there, and albums you ignore gather dust. Ask for a new
+          rotation from your phone and Claude builds it from your own vault — nothing changes until you
+          approve it.</p>
+          <a class="go mono" href="https://github.com/a-dawg010/deadwax">TUNE IN <span>→</span></a>
+        </div>
+        <div class="viz"><svg viewBox="0 0 380 250" id="v-deadwax" aria-label="A record spins as the tonearm drifts toward the label; a private note fades in at the second it was pinned to"></svg></div>
       </article>
 
       <div class="progress" id="prog"></div>
@@ -334,6 +386,8 @@ footer .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-ite
       <b>BREAKING</b>
       <div><ul id="crawl">
         <li>agent admits it does not know · markets remain stable</li>
+        <li>github issue fails to reach aws keys · human was asked first</li>
+        <li>three-body problem solved for one laptop · orbit stable</li>
         <li>local man learns which repos he pasted into four different vendors</li>
         <li>file located · not summarised · not chatted with · just located</li>
         <li>64 sources ranked, zero padded · editors baffled</li>
@@ -341,10 +395,12 @@ footer .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-ite
         <li>no analytics on this page · we checked</li>
         <li>confident wrong answer caught before reaching auditor</li>
         <li>reader on chapter 18 remains unspoiled · ending still a mystery</li>
+        <li>music player reports exactly one user · growth team unconcerned</li>
+        <li>album left alone for months found gathering dust</li>
       </ul></div>
     </div>
   </div>
-  <div class="hint mono rv"><span class="kb"><kbd>1</kbd>–<kbd>4</kbd> change channel · <kbd>←</kbd><kbd>→</kbd> surf · <kbd>T</kbd> theme</span><span class="kb">AUTO-SURF PAUSES WHEN YOU HOVER</span><span class="touch">SWIPE THE SCREEN TO CHANGE CHANNEL</span></div>
+  <div class="hint mono rv"><span class="kb"><kbd>1</kbd>–<kbd>6</kbd> change channel · <kbd>←</kbd><kbd>→</kbd> surf · <kbd>T</kbd> theme</span><span class="kb">AUTO-SURF PAUSES WHEN YOU HOVER</span><span class="touch">SWIPE THE SCREEN TO CHANGE CHANNEL</span></div>
 </section>
 
 <section id="notes" class="wrap">
@@ -476,7 +532,7 @@ const el = (tag, attrs, text) => { const n = document.createElementNS(NS, tag); 
 
 // CH.01 assay — vendor lanes
 (() => {
-  const v = $('#v1'), L = 86, R = 376, span = R - L;
+  const v = $('#v-assay'), L = 86, R = 376, span = R - L;
   const lanes = [['ANTHROPIC', 19], ['OPENAI', 9], ['COPILOT', 6], ['GOOGLE', 5]];
   const rnd = (s => () => (s = (s * 16807) % 2147483647) / 2147483647)(11);
   lanes.forEach(([name, n], i) => {
@@ -499,7 +555,7 @@ const el = (tag, attrs, text) => { const n = document.createElementNS(NS, tag); 
 
 // CH.02 shelfmark — two columns
 (() => {
-  const v = $('#v2'), A = 4, B = 196, R = 376;
+  const v = $('#v-shelfmark'), A = 4, B = 196, R = 376;
   v.append(el('rect', { class: 'q', x: A, y: 4, width: R - A, height: 40 }));
   const q = el('text', { class: 'qt', x: A + 16, y: 29 }); q.id = 'q2'; v.append(q);
   const head = (x, c, t) => { v.append(el('rect', { x, y: 62, width: 7, height: 7, fill: c })); v.append(el('text', { class: 'lab', x: x + 13, y: 69 }, t)); };
@@ -517,7 +573,7 @@ const el = (tag, attrs, text) => { const n = document.createElementNS(NS, tag); 
 
 // CH.03 inference — sources → rank → one page
 (() => {
-  const v = $('#v3'), GX = 8, GY = 14, GS = 12;
+  const v = $('#v-inference'), GX = 8, GY = 14, GS = 12;
   const rnd = (s => () => (s = (s * 16807) % 2147483647) / 2147483647)(5);
   for(let r = 0; r < 8; r++) for(let c = 0; c < 8; c++)
     v.append(el('circle', { class: 'dt', cx: GX + c * GS, cy: GY + r * GS, r: 2.6, style: `animation-delay:${(.1 + rnd() * 1.1).toFixed(2)}s` }));
@@ -550,7 +606,7 @@ const el = (tag, attrs, text) => { const n = document.createElementNS(NS, tag); 
 
 // CH.04 folio — the spoiler guard
 (() => {
-  const v = $('#v4'), L = 4, R = 376, N = 30, UPTO = 18, pitch = (R - L) / N;
+  const v = $('#v-folio'), L = 4, R = 376, N = 30, UPTO = 18, pitch = (R - L) / N;
   v.innerHTML = `<defs><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
     <rect width="5" height="5" fill="var(--sunk)"/><line x1="0" y1="0" x2="0" y2="5" stroke="var(--rule2)" stroke-width="1.4"/></pattern></defs>`;
   v.append(el('rect', { class: 'q', x: L, y: 4, width: R - L, height: 38 }));
@@ -577,6 +633,48 @@ const el = (tag, attrs, text) => { const n = document.createElementNS(NS, tag); 
     v.append(el('text', { class: 'lab', x, y: 200 }, l));
   });
   v.append(el('text', { class: 'lab', x: L, y: 240 }, 'ONE SQLITE FILE · NO API KEY · NOTHING UPLOADED'));
+})();
+
+// CH.05 deadwax — the record is the seek bar
+(() => {
+  const v = $('#v-deadwax'), C = '104 104', R = [];
+  for(let r = 95; r > 42; r -= 2.6) R.push(`<circle cx="104" cy="104" r="${r.toFixed(1)}" fill="none" stroke="#1D1D21" stroke-width=".9"/>`);
+  const loop = (vals, kt) => `<animate attributeName="opacity" dur="12s" repeatCount="indefinite" values="${vals}" keyTimes="${kt}"/>`;
+  const cue = loop('0;0;1;1;0;0', '0;0.3;0.33;0.84;0.88;1');
+  v.innerHTML = `
+  <g><animateTransform attributeName="transform" type="rotate" dur="1.8s" repeatCount="indefinite" values="0 ${C};360 ${C}"/>
+    <circle cx="104" cy="104" r="100" fill="#0B0B0C" stroke="var(--rule2)"/>${R.join('')}
+    ${[84, 70, 56].map(r => `<circle cx="104" cy="104" r="${r}" fill="none" stroke="#34343A" stroke-width="1.4"/>`).join('')}
+    <g fill="none" stroke="var(--acid)" stroke-width="2.4" stroke-linecap="round" opacity=".6">
+      <path d="M31.6,77.7 A77,77 0 0 1 80.2,30.8"/><path d="M163.9,123.5 A63,63 0 0 1 142.8,153.6"/><path d="M94.7,192.1 A88.6,88.6 0 0 1 62.4,182.2"/>
+      ${loop('.6;.6;1;1;.6;.6', '0;0.3;0.33;0.84;0.88;1')}</g>
+    <circle cx="104" cy="104" r="34" fill="var(--acid)"/>
+    <text x="104" y="98" text-anchor="middle" style="font:900 8.6px var(--disp);font-stretch:125%;fill:var(--atext)">DEADWAX</text>
+    <text x="104" y="116" text-anchor="middle" style="font:500 5.2px var(--mono);fill:var(--atext);letter-spacing:.8px">SIDE A · 33 RPM</text>
+    <circle cx="104" cy="104" r="2.6" fill="var(--paper)"/></g>
+  <g fill="#fff" opacity=".07"><path d="M104,104 L140.7,13.1 A98,98 0 0 1 174.5,35.9 Z"/><path d="M104,104 L67.3,194.9 A98,98 0 0 1 33.5,172.1 Z"/></g>
+  <circle cx="226" cy="12" r="13" fill="var(--card)" stroke="var(--rule2)"/>
+  <g transform="translate(226 12)"><g>
+    <animateTransform attributeName="transform" type="rotate" dur="12s" repeatCount="indefinite" calcMode="spline"
+      values="100;106.6;124.7;124.7;100" keyTimes="0;0.07;0.86;0.92;1" keySplines=".4 0 .2 1;0 0 1 1;0 0 1 1;.4 0 .2 1"/>
+    <rect x="-27" y="-5" width="13" height="10" fill="var(--rule2)"/>
+    <line x1="-14" y1="0" x2="138" y2="0" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round"/>
+    <rect x="135" y="-5" width="16" height="10" fill="var(--hot)"/></g></g>
+  <circle cx="226" cy="12" r="4.5" fill="var(--rule2)"/>`;
+  const L = 256, small = { style: 'font-size:8px' };
+  v.append(el('text', { class: 'lab', x: L, y: 12, ...small }, 'SIDE A · TRACK 03'));
+  v.append(el('text', { class: 'qt', x: L, y: 30 }, 'night bus.flac'));
+  v.append(el('text', { class: 'lab', x: L, y: 44, ...small }, '24-BIT / 192 KHZ'));
+  const n = el('g', { opacity: 0 }); n.innerHTML = cue +
+    `<rect x="${L}" y="60" width="2" height="68" fill="var(--hot)"/>
+     <text class="lab" x="${L + 10}" y="70" style="font-size:8px;fill:var(--hot)">NOTE · 0:04</text>
+     ${['the swell right', 'here. goa, the night', 'the car broke down.'].map((t, i) =>
+       `<text x="${L + 10}" y="${90 + i * 17}" style="font:italic 400 14px var(--serif);fill:var(--ink)">${t}</text>`).join('')}`;
+  v.append(n);
+  v.append(el('line', { class: 'rule', x1: L, y1: 148, x2: 376, y2: 148 }));
+  v.append(el('text', { class: 'stat', x: L, y: 184 }, '$0'));
+  v.append(el('text', { class: 'lab', x: L, y: 200, ...small }, 'A MONTH, FOREVER'));
+  v.append(el('text', { class: 'lab', x: 4, y: 240 }, 'ONE PASSWORD · ONE OWNER · FLAC AS-IS'));
 })();
 
 /* ---------- the set: switching, static, OSD, auto-surf ---------- */
@@ -612,13 +710,13 @@ function typeQuery(){
   let i = 0; const id = setInterval(() => { s.textContent = text.slice(0, ++i) + (i < text.length ? '▌' : ''); if(i >= text.length) clearInterval(id); }, 34);
 }
 function play(ch){
-  const a = chans[ch - 1];
+  const a = chans[ch - 1], name = a.dataset.name;
   a.classList.remove('live'); void a.offsetWidth; a.classList.add('live');
-  if(ch === 2) typeQuery();
-  if(ch === 3){ countUp($('#v3')); if(!reduced) [0, 1, 2].forEach(i => setTimeout(() => $('#pm' + i)?.beginElement(), i * 180 + 300)); }
+  if(name === 'shelfmark') typeQuery();
+  if(name === 'inference'){ countUp($('#v-inference')); if(!reduced) [0, 1, 2].forEach(i => setTimeout(() => $('#pm' + i)?.beginElement(), i * 180 + 300)); }
 }
 function tune(ch, fromUser){
-  ch = ((ch - 1 + 4) % 4) + 1;
+  ch = ((ch - 1 + chans.length) % chans.length) + 1;
   if(fromUser) userTouched = true;
   started = true;
   if(ch !== cur) burst();
@@ -643,7 +741,7 @@ screen.addEventListener('touchend', e => { if(sx === null) return; const dx = e.
   if(Math.abs(dx) > 50) tune(cur + (dx < 0 ? 1 : -1), true); sx = null; });
 addEventListener('keydown', e => {
   if(e.metaKey || e.ctrlKey || e.altKey || /input|textarea/i.test(e.target.tagName)) return;
-  if(e.key >= '1' && e.key <= '4') tune(+e.key, true);
+  if(e.key >= '1' && e.key <= String(chans.length)) tune(+e.key, true);
   else if(e.key === 'ArrowRight') tune(cur + 1, true);
   else if(e.key === 'ArrowLeft') tune(cur - 1, true);
   else if(e.key === 't' || e.key === 'T') toggleTheme();

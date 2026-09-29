@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="Channel 02, shelfmark: ask where a file is and get the path, from a lexical index and an on-device embedding index shown side by side.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="Channel 05, shelfmark: ask where a file is and get the path, from a lexical index and an on-device embedding index shown side by side.">
 <style>
 __FONTS__
 __VARS__
@@ -25,10 +25,10 @@ __VARS__
 </defs>
 <rect class="paper" width="880" height="300"/>
 <rect class="frame" x="14.5" y="10.5" width="851" height="279"/>
-<g clip-path="url(#card)"><text class="ghost" x="874" y="286" text-anchor="end">02</text></g>
+<g clip-path="url(#card)"><text class="ghost" x="874" y="286" text-anchor="end">05</text></g>
 
 <rect x="14.5" y="10.5" width="62" height="26" fill="var(--acid)"/>
-<text class="ch" x="24" y="27.5">CH.02</text>
+<text class="ch" x="24" y="27.5">CH.05</text>
 <text class="stack" x="844" y="27" text-anchor="end">SWIFT 6  ·  macOS  ·  NO DEPENDENCIES</text>
 <line class="rule" x1="14.5" y1="36.5" x2="865.5" y2="36.5"/>
 

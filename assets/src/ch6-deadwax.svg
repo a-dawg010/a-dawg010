@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" role="img" aria-label="Channel 06, deadwax: a music player you host yourself, for free, for exactly one person. Hi-res FLAC on Cloudflare's free tier, a record that is the seek bar, and private notes etched onto the exact second of a song.">
+<style>
+__FONTS__
+__VARS__
+.paper{fill:var(--paper)}
+.frame{fill:var(--card);stroke:var(--rule2);stroke-width:1}
+.rule{stroke:var(--rule);stroke-width:1}
+.ch{font:500 9px var(--mono);fill:var(--atext);letter-spacing:1.4px}
+.stack{font:500 8.5px var(--mono);fill:var(--faint);letter-spacing:1.6px}
+.name{font:900 50px var(--disp);fill:var(--ink);letter-spacing:-1.6px}
+.ghost{font:900 230px var(--disp);fill:none;stroke:var(--rule);stroke-width:1;letter-spacing:-8px}
+.tag{font:italic 400 22px var(--serif);fill:var(--ink)}
+.body{font:500 12.8px var(--body);fill:var(--dim)}
+.link{font:500 9.5px var(--mono);fill:var(--violet);letter-spacing:1.3px}
+.lab{font:500 8px var(--mono);fill:var(--faint);letter-spacing:1.4px}
+.trk{font:500 10.5px var(--mono);fill:var(--ink)}
+.note{font:italic 400 14px var(--serif);fill:var(--ink)}
+.big{font:900 30px var(--disp);fill:var(--ink);letter-spacing:-1px}
+.gv{fill:none;stroke:#1D1D21;stroke-width:.9}
+.gap{fill:none;stroke:#34343A;stroke-width:1.4}
+.mo{fill:none;stroke:var(--acid);stroke-width:2.4;stroke-linecap:round}
+.lbl{font:900 8.6px var(--disp);fill:var(--atext);letter-spacing:.2px}
+.lbs{font:500 5.2px var(--mono);fill:var(--atext);letter-spacing:.8px}
+</style>
+<defs>
+  <clipPath id="card"><rect x="14" y="10" width="852" height="280"/></clipPath>
+  <clipPath id="disc"><circle cx="572" cy="162" r="98"/></clipPath>
+</defs>
+<rect class="paper" width="880" height="300"/>
+<rect class="frame" x="14.5" y="10.5" width="851" height="279"/>
+<g clip-path="url(#card)"><text class="ghost" x="874" y="286" text-anchor="end">06</text></g>
+
+<rect x="14.5" y="10.5" width="62" height="26" fill="var(--acid)"/>
+<text class="ch" x="24" y="27.5">CH.06</text>
+<text class="stack" x="844" y="27" text-anchor="end">REACT 19  ·  CLOUDFLARE WORKERS  ·  $0 / MONTH</text>
+<line class="rule" x1="14.5" y1="36.5" x2="865.5" y2="36.5"/>
+
+<text class="name" x="34" y="104">deadwax</text>
+<text class="tag" x="36" y="138">the part of the record only you can read.</text>
+<rect x="36" y="146" width="198" height="2" fill="var(--acid)"/>
+<text class="body" x="36" y="176">A music player you host yourself, for free, for exactly</text>
+<text class="body" x="36" y="195">one person. Hi-res FLAC on Cloudflare’s free tier. The</text>
+<text class="body" x="36" y="214">record is the seek bar, and notes etched onto a second</text>
+<text class="body" x="36" y="233">of a song fade in when playback gets there.</text>
+<text class="link" x="36" y="264">GITHUB.COM/A-DAWG010/DEADWAX  ↗</text>
+
+<!-- the record: spins at 33 rpm; moments (acid) ride the grooves -->
+<g>
+  <animateTransform attributeName="transform" type="rotate" dur="1.8s" repeatCount="indefinite" calcMode="linear" values="0 572 162;360 572 162"/>
+  <circle cx="572" cy="162" r="100" fill="#0B0B0C" stroke="var(--rule2)"/>
+  <circle cx="572" cy="162" r="95.0" class="gv"/><circle cx="572" cy="162" r="92.4" class="gv"/><circle cx="572" cy="162" r="89.8" class="gv"/><circle cx="572" cy="162" r="87.2" class="gv"/><circle cx="572" cy="162" r="84.6" class="gv"/><circle cx="572" cy="162" r="82.0" class="gv"/><circle cx="572" cy="162" r="79.4" class="gv"/><circle cx="572" cy="162" r="76.8" class="gv"/><circle cx="572" cy="162" r="74.2" class="gv"/><circle cx="572" cy="162" r="71.6" class="gv"/><circle cx="572" cy="162" r="69.0" class="gv"/><circle cx="572" cy="162" r="66.4" class="gv"/><circle cx="572" cy="162" r="63.8" class="gv"/><circle cx="572" cy="162" r="61.2" class="gv"/><circle cx="572" cy="162" r="58.6" class="gv"/><circle cx="572" cy="162" r="56.0" class="gv"/><circle cx="572" cy="162" r="53.4" class="gv"/><circle cx="572" cy="162" r="50.8" class="gv"/><circle cx="572" cy="162" r="48.2" class="gv"/><circle cx="572" cy="162" r="45.6" class="gv"/><circle cx="572" cy="162" r="43.0" class="gv"/>
+  <circle cx="572" cy="162" r="84" class="gap"/><circle cx="572" cy="162" r="70" class="gap"/><circle cx="572" cy="162" r="56" class="gap"/>
+  <g opacity=".6"><path class="mo" d="M499.6,135.7 A77,77 0 0 1 548.2,88.8"/><path class="mo" d="M631.9,181.5 A63,63 0 0 1 610.8,211.6"/><path class="mo" d="M562.7,250.1 A88.6,88.6 0 0 1 530.4,240.2"/>
+    <animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values=".6;.6;1;1;.6;.6" keyTimes="0;0.3;0.33;0.84;0.88;1"/>
+  </g>
+  <circle cx="572" cy="162" r="34" fill="var(--acid)"/>
+  <circle cx="572" cy="162" r="29.5" fill="none" stroke="var(--atext)" stroke-width=".5" opacity=".35"/>
+  <text class="lbl" x="572" y="156" text-anchor="middle">DEADWAX</text>
+  <text class="lbs" x="572" y="174" text-anchor="middle">SIDE A · 33 RPM</text>
+  <circle cx="572" cy="162" r="2.6" fill="var(--paper)"/>
+</g>
+<!-- gloss stays still while the disc turns under it -->
+<g clip-path="url(#disc)" fill="#FFFFFF" opacity=".07">
+  <path d="M572,162 L609.5,69.3 A100,100 0 0 1 643.9,92.5 Z"/><path d="M572,162 L534.5,254.7 A100,100 0 0 1 500.1,231.5 Z"/>
+</g>
+
+<!-- tonearm: swings in, drifts toward the label as the song plays, lifts off -->
+<circle cx="694" cy="70" r="13" fill="var(--card)" stroke="var(--rule2)"/>
+<g transform="translate(694 70)">
+  <g>
+    <animateTransform attributeName="transform" type="rotate" dur="12s" repeatCount="indefinite" calcMode="spline"
+      values="100;106.6;124.7;124.7;100" keyTimes="0;0.07;0.86;0.92;1" keySplines=".4 0 .2 1;0 0 1 1;0 0 1 1;.4 0 .2 1"/>
+    <rect x="-27" y="-5" width="13" height="10" fill="var(--rule2)"/>
+    <line x1="-14" y1="0" x2="138" y2="0" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round"/>
+    <rect x="135" y="-5" width="16" height="10" fill="var(--hot)"/>
+  </g>
+</g>
+<circle cx="694" cy="70" r="4.5" fill="var(--rule2)"/>
+
+<text class="lab" x="724" y="62">SIDE A · TRACK 03</text>
+<text class="trk" x="724" y="80">night bus.flac</text>
+<text class="lab" x="724" y="94">24-BIT / 192 KHZ</text>
+<g opacity="0">
+  <animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="linear" values="0;0;1;1;0;0" keyTimes="0;0.3;0.33;0.84;0.88;1"/>
+  <rect x="724" y="110" width="2" height="68" fill="var(--hot)"/>
+  <text class="lab" x="734" y="120" style="fill:var(--hot)">NOTE · 0:04</text>
+  <text class="note" x="734" y="140">the swell right</text>
+  <text class="note" x="734" y="157">here. goa, the night</text>
+  <text class="note" x="734" y="174">the car broke down.</text>
+</g>
+<line class="rule" x1="724" y1="198" x2="844" y2="198"/>
+<text class="big" x="724" y="232">$0</text>
+<text class="lab" x="724" y="248">A MONTH, FOREVER</text>
+<text class="lab" x="724" y="270">USERS: EXACTLY ONE</text>
+</svg>
